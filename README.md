@@ -3,5 +3,3 @@
 ### Alejandro Arbós | Eduard Pérez | Carlos Rodríguez | Linyi Zhang
 
 Resumen del Proyecto, sigma sigma sigma
-
-## Índice
