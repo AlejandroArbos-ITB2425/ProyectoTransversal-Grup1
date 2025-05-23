@@ -10,7 +10,7 @@
 
 | Servidor | Servicios | Tipo EC2 |
 | ----------- | ----------- | ----------- | 
-| 1 | ElasticSearch, Kibana, Nagios | t3.small |
+| 1 | ElasticSearch, Kibana, Nagios | t2.large |
 | 2 | Web, Audio, Streaming | t3.small |
 | 3 | DNS, FTP | t2.micro |
 | 4 | Base de Datos (PGSQL) | t3.small |
