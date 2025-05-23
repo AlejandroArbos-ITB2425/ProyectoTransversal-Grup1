@@ -1,7 +1,7 @@
 # 1. Propuesta de CPD (Centro de Procesamiento de Datos)
 
 ## Ubicación Física
-### Situación física de la sala en el edificio
+#### Situación física de la sala en el edificio
 ### Sistemas de climatización
 ### Medidas para dificultar la identificación de la sala
 ### Distribución y gestión del cableado
