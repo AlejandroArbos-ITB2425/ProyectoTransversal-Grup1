@@ -319,6 +319,26 @@ Para poder utilizar SFTP hay que activar el módulo LoadModule mod_sftp.c e inst
 ![image](./img/servicios/srv3/3.4.png)
 ![image](./img/servicios/srv3/3.5.png)
 
+Se crea un directorio principal "_mkdir -p /ftp/sftpuser_" , esto sirve como base para alojar los directorios de los usuarios que utilizarán SFTP en el servidor, y un grupo "groupadd sftpgroup", este grupo identifica a los usuarios autorizados a acceder a SFTP.
+
+Los usuarios que se crean, son asignados al grupo y al directorio creado. 
+Y además de establecer una contraseña para los usuarios con la comanda passwd. 
+Se configura la shell en /sbin/nologin para limitarlos a SFTP, evitando que puedan acceder a una shell completa.
+
+![image](./img/servicios/srv3/3.6.png)
+
+A continuación, el directorio /ftp/sftpuser es cambiado a root:root con comanda, "chown root:root /ftp/sftpuser". Esto garantiza que sólo el administrador tenga control sobre la carpeta principal.
+Se añade permisos de lectura y ejecución al grupo sftpgroup con "chmod g+rx /ftp/sftpuser". Esto permite a los usuarios del grupo acceder a sus directorios, pero no modificar la estructura principal.
+
+![image](./img/servicios/srv3/3.7.png)
+![image](./img/servicios/srv3/3.8.png)
+
+Se crean directorios individuales dentro de _/ftp/sftpuser_ para cada usuario. Estos directorios sirven como espacio privado para cada usuario dentro del sistema SFTP.
+Además se crean subdirectorios llamados data dentro de cada directorio de usuario. 
+
+![image](./img/servicios/srv3/3.9.png)
+
+
 
 
 ## Configuración de Servidor 4
