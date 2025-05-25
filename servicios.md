@@ -194,7 +194,7 @@ Para poder acceder a Icecast2, debemos de entrar via URL, con nuestra IP públic
 
 ## Configuración de Servidor 3
 Para el servidor DNS y FTP se crea una instancia de tipo t2.micro con SO Ubuntu Server 24.04. 
-
+![image](./img/servicios/srv2/1.1.png)
 
 Se asigna una IP elástica, quiere decir que es una  dirección IP pública estática que no cambia, incluso si la instancia se reinicia o se detiene.
 
