@@ -263,6 +263,20 @@ Modificar el archivo _/etc/bind/zonas/db.grup1.pt_ para configurar la zona direc
 
 ![image](./img/servicios/srv3/2.13.png)
 
+En el archivo de configuración para la zona inversa. 
+
+SOA y NS: Al igual que en la zona directa, definen la autoridad (SRV3 como servidor DNS).
+PTR: Asocia una IP a un nombre. 
+La parte inversa, la IP sólo incluye los bytes relevantes dentro de la subred.
+
+![image](./img/servicios/srv3/2.14.png)
+
+![image](./img/servicios/srv3/2.15.png)
+
+![image](./img/servicios/srv3/2.16.png)
+![image](./img/servicios/srv3/2.17.png)
+![image](./img/servicios/srv3/2.18.png)
+
 
 #### FTP
 
