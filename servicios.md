@@ -224,7 +224,8 @@ Añadir en el archivo _/etc/systemd/resolved.conf_ la dirección IP del server y
 ![image](./img/servicios/srv3/2.5.png)
 
 Hay que modificar el enlace del archivo _/etc/resolv.conf_. 
-Ejecutar _rm-f /etc/resolv.conf_ y volver a crear un enlace simbólico, _ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf_ 
+Ejecutar _rm-f /etc/resolv.conf_ y volver a crear un enlace simbólico, 
+_ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf_ 
 
 ![image](./img/servicios/srv3/2.6.png)
 ![image](./img/servicios/srv3/2.7.png)
@@ -239,7 +240,7 @@ Configurar el archivo _/etc/bind/named.conf.local_ para declarar las zonas direc
 
 ![image](./img/servicios/srv3/2.10.png)
 
-Modificar el archivo /etc/bind/named.conf.options 
+Modificar el archivo _/etc/bind/named.conf.options_ 
 El servidor DNS utilizará los servidores DNS externos con las direcciones IP 8.8.8.8 y 8.8.4.4 como reenviadores para resolver consultas de nombres de dominio que no estén en las zonas que el servidor gestiona directamente. 
 Recursion yes; Habilita la resolución recursiva, permitiendo que el servidor DNS resuelva consultas para dominios que no gestiona directamente (por ejemplo, google.com) consultando otros servidores DNS en la jerarquía. 
 Allow-recursion {10.0.0.0/8;}; Restringe la resolución recursiva a un rango específico de direcciones IP, en nuestro caso, la red 10.0.0.0/8. Solo los dispositivos en esta red pueden usar el servidor DNS para consultas recursivas.
