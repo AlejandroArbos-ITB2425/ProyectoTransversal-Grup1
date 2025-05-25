@@ -282,8 +282,39 @@ La parte inversa, la IP sólo incluye los bytes relevantes dentro de la subred.
 ![image](./img/servicios/srv3/2.21.png) ![image](./img/servicios/srv3/2.22.png)
 
 
-
 #### FTP
+
+FTP es un protocolo de la capa de aplicación del modelo TCP/IP que facilita la transferencia de archivos entre un cliente y un servidor. Utiliza los puertos 21 (para comandos) y 20 (para datos) por defecto. Pero FTP no es un protocolo seguro, existen mecanismos para asegurar las conexiones entre clientes y servidores FTP como son; FTPS o enviar el protocolo FTP a través de un túnel SSH(SFTP).
+
+SFTP es un protocolo que proporciona transferencia segura de archivos sobre una conexión SSH. A diferencia del FTP, SFTP encripta tanto las credenciales de autenticación como los datos transferidos, proporcionando mayor seguridad.
+
+Para instalar el servicio proFTPD  se ejecuta la siguiente comanda: _sudo apt install proftpd_
+
+![image](./img/servicios/srv3/3.1.png)
+
+
+Se decide implementar SFTP como método principal de transferencia de archivos 
+por la necesidad de garantizar la seguridad de los datos sensibles que se transmiten, especialmente teniendo en cuenta la presencia de información como la base de datos. 
+Por este motivo se instala el servicio ssh que permite una transferencia segura. 
+
+Comando para instalar SSH: _sudo apt install openssh-server_
+
+![image](./img/servicios/srv3/3.2.png)
+
+
+Editar el archivo principal /etc/ssh/ssh_config donde la guarda la configuración del servicio SSH.
+
+Match Group sftpgroup: se aplica esta configuración sólo a los usuarios del grupo sftpgroup (se creará un grupo en el siguiente apartado)
+
+ChrootDirectory %h: esta configuración sirve para restringir a los usuarios a su directorio personal (%h directorio home del usuario), evitando que puedan navegar fuera de ese directorio.
+
+ForceCommand internal-sftp: fuerza de que los usuarios sólo puedan utilizar SFTP, no una shell completa (no pueden ejecutar bash).
+
+AllowTcpForwarding no y X11Forwarding no: desactiva funcionalidades innecesarias para SFTP, reduciendo riesgos.
+
+![image](./img/servicios/srv3/3.3.png)
+
+
 
 ## Configuración de Servidor 4
 Para nuestro caso de base de datos tenemos un Ubuntu Server 22.04 con conectividad al resto de máquinas y PostgreSQL instalado:
