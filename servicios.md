@@ -219,6 +219,10 @@ En el archivo /etc/hosts hay que asociar manualmente direcciones IP con nombres 
 Se tiene que configurar la resolución DNS y el dominio de búsqueda modificando el archivo /etc/netplan/50-cloud-init.yaml
 ![image](./img/servicios/srv3/2.4.png)
 
+Añadir en el archivo _/etc/systemd/resolved.conf_ la dirección IP del server y el dominio
+
+![image](./img/servicios/srv3/2.5.png)
+
 
 #### FTP
 
