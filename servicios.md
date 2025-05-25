@@ -302,7 +302,7 @@ Comando para instalar SSH: _sudo apt install openssh-server_
 ![image](./img/servicios/srv3/3.2.png)
 
 
-Editar el archivo principal /etc/ssh/ssh_config donde la guarda la configuración del servicio SSH.
+Editar el archivo principal _/etc/ssh/ssh_config_ donde la guarda la configuración del servicio SSH.
 
 Match Group sftpgroup: se aplica esta configuración sólo a los usuarios del grupo sftpgroup (se creará un grupo en el siguiente apartado)
 
@@ -313,6 +313,11 @@ ForceCommand internal-sftp: fuerza de que los usuarios sólo puedan utilizar SFT
 AllowTcpForwarding no y X11Forwarding no: desactiva funcionalidades innecesarias para SFTP, reduciendo riesgos.
 
 ![image](./img/servicios/srv3/3.3.png)
+
+Para poder utilizar SFTP hay que activar el módulo LoadModule mod_sftp.c e instalar proftpd-mod-crypto.
+
+![image](./img/servicios/srv3/3.4.png)
+![image](./img/servicios/srv3/3.5.png)
 
 
 
