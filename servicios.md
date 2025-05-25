@@ -344,7 +344,9 @@ Cada usuario ha sido asignado como propietario de su propio directorio data, est
 
 ![image](./img/servicios/srv3/3.10.png) ![image](./img/servicios/srv3/3.11.png)
 
-
+![image](./img/servicios/srv3/3.12.png)
+![image](./img/servicios/srv3/3.13.png)
+![image](./img/servicios/srv3/3.14.png)
 
 ## Configuración de Servidor 4
 Para nuestro caso de base de datos tenemos un Ubuntu Server 22.04 con conectividad al resto de máquinas y PostgreSQL instalado:
