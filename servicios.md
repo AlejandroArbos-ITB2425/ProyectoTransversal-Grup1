@@ -205,7 +205,77 @@ ssh -i key_LZ.pem ubuntu@98.83.123.40
 #### FTP
 
 ## Configuración de Servidor 4
+Para nuestro caso de base de datos tenemos un Ubuntu Server 22.04 con conectividad al resto de máquinas y PostgreSQL instalado:
+![img.png](img.png)
+![img_2.png](img_2.png)
+Previo a la creación de cualquier consulta, es necesaria la creación de un modelo entidad-relación, que será el siguiente:
+![img_1.png](img_1.png)
+##### Con las siguientes relaciones:
+### Relaciones 1:N (Uno a Muchos):
+CONVENIO_COLECTIVO - NIVEL_CONVENIO.
+
+NIVEL_CONVENIO - COMPONENTE_SALARIAL_CONVENIO 
+
+NIVEL_CONVENIO - HISTORIAL_NIVEL_EMPLEADO.
+
+DEPARTAMENTO - EMPLEADO.
+
+ROL_EMPRESA - EMPLEADO.
+
+EMPLEADO - (HISTORIAL_NIVEL_EMPLEADO).
+
+EMPLEADO - (HISTORIAL_SALARIO_EMPLEADO).
+
+### Relaciones N:1 (Muchos a Uno):
+ROL_EMPRESA-NIVEL_CONVENIO 
+### Relaciones N:M (Muchos a Muchos):
+REGLAS_ANTIGUEDAD - COMPONENTE_SALARIAL_CONVENIO.
+
+REGLAS_PERIODO_PRUEBA_CONVENIO - NIVEL_CONVENIO.
+
+##### Cada tabla tendrá una función importante en la base de datos y su precisión en los datos:
+
+### Funciones de cada tabla:                       
+CONVENIO_COLECTIVO: Información básica de los convenios (Nombre, vigencia..)
+
+NIVEL_CONVENIO: Almacena las diferentes áreas y grupos por los que separa el sector, el convenio colectivo.
+
+COMPONENTE_SALARIAL_CONVENIO: Guarda los salarios base y totales mínimos anuales para cada nivel de convenio y año.
+
+REGLAS_ANTIGUEDAD: Detalla los porcentajes de incremento salarial por trienios para calcular la antigüedad.
+
+REGLAS_PERIODO_PRUEBA_CONVENIO: Define las duraciones estándar de los periodos de prueba por área y tipo de contrato.
+
+ROL_EMPRESA: Contiene la definición de los roles internos de la empresa y su mapeo a niveles de convenio.
+
+DEPARTAMENTO: Lista los departamentos de la empresa para organizar a los empleados.
+
+EMPLEADO: Es la tabla central con la información personal y contractual básica de cada trabajador.
+
+HISTORIAL_NIVEL_EMPLEADO: Registra los cambios de nivel de convenio de un empleado a lo largo del tiempo.
+
+HISTORIAL_SALARIO_EMPLEADO: Guarda el historial de los componentes salariales de cada empleado en diferentes momentos.
+
+Hecho el modelo, pasamos a los ajustes de seguridad:
+
+La base de datos aceptará entradas de todas las direcciones IP:
+![BBDD_4.png](img/servicios/SRV4/BBDD_4.png) 
+![BBDD_5.png](img/servicios/SRV4/BBDD_5.png)
+Y en este archivo especificamos quién puede conectarse. En este caso se decide añadir las redes de todas las máquinas presentes en este proyecto
+![BBDD_6.png](img/servicios/SRV4/BBDD_6.png)
+
+Procedemos a la creación de la base de datos y de un usuario (Se adjunta prueba de la existencia de ambos objetos):
+![BBDD_7.png](img/servicios/SRV4/BBDD_7.png)
+
+Y la creación de la base de datos:
+![BBDD_8.png](img/servicios/SRV4/BBDD_8.png)
 #### Base Datos
+La base de datos ya está creada, y ahora es necesario darle una interfaz gráfica. Utilizaremos Flask, que permite crear webs rápidas a partir de Python y HTML:
+![BBDD_9.png](img/servicios/SRV4/BBDD_9.png)
+Crearemos dos archivos:
+-Un app.py que permita ejecutarse para iniciar el servicio.
+-Un HTML con el template básico.
+Y con esto ya tenemos una base de datos funcional.
 
 ## Configuración de Servidor 5
 #### Copias seguridad
