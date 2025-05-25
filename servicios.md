@@ -279,7 +279,7 @@ La parte inversa, la IP sólo incluye los bytes relevantes dentro de la subred.
 
 ![image](./img/servicios/srv3/2.19.png) ![image](./img/servicios/srv3/2.20.png)
 
-![image](./img/servicios/srv3/2.23.png) ![image](./img/servicios/srv3/2.22.png)
+![image](./img/servicios/srv3/2.21.png) ![image](./img/servicios/srv3/2.22.png)
 
 
 
