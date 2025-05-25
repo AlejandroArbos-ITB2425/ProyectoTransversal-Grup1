@@ -240,12 +240,29 @@ Configurar el archivo _/etc/bind/named.conf.local_ para declarar las zonas direc
 ![image](./img/servicios/srv3/2.10.png)
 
 Modificar el archivo /etc/bind/named.conf.options 
-El servidor DNS utilizará los servidores DNS externos con las direcciones IP 8.8.8.8 y 8.8.4.4 como reenviadores para resolver consultas de nombres de dominio que no estén en las zonas que el servidor gestiona directamente.
-recursion yes;  Habilita la resolución recursiva, permitiendo que el servidor DNS resuelva consultas para dominios que no gestiona directamente (por ejemplo, google.com) consultando otros servidores DNS en la jerarquía. 
-allow-recursion {10.0.0.0/8;}; Restringe la resolución recursiva a un rango específico de direcciones IP, en nuestro caso, la red 10.0.0.0/8. Solo los dispositivos en esta red pueden usar el servidor DNS para consultas recursivas.
+El servidor DNS utilizará los servidores DNS externos con las direcciones IP 8.8.8.8 y 8.8.4.4 como reenviadores para resolver consultas de nombres de dominio que no estén en las zonas que el servidor gestiona directamente. 
+Recursion yes; Habilita la resolución recursiva, permitiendo que el servidor DNS resuelva consultas para dominios que no gestiona directamente (por ejemplo, google.com) consultando otros servidores DNS en la jerarquía. 
+Allow-recursion {10.0.0.0/8;}; Restringe la resolución recursiva a un rango específico de direcciones IP, en nuestro caso, la red 10.0.0.0/8. Solo los dispositivos en esta red pueden usar el servidor DNS para consultas recursivas.
 
 ![image](./img/servicios/srv3/2.11.png)
 
+Modificar y añadir el parámetro -4 para que solo escuche peticiones del protocolo IPv4 en el archivo /etc/default/named, donde se configura parámetros de inicio del servicio Bind9. 
+
+![image](./img/servicios/srv3/2.12.png)
+
+Modificar el archivo _/etc/bind/zonas/db.grup1.pt_ para configurar la zona directa. 
+@: Representa la zona grup1.pt.
+IN SOA: Indica que es un registro de tipo SOA, que define la autoridad de la zona.
+grup1.pt.: Nombre del servidor primario de nombres  
+
+@ IN NS ns.grupi.pt.: Define ns.grup1.pt como el servidor de nombres autorizativo para la zona.
+ns IN A 10.1.1.96: Asigna la dirección IP 10.1.1.96 a ns.grup1.pt, que corresponde a SRV3 
+
+IN A: asocia un nombre de host (como srv1.grup1.pt) a una dirección IP (como 10.2.1.49) para que los dispositivos puedan encontrar el servidor en la red.
+
+IN CNAME: crea un alias (como nagios.grup1.pt) que apunta a otro nombre de host (como srv1.grup1.pt), para facilitar el acceso a servicios específicos sin duplicar IPs.
+
+![image](./img/servicios/srv3/2.13.png)
 
 
 #### FTP
