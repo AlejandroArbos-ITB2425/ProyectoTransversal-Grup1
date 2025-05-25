@@ -331,6 +331,7 @@ A continuación, el directorio /ftp/sftpuser es cambiado a root:root con comanda
 Se añade permisos de lectura y ejecución al grupo sftpgroup con "chmod g+rx /ftp/sftpuser". Esto permite a los usuarios del grupo acceder a sus directorios, pero no modificar la estructura principal.
 
 ![image](./img/servicios/srv3/3.7.png)
+
 ![image](./img/servicios/srv3/3.8.png)
 
 Se crean directorios individuales dentro de _/ftp/sftpuser_ para cada usuario. Estos directorios sirven como espacio privado para cada usuario dentro del sistema SFTP.
