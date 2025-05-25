@@ -213,6 +213,7 @@ Cambiar el nombre del sistema modificando el archivo /etc/hostname para una mejo
 ![image](./img/servicios/srv3/2.2.png)
 
 En el archivo /etc/hosts hay que asociar manualmente direcciones IP con nombres de dominio, permitiendo que el sistema resuelva esos nombres sin consultar un servidor DNS externo.
+
 ![image](./img/servicios/srv3/2.3.png)
 
 Se tiene que configurar la resolución DNS y el dominio de búsqueda modificando el archivo /etc/netplan/50-cloud-init.yaml
