@@ -223,6 +223,30 @@ Añadir en el archivo _/etc/systemd/resolved.conf_ la dirección IP del server y
 
 ![image](./img/servicios/srv3/2.5.png)
 
+Hay que modificar el enlace del archivo _/etc/resolv.conf_. 
+Ejecutar _rm-f /etc/resolv.conf_ y volver a crear un enlace simbólico, _ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf_ 
+
+![image](./img/servicios/srv3/2.6.png)
+![image](./img/servicios/srv3/2.7.png)
+
+Hacer una copia de la plantilla de los archivos que contienen la configuración de la zona directa y la zona inversa. En nuestro caso, se decide guardar estas configuraciones en un directorio llamado zonas dentro de _/etc/bind_. (_/etc/bind/zonas_)
+La función de la zona directa es traducir nombres de dominio a direcciones IP y la inversa traducir direcciones IP a nombres de dominio. 
+
+![image](./img/servicios/srv3/2.8.png)
+![image](./img/servicios/srv3/2.9.png)
+
+Configurar el archivo _/etc/bind/named.conf.local_ para declarar las zonas directas e inversas asociadas con el dominio.
+
+![image](./img/servicios/srv3/2.10.png)
+
+Modificar el archivo /etc/bind/named.conf.options 
+El servidor DNS utilizará los servidores DNS externos con las direcciones IP 8.8.8.8 y 8.8.4.4 como reenviadores para resolver consultas de nombres de dominio que no estén en las zonas que el servidor gestiona directamente.
+recursion yes;  Habilita la resolución recursiva, permitiendo que el servidor DNS resuelva consultas para dominios que no gestiona directamente (por ejemplo, google.com) consultando otros servidores DNS en la jerarquía. 
+allow-recursion {10.0.0.0/8;}; Restringe la resolución recursiva a un rango específico de direcciones IP, en nuestro caso, la red 10.0.0.0/8. Solo los dispositivos en esta red pueden usar el servidor DNS para consultas recursivas.
+
+![image](./img/servicios/srv3/2.11.png)
+
+
 
 #### FTP
 
