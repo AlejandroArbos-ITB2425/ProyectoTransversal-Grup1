@@ -252,16 +252,14 @@ Modificar y añadir el parámetro -4 para que solo escuche peticiones del protoc
 ![image](./img/servicios/srv3/2.12.png)
 
 Modificar el archivo _/etc/bind/zonas/db.grup1.pt_ para configurar la zona directa. 
-@: Representa la zona grup1.pt.
-IN SOA: Indica que es un registro de tipo SOA, que define la autoridad de la zona.
-grup1.pt.: Nombre del servidor primario de nombres  
+- @: Representa la zona grup1.pt.
+- IN SOA: Indica que es un registro de tipo SOA, que define la autoridad de la zona.
+- grup1.pt.: Nombre del servidor primario de nombres
+- @ IN NS ns.grupi.pt.: Define ns.grup1.pt como el servidor de nombres autorizativo para la zona.
+- ns IN A 10.1.1.96: Asigna la dirección IP 10.1.1.96 a ns.grup1.pt, que corresponde a SRV3 
 
-@ IN NS ns.grupi.pt.: Define ns.grup1.pt como el servidor de nombres autorizativo para la zona.
-ns IN A 10.1.1.96: Asigna la dirección IP 10.1.1.96 a ns.grup1.pt, que corresponde a SRV3 
-
-IN A: asocia un nombre de host (como srv1.grup1.pt) a una dirección IP (como 10.2.1.49) para que los dispositivos puedan encontrar el servidor en la red.
-
-IN CNAME: crea un alias (como nagios.grup1.pt) que apunta a otro nombre de host (como srv1.grup1.pt), para facilitar el acceso a servicios específicos sin duplicar IPs.
+- IN A: asocia un nombre de host (como srv1.grup1.pt) a una dirección IP (como 10.2.1.49) para que los dispositivos puedan encontrar el servidor en la red.
+- IN CNAME: crea un alias (como nagios.grup1.pt) que apunta a otro nombre de host (como srv1.grup1.pt), para facilitar el acceso a servicios específicos sin duplicar IPs.
 
 ![image](./img/servicios/srv3/2.13.png)
 
