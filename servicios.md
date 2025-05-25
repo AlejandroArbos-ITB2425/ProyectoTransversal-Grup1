@@ -339,6 +339,10 @@ Además se crean subdirectorios llamados data dentro de cada directorio de usuar
 
 ![image](./img/servicios/srv3/3.9.png)
 
+Cada usuario será el propietario de su directorio _data_. 
+Cada usuario ha sido asignado como propietario de su propio directorio data, esto permite que puedan gestionar sus archivos.
+
+![image](./img/servicios/srv3/3.10.png) ![image](./img/servicios/srv3/3.11.png)
 
 
 
