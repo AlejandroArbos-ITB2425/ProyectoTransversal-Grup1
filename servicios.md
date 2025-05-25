@@ -201,7 +201,13 @@ Se asigna una IP elástica, quiere decir que es una  dirección IP pública est�
 Se accede a la instancia mediante la clave privada por ssh. Cambiar los permisos a solo lectura para la clave privada. 
 ssh -i key_LZ.pem ubuntu@98.83.123.40
 
-#### DNS
+#### DNS (Domain Name System)
+
+El servicio DNS traduce nombres de dominio a direcciones IP y también la resolución inversa. Para ello hay que instalar el software principal que actuará como servidor DNS (bind9).
+
+Para instalar bind9 hay que ejecutar la siguiente comanda: _sudo apt install bind9_ 
+
+
 #### FTP
 
 ## Configuración de Servidor 4
