@@ -248,6 +248,7 @@ Terminal 2 - Transmisión RTP
 Ejecutar la siguiente comanda que transmitirá el vídeo por RTP al cliente. Captura el vídeo del dispositivo virtual, lo codifica en formato H.264 optimizado para baja latencia, lo empaqueta en formato RTP y lo envía vía UDP al cliente (srv3) en el puerto 5000.
 
 >gst-launch-1.0 v4l2src device=/dev/video0 ! videoconvert ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=10.1.1.96 port=5000
+
 ![image](./img/servicios/srv2/4.9.png)
 
 CLIENTE (srv3 - 10.1.1.96)
@@ -296,6 +297,20 @@ Se instala iperf3 para hacer mediciones de ancho de banda entre servidores. Esta
 ![image](./img/servicios/srv2/4.15.png)
 
 
+> Nota Importante sobre Reproducción de Vídeo
+Advertencia: Al ejecutar las siguientes comandas, hay que reproducir el vídeo. 
+
+Servidor (Receptor):
+> iperf3 -s
+
+![image](./img/servicios/srv2/4.16.png)
+
+Cliente (Emisor): 
+> iperf3 -c  10.0.1.119
+
+![image](./img/servicios/srv2/4.17.png)
+
+Se establece una configuración cliente-servidor donde el equipo receptor (srv1) actúa como destino de las pruebas de ancho de banda, mientras que el cliente (srv3) genera tráfico de prueba hacia la IP del servidor.
 
 ## Configuración de Servidor 3
 Para el servidor DNS y FTP se crea una instancia de tipo t2.micro con SO Ubuntu Server 24.04. 
