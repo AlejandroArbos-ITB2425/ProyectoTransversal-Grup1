@@ -264,11 +264,13 @@ En el cliente ejecutar la siguiente comanda que, recibe y reproduce el stream RT
 Se ha instalado FFmpeg como motor principal de codificación y transmisión.
 
 > sudo apt install ffmpeg
+
 ![image](./img/servicios/srv2/4.12.png)
 
 Seguidamente se ejecuta la transmisión directa del contenido hacia Icecast2. FFmpeg se encarga de  procesar el archivo test.mp4 en tiempo real, aplicando codificación WebM con optimización de bitrate variable y enviando el stream resultante al servidor de distribución en el puerto 8000.
 
 > ffmpeg -re -i /home/ubuntu/videos/test.mp4 -c:v libvpx -b:v 500k -maxrate 600k -bufsize 600k -c:a libvorbis -b:a 64k -f webm -content_type video/webm -method PUT icecast://source:sourcepass@127.0.0.1:8000/stream.webm
+
 ![image](./img/servicios/srv2/4.13.png)
 
 **Gestión de Conflictos del Sistema**
