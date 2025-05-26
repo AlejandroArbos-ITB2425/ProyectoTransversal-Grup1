@@ -476,6 +476,7 @@ Cada usuario ha sido asignado como propietario de su propio directorio data, est
 ## Configuración de Servidor 4
 Para nuestro caso de base de datos tenemos un Ubuntu Server 22.04 con conectividad al resto de máquinas y PostgreSQL instalado:
 ![image](./img/servicios/SRV4/img.png)
+
 ![image](./img/servicios/SRV4/img_2.png)
 
 Previo a la creación de cualquier consulta, es necesaria la creación de un modelo entidad-relación, que será el siguiente:
