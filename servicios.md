@@ -259,7 +259,39 @@ En el cliente ejecutar la siguiente comanda que, recibe y reproduce el stream RT
 ![image](./img/servicios/srv2/4.10.png)
 ![image](./img/servicios/srv2/4.11.png)
 
+**Transmisión de Vídeo mediante ICECAST2**
 
+Se ha instalado FFmpeg como motor principal de codificación y transmisión.
+
+> sudo apt install ffmpeg
+![image](./img/servicios/srv2/4.12.png)
+
+Seguidamente se ejecuta la transmisión directa del contenido hacia Icecast2. FFmpeg se encarga de  procesar el archivo test.mp4 en tiempo real, aplicando codificación WebM con optimización de bitrate variable y enviando el stream resultante al servidor de distribución en el puerto 8000.
+
+> ffmpeg -re -i /home/ubuntu/videos/test.mp4 -c:v libvpx -b:v 500k -maxrate 600k -bufsize 600k -c:a libvorbis -b:a 64k -f webm -content_type video/webm -method PUT icecast://source:sourcepass@127.0.0.1:8000/stream.webm
+![image](./img/servicios/srv2/4.13.png)
+
+**Gestión de Conflictos del Sistema**
+
+Resolución de Incompatibilidades RTP-FFmpeg:
+
+Al activar la retransmisión en vivo con RTP y FFmpeg simultáneamente pueden ocurrir errores de incompatibilidad, en ese caso ejecutar el siguiente comando:
+
+> sudo rmmod v4l2loopback
+
+> sudo modprobe v4l2loopback devices=1 video_nr=0 card_label="Virtual Camera"
+
+> ls -la /dev/video0
+
+![image](./img/servicios/srv2/4.14.png)
+
+**Comprovación de ancho de banda con iperf3**
+
+Se instala iperf3 para hacer mediciones de ancho de banda entre servidores. Esta aplicación permite evaluar el rendimiento de la red y verificar la capacidad de transmisión.
+
+> Instal·lación: sudo apt install -y iperf3
+
+![image](./img/servicios/srv2/4.15.png)
 
 
 
