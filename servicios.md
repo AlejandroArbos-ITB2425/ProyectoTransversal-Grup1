@@ -536,11 +536,11 @@ La base de datos aceptará entradas de todas las direcciones IP:
 ![BBDD_4.png](img/servicios/SRV4/BBDD_4.png) 
 ![BBDD_5.png](img/servicios/SRV4/BBDD_5.png)
 
-Y en este archivo especificamos quién puede conectarse. En este caso se decide añadir las redes de todas las máquinas presentes en este proyecto
+Y en este archivo se especifica quién puede conectarse. En este caso se decide añadir las redes de todas las máquinas presentes en este proyecto
 
 ![BBDD_6.png](img/servicios/SRV4/BBDD_6.png)
 
-Procedemos a la creación de la base de datos y de un usuario (Se adjunta prueba de la existencia de ambos objetos):
+Se procede a la creación de la base de datos y de un usuario (Se adjunta prueba de la existencia de ambos objetos):
 
 ![BBDD_7.png](img/servicios/SRV4/BBDD_7.png)
 
@@ -550,7 +550,7 @@ Y la creación de la base de datos:
 #### Base Datos
 La base de datos ya está creada, y ahora es necesario darle una interfaz gráfica. Utilizaremos Flask, que permite crear webs rápidas a partir de Python y HTML:
 ![BBDD_9.png](img/servicios/SRV4/BBDD_9.png)
-Crearemos dos archivos:
+Se crea dos archivos:
 -Un app.py que permita ejecutarse para iniciar el servicio.
 -Un HTML con el template básico.
 Y con esto ya tenemos una base de datos funcional.
@@ -572,7 +572,7 @@ Se ha formateado el volumen de almacenamiento adicional (/dev/nvme1n1) utilizand
 
 ![image](./img/servicios/srv5/5.4.png)
 
-Se ha añadido una entrada al archivo /etc/fstab para configurar el montaje automático del volumen de backup, con esto, cada vez que iniciemos el sistema se montará el volumen en su carpeta correspondiente.
+Se ha añadido una entrada al archivo /etc/fstab para configurar el montaje automático del volumen de backup, con esto, cada vez que se inicie el sistema se montará el volumen en su carpeta correspondiente.
 
 ![image](./img/servicios/srv5/5.5.png)
 
@@ -592,7 +592,7 @@ Se ha generado un par de claves SSH dentro del Servidor 5 y se almacenan en /hom
 
 ![image](./img/servicios/srv5/5.10.png)
 
-Desde la máquina local enviamos todas las llaves de las otras instancias al Server 5 para poder acceder a estas, dado que para entrar via ssh debemos tener sus llaves correspondientes.
+Desde la máquina local se envia todas las llaves de las otras instancias al Server 5 para poder acceder a estas, dado que para entrar via ssh debemos tener sus llaves correspondientes.
 
 ![image](./img/servicios/srv5/5.11.png)
 
@@ -602,7 +602,7 @@ Se ha creado un archivo de configuración SSH que mapea cada servidor de la infr
 
 ![image](./img/servicios/srv5/5.13.png)
 
-Creamos una nueva carpeta la cual tendrá los dos scripts, tanto copias incrementales como total.
+Crear una nueva carpeta la cual tendrá los dos scripts, tanto copias incrementales como total.
 
 ![image](./img/servicios/srv5/5.14.png)
 
@@ -632,7 +632,7 @@ Se comprueba la estructura de directorios de backup verificando la existencia de
 
 ![image](./img/servicios/srv5/5.21.png)
 
-Como último paso modificamos el archivo de crontab para que ejecute los scripts de forma automática.
+Como último paso, modificar el archivo de crontab para que ejecute los scripts de forma automática.
 
 ![image](./img/servicios/srv5/5.22.png)
 
