@@ -240,6 +240,7 @@ Terminal 1 - Alimentación del Dispositivo Virtual
 Ejecutar la siguiente comanda que se encarga de alimentar el dispositivo de vídeo virtual con el contenido del archivo. Lee el test.mp4, lo decodifica, lo redimensiona a 640x480 píxeles y lo canaliza hacia /dev/video0 para que quede disponible como fuente de vídeo.
 
 >gst-launch-1.0 filesrc location=/home/ubuntu/videos/test.mp4 ! decodebin ! videoconvert ! videoscale ! video/x-raw,width=640,height=480 ! v4l2sink device=/dev/video0
+
 ![image](./img/servicios/srv2/4.8.png)
 
 Terminal 2 - Transmisión RTP
