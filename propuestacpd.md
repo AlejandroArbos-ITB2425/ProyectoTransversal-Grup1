@@ -98,6 +98,7 @@ Integración de detectores y luminarias sin interferir con el flujo de retorno.
 La combinación de falso suelo como plenum frío y falso techo como plenum caliente, junto al esquema de pasillos frío / caliente y unidades CRAC, reduce la carga de refrigeración, mejora la eficiencia energética y facilita futuras ampliaciones con mínimo trabajo en obra.
 
 #### Planos, dibujos y diagramas
+
 ![alt text](image.png)
 
 #### Estructuración de los racks 
