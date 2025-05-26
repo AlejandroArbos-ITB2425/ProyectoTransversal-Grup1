@@ -202,6 +202,11 @@ Se accede a la instancia mediante la clave privada por ssh. Cambiar los permisos
 ssh -i key_LZ.pem ubuntu@98.83.123.40
 ![image](./img/servicios/srv3/1.3.png)
 
+Se hace ping para comprobar que hay conectividad con los otros servidores. 
+
+![image](./img/servicios/srv3/1.3.1.png)
+
+
 #### DNS (Domain Name System)
 
 El servicio DNS traduce nombres de dominio a direcciones IP y también la resolución inversa. Para ello hay que instalar el software principal que actuará como servidor DNS (bind9).
