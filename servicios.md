@@ -541,6 +541,7 @@ Procedemos a la creación de la base de datos y de un usuario (Se adjunta prueba
 ![BBDD_7.png](img/servicios/SRV4/BBDD_7.png)
 
 Y la creación de la base de datos:
+
 ![BBDD_8.png](img/servicios/SRV4/BBDD_8.png)
 #### Base Datos
 La base de datos ya está creada, y ahora es necesario darle una interfaz gráfica. Utilizaremos Flask, que permite crear webs rápidas a partir de Python y HTML:
