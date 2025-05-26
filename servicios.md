@@ -234,6 +234,20 @@ Se ha preparado el archivo test.mp4 como material de prueba para realizar las tr
 
 ![image](./img/servicios/srv2/4.7.png)
 
+**Retransmisión de Vídeo en Vivo con Protocolo RTP**
+
+Terminal 1 - Alimentación del Dispositivo Virtual
+Ejecutar la siguiente comanda que se encarga de alimentar el dispositivo de vídeo virtual con el contenido del archivo. Lee el test.mp4, lo decodifica, lo redimensiona a 640x480 píxeles y lo canaliza hacia /dev/video0 para que quede disponible como fuente de vídeo.
+
+>gst-launch-1.0 filesrc location=/home/ubuntu/videos/test.mp4 ! decodebin ! videoconvert ! videoscale ! video/x-raw,width=640,height=480 ! v4l2sink device=/dev/video0
+![image](./img/servicios/srv2/4.8.png)
+
+Terminal 2 - Transmisión RTP
+
+Ejecutar la siguiente comanda que transmitirá el vídeo por RTP al cliente. Captura el vídeo del dispositivo virtual, lo codifica en formato H.264 optimizado para baja latencia, lo empaqueta en formato RTP y lo envía vía UDP al cliente (srv3) en el puerto 5000.
+
+>gst-launch-1.0 v4l2src device=/dev/video0 ! videoconvert ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=10.1.1.96 port=5000
+![image](./img/servicios/srv2/4.9.png)
 
 
 ## Configuración de Servidor 3
