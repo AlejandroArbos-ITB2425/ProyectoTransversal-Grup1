@@ -192,6 +192,19 @@ Para poder acceder a Icecast2, debemos de entrar via URL, con nuestra IP públic
 
 #### Streaming
 
+Se debe actualizar la lista de paquetes disponibles desde los repositorios de Ubuntu. Seguidamente, se ha instalado el framework completo de GStreamer junto con sus plugins esenciales para procesamiento de vídeo y audio. Se añade herramientas de monitoreo de red (vnstat, iftop, iperf3) y utilidades para dispositivos de vídeo (v4l-utils).
+
+![image](./img/servicios/srv2/4.1.png)
+![image](./img/servicios/srv2/4.2.png)
+
+Se habilita la capacidad de crear cámaras virtuales (/dev/videoX) que pueden ser alimentadas con contenido de archivos o streams para su retransmisión.
+> sudo apt install -y v4l2loopback-dkms v4l2loopback-utils
+
+![image](./img/servicios/srv2/4.3.png)
+Se ha establecido el dispositivo /dev/video0 como cámara virtual operativa, lista para recibir contenido de vídeo y retransmitirlo como si fuera una cámara física, dado que AWS no dispone para las instancias.
+
+
+
 ## Configuración de Servidor 3
 Para el servidor DNS y FTP se crea una instancia de tipo t2.micro con SO Ubuntu Server 24.04. 
 ![image](./img/servicios/srv3/1.1.png)
