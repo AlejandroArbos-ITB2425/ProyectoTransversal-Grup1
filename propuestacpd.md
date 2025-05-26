@@ -2,7 +2,7 @@
 
 ## Ubicación Física
 #### Situación física de la sala en el edificio
-Montar el sistema de CPD dentro del propio edificio, en una sala especializada para su mantenimiento y rendimiento estable. ej: alejado de las ventanas y la luz del sol.
+Se monta el sistema de CPD dentro del propio edificio, en una sala especializada para su mantenimiento y rendimiento estable. ej: alejado de las ventanas y la luz del sol.
 Ubicada en “       “
 
 #### Sistemas de climatización
