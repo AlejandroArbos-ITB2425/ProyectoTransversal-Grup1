@@ -534,6 +534,7 @@ Hecho el modelo, pasamos a los ajustes de seguridad:
 La base de datos aceptará entradas de todas las direcciones IP:
 ![BBDD_4.png](img/servicios/SRV4/BBDD_4.png) 
 ![BBDD_5.png](img/servicios/SRV4/BBDD_5.png)
+
 Y en este archivo especificamos quién puede conectarse. En este caso se decide añadir las redes de todas las máquinas presentes en este proyecto
 ![BBDD_6.png](img/servicios/SRV4/BBDD_6.png)
 
