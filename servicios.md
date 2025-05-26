@@ -51,7 +51,7 @@ Para poder instalar este servicio se debe  de ejecutar el comando “sudo apt in
 
 ![image](./img/servicios/srv2/2.1.png)
 
-Se ha creado una carpeta dedicada donde almacenaremos los archivos relacionados con nuestra página principal. Además, se ha instalado la plantilla Massively con “wget”.
+Se crea un directorio para guardar los archivos relacionados con nuestra página principal. Además, se ha instalado la plantilla Massively con “wget”.
 
 ![image](./img/servicios/srv2/2.2.png)
 
@@ -61,7 +61,7 @@ Para garantizar la seguridad de nuestra página web, se han generado tres archiv
 
 ![image](./img/servicios/srv2/2.4.png)
 
-Se crea y configura el host virtual dentro del directorio /etc/nginx/sites-available con los siguientes parámetros:
+Se crea y configura el host virtual dentro del directorio _/etc/nginx/sites-available_ con los siguientes parámetros:
 
 ![image](./img/servicios/srv2/2.5.png)
 
@@ -78,10 +78,11 @@ Se crea y configura el host virtual dentro del directorio /etc/nginx/sites-avail
 Además de la página anterior, se ha configurado el servicio FTP para poder usarlo a través de nuestra web. 
 
 Se crea un nuevo directorio “ftp” dentro de “/var/www/html/pprincipal” en el cual se añade el archivo descomprimido de monsta_ftp.
+Monsta FTP es un cliente FTP basado en web, desarrollado en PHP y AJAX, que puede utilizar para administrar su sitio web a través de su navegador, editar código, cargar y descargar archivos, copiar/mover/eliminar archivos y carpetas, todo sin instalar ningún software de escritorio.
 
 ![image](./img/servicios/srv2/2.8.png)
 
-Lo más probable es que ocurra el siguiente error:
+Lo más probable es que muestre el siguiente error:
 
 > “2025-05-21T09:46:43.211693+00:00 srv3 sshd[10412]: Unable to negotiate with 34.234.116.252 port 44862: no matching host key type found. Their offer: ssh-rsa,ssh-dss [preauth]”
 
