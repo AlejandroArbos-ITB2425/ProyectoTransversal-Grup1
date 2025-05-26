@@ -250,6 +250,18 @@ Ejecutar la siguiente comanda que transmitirá el vídeo por RTP al cliente. Cap
 >gst-launch-1.0 v4l2src device=/dev/video0 ! videoconvert ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=10.1.1.96 port=5000
 ![image](./img/servicios/srv2/4.9.png)
 
+CLIENTE (srv3 - 10.1.1.96)
+
+En el cliente ejecutar la siguiente comanda que, recibe y reproduce el stream RTP. Escucha en el puerto 5000 los datos RTP entrantes, desempaqueta el vídeo H.264, lo decodifica y lo muestra en una ventana gráfica a través de X11 forwarding.
+
+>gst-launch-1.0 -v udpsrc port=5000 ! application/x-rtp,media=video,clock-rate=90000,encoding-name=H264,payload=96 ! rtph264depay ! h264parse ! queue max-size-buffers=10 ! avdec_h264 ! videoconvert ! autovideosink sync=false
+
+![image](./img/servicios/srv2/4.10.png)
+![image](./img/servicios/srv2/4.11.png)
+
+
+
+
 
 ## Configuración de Servidor 3
 Para el servidor DNS y FTP se crea una instancia de tipo t2.micro con SO Ubuntu Server 24.04. 
