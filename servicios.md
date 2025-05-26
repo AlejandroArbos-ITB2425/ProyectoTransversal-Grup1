@@ -549,4 +549,82 @@ Y con esto ya tenemos una base de datos funcional.
 ## Configuración de Servidor 5
 #### Copias seguridad
 
+Se ha configurado una nueva instancia EC2 con el nombre "Server 5" para funcionar como servidor centralizado de backups. Se ha seleccionado la imagen Ubuntu Server 24.04 LTS. Además, se ha configurado el almacenamiento con 2 volúmenes totalizando 108 GB, divididos estratégicamente entre el sistema operativo y el espacio dedicado para backups.
 
+![image](./img/servicios/srv5/5.1.png)
+
+Se ha asociado una dirección IP elástica (44.217.179.151) al servidor de backup para garantizar conectividad externa consistente.
+
+![image](./img/servicios/srv5/5.2.png)
+
+Se ha formateado el volumen de almacenamiento adicional (/dev/nvme1n1) utilizando el sistema de archivos ext4. Se ha creado el directorio principal /backups como punto de montaje para el volumen formateado, estableciendo la base donde se almacenarán todos los datos.
+
+![image](./img/servicios/srv5/5.3.png)
+
+![image](./img/servicios/srv5/5.4.png)
+
+Se ha añadido una entrada al archivo /etc/fstab para configurar el montaje automático del volumen de backup, con esto, cada vez que iniciemos el sistema se montará el volumen en su carpeta correspondiente.
+
+![image](./img/servicios/srv5/5.5.png)
+
+Se verifica el montaje correcto del volumen de backup mediante la consulta del espacio disponible en el sistema de archivos.
+
+![image](./img/servicios/srv5/5.6.png)
+
+Se cambian los permisos y el propietario de la carpeta backups. Seguidamente, se crean las carpetas necesarias de forma organizada para tener una buena distribución de las copias de seguridad.
+
+![image](./img/servicios/srv5/5.7.png)
+
+![image](./img/servicios/srv5/5.8.png)
+
+Se ha generado un par de claves SSH dentro del Servidor 5 y se almacenan en /home/ubuntu/.ssh/
+
+![image](./img/servicios/srv5/5.9.png)
+
+![image](./img/servicios/srv5/5.10.png)
+
+Desde la máquina local enviamos todas las llaves de las otras instancias al Server 5 para poder acceder a estas, dado que para entrar via ssh debemos tener sus llaves correspondientes.
+
+![image](./img/servicios/srv5/5.11.png)
+
+![image](./img/servicios/srv5/5.12.png)
+
+Se ha creado un archivo de configuración SSH que mapea cada servidor de la infraestructura con sus respectivas claves de autenticación privadas. Se han definido cuatro hosts (srv1, srv2, srv3, srv4) con sus direcciones IP privadas
+
+![image](./img/servicios/srv5/5.13.png)
+
+Creamos una nueva carpeta la cual tendrá los dos scripts, tanto copias incrementales como total.
+
+![image](./img/servicios/srv5/5.14.png)
+
+Se ha desarrollado un script automatizado de backup incremental que utiliza rsync para sincronizar datos de forma eficiente entre servidores.
+
+![image](./img/servicios/srv5/5.15.png)
+
+Se asignan los permisos de ejecución al script de copias incrementales.
+
+![image](./img/servicios/srv5/5.16.png)
+
+Se ha realizado una prueba del script y se han comprobado los archivos creados en sus rutas correctas.
+
+![image](./img/servicios/srv5/5.17.png)
+
+![image](./img/servicios/srv5/5.18.png)
+
+Se ha desarrollado un script de backup total semanal que extiende las capacidades del backup incremental para realizar copias completas del sistema.
+
+![image](./img/servicios/srv5/5.19.png)
+
+Se asignan los permisos de ejecución al script de copias total.
+
+![image](./img/servicios/srv5/5.20.png)
+
+Se comprueba la estructura de directorios de backup verificando la existencia de los directorios /backups/srvX/total/ para cada uno de los cuatro servidores. La verificación confirma que se han creado correctamente los subdirectorios
+
+![image](./img/servicios/srv5/5.21.png)
+
+Como último paso modificamos el archivo de crontab para que ejecute los scripts de forma automática.
+
+![image](./img/servicios/srv5/5.22.png)
+
+![image](./img/servicios/srv5/5.23.png)
