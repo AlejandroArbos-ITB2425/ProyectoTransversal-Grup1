@@ -200,7 +200,39 @@ Se habilita la capacidad de crear cámaras virtuales (/dev/videoX) que pueden se
 > sudo apt install -y v4l2loopback-dkms v4l2loopback-utils
 
 ![image](./img/servicios/srv2/4.3.png)
+
 Se ha establecido el dispositivo /dev/video0 como cámara virtual operativa, lista para recibir contenido de vídeo y retransmitirlo como si fuera una cámara física, dado que AWS no dispone para las instancias.
+
+Comandos utilizados:
+
+> sudo modprobe v4l2loopback devices=1 video_nr=0 card_label="Virtual Camera"
+Carga el módulo del kernel v4l2loopback
+
+> echo 'v4l2loopback' | sudo tee -a /etc/modules
+Hace que el módulo se cargue automáticamente al iniciar el sistema
+
+> ls -la /dev/video*
+Lista todos los dispositivos de video disponibles
+
+> lsmod | grep v4l2loopback
+Verifica que el módulo esté cargado correctamente
+
+![image](./img/servicios/srv2/4.4.png)
+![image](./img/servicios/srv2/4.5.png)
+
+Se abren los puertos UDP 5000 y 5004 en el firewall para permitir el tráfico de streaming RTP de entrada y salida. Se ha habilitado el puerto TCP 22 para garantizar el acceso SSH al servidor.
+
+> sudo ufw allow 5000/udp
+sudo ufw allow 5004/udp
+sudo ufw allow 22/tcp
+
+Se crea un directorio donde se almacenan los videos con el comando “mkdir -p ~/videos”.
+
+![image](./img/servicios/srv2/4.6.png)
+
+Se ha preparado el archivo test.mp4 como material de prueba para realizar las transmisiones de vídeo, quedando listo para usar en la ruta /home/ubuntu/videos/test.mp4.
+
+![image](./img/servicios/srv2/4.7.png)
 
 
 
