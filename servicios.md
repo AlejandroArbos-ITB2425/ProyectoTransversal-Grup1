@@ -103,11 +103,9 @@ Para poder acceder a Monsta FTP, debemos navegar por “http://URLweb/ftp”. Un
 
 ![image](./img/servicios/srv2/2.12.png)
 
-![image](./img/servicios/srv2/2.13.png)
-
 ![image](./img/servicios/srv2/2.14.png)
 
-Se crea un host virtual que hará de proxy para poder mostrar una página del servidor 4 que tiene la tablas sobre Auditoría de Empleados por Convenio. Para hacer esto, se debe añadir al archivo de configuración bind9 que contiene las zonas directas un nuevo CNAME para que haga referencia al proxy y poder buscarlo como bbddweb.grup1.pt.
+Se crea un host virtual que hará de proxy para poder mostrar una página del servidor 4 que tiene las tablas sobre Auditoría de Empleados por Convenio. Para hacer esto, se debe añadir al archivo de configuración bind9 que contiene las zonas directas un nuevo CNAME para que haga referencia al proxy y poder acceder como bbddweb.grup1.pt.
 
 Estos cambios y búsqueda/resolución de nombre solo se pueden ver desde dentro de la red virtual privada.
 
@@ -115,7 +113,7 @@ Estos cambios y búsqueda/resolución de nombre solo se pueden ver desde dentro 
 
 ![image](./img/servicios/srv2/2.16.png)
 
-Se crea un enlace simbólico del fichero “bbdd” que está dentro del directorio /etc/nginx/sites-available/ hasta /etc/nginx/sites-enabled/ para activar el host virtual que actúa como proxy.
+Se crea un enlace simbólico del fichero “bbdd” que está dentro del directorio _/etc/nginx/sites-available/_ con /_etc/nginx/sites-enabled/_ para activar el host virtual que actúa como proxy.
 
 ![image](./img/servicios/srv2/2.17.png)
 
@@ -124,7 +122,7 @@ Se crea un enlace simbólico del fichero “bbdd” que está dentro del directo
 #### Audio
 Icecast es un servicio de streaming de audio en tiempo real que permite transmitir contenido multimedia a múltiples usuarios simultáneamente. Se utiliza principalmente para crear emisoras de radio por internet o para enviar audio en directo a través de la red.
 
-Para poder instalar este servicio se ejecuta el comando “apt install icecast2 -y”. Durante el proceso de instalación pide 3 tipos de contraseña (sourcepassword, relaypassword y admin password).
+Para poder instalar este servicio se ejecuta el comando “_apt install icecast2 -y_”. Durante el proceso de instalación pide 3 tipos de contraseñas (sourcepassword, relaypassword y admin password).
 
 ![image](./img/servicios/srv2/3.1.png)
 
@@ -140,54 +138,54 @@ Para poder instalar este servicio se ejecuta el comando “apt install icecast2 
 
 Seguidamente se instala DarkIce, que es una herramienta de captura y codificación de audio en tiempo real. Su función principal es tomar audio desde una fuente y enviarlo a un servidor de streaming como Icecast.
 
-Para instalar darkice se ejecuta el comando “apt install darkice -y”.
+Para instalar darkice se ejecuta el comando “_apt install darkice -y_”.
 
 ![image](./img/servicios/srv2/3.7.png)
 
-Se edita el fichero de configuración de darkice “/etc/darkice.cfg”.
+Se edita el fichero de configuración de darkice “_/etc/darkice.cfg_”.
 
 ![image](./img/servicios/srv2/3.8.png)
 
-Al estar usando una instancia de Amazon Web Service (AWS) no se dispone de tarjetas de sonido, por ende, se instala una imagen genérica de linux con el siguiente comando “apt install linux-generic-image”ç
+Al estar usando una instancia de Amazon Web Service (AWS) no se dispone de tarjetas de sonido, por ende, se instala una imagen genérica de linux con el siguiente comando “_apt install linux-generic-image_”
 
 ![image](./img/servicios/srv2/3.9.png)
 
-Se comprueba la imagen de la cual se dispone para poder copiar el menuentry seleccionado en la siguiente foto. Esto nos servirá para configurar el grub por defecto.
+Se muestra la salida de la cual se dispone para poder copiar el menuentry seleccionado como se puede ver en la siguiente imagen. Esto servirá para configurar el grub por defecto.
 
 ![image](./img/servicios/srv2/3.10.png)
 
-Accedemos a “/etc/default/grub” y en la línea GRUB_DEFAULT= se añade el texto copiado anteriormente, el nombre de la imagen (Ubuntu, with Linux 6.8.0-60-generic).
+Hay que acceder a “_/etc/default/grub_” y en la línea _GRUB_DEFAULT=_ se añade el menuentry copiado anteriormente (Ubuntu, with Linux 6.8.0-60-generic).
 
 ![image](./img/servicios/srv2/3.11.png)
 
-Se ejecuta el comando sudo update-grub, que actualiza la configuración del gestor de arranque GRUB, y luego sudo reboot para aplicar los cambios.
+Se ejecuta el comando "_sudo update-grub_", que actualiza la configuración del gestor de arranque GRUB, y luego "_sudo reboot_" para reiniciar y aplicar los cambios.
 
 ![image](./img/servicios/srv2/3.12.png)
 
-Se ejecuta el comando aplay -l, que muestra la lista de dispositivos de audio disponibles en el sistema. Sirve para identificar la tarjeta y el dispositivo de salida que se usarán en la configuración de audio.
+Se ejecuta el comando "_aplay -l_", que muestra la lista de dispositivos de audio disponibles en el sistema. Sirve para identificar la tarjeta y el dispositivo de salida que usará en la configuración de audio.
 
 ![image](./img/servicios/srv2/3.13.png)
 
-Se ejecuta echo “snd-aloop | sudo tee -a /etc/modules” para añadir el módulo snd-aloop (dispositivo de loopback de audio) al archivo /etc/modules, asegurando que se cargue automáticamente en cada arranque del sistema.
+Se ejecuta _echo “snd-aloop | sudo tee -a /etc/modules_” para añadir el módulo _snd-aloop _(dispositivo de loopback de audio) al archivo _/etc/modules_, asegurando que se cargue automáticamente en cada arranque del sistema.
 
 ![image](./img/servicios/srv2/3.14.png)
 
-Se abre “/etc/asound.conf” para editar el archivo de configuración global de ALSA, donde se define el comportamiento del sistema de sonido. Usaremos un dispositivo loopback dado que no disponemos de tarjeta de sonido.
+Se abre “_/etc/asound.conf_” para editar el archivo de configuración global de ALSA, donde se define el comportamiento del sistema de sonido. Se utilizará un dispositivo loopback dado que no disponemos de tarjeta de sonido.
 
 ![image](./img/servicios/srv2/3.15.png)
 
-Se ejecuta apt install alsa-utils para instalar el paquete alsa-utils, que incluye herramientas esenciales para gestionar el sonido en Linux, como aplay, amixer y utilidades para configurar y probar dispositivos de audio.
+Se ejecuta "_apt install alsa-utils _" para instalar el paquete alsa-utils, que incluye herramientas esenciales para gestionar el sonido en Linux, como aplay, amixer y utilidades para configurar y probar dispositivos de audio.
 
 ![image](./img/servicios/srv2/3.16.png)
 
 
-systemctl restart alsa reinicia el servicio de sonido ALSA para aplicar los cambios realizados en la configuración sin necesidad de reiniciar todo el sistema. Una vez hecha las anteriores configuraciones se reinicia el sistema.
+Ejecutar "_systemctl restart alsa _" para reinicia el servicio de sonido ALSA y aplicar los cambios realizados en la configuración sin necesidad de reiniciar todo el sistema. Una vez hecha las anteriores configuraciones se reinicia el sistema.
 
-Se ejecuta “sudo darkice -c /etc/darkice.cfg” que  inicia DarkIce usando el archivo de configuración especificado.
+Se ejecuta “_sudo darkice -c /etc/darkice.cfg_” que  inicia DarkIce usando el archivo de configuración especificado.
 
 ![image](./img/servicios/srv2/3.17.png)
 
-Para poder acceder a Icecast2, debemos de entrar via URL, con nuestra IP pública y el puerto 8000.
+Para poder acceder a Icecast2, hay que acceder via URL, con nuestra IP pública y el puerto 8000.
 
 ![image](./img/servicios/srv2/3.18.png)
 
