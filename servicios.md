@@ -532,13 +532,16 @@ HISTORIAL_SALARIO_EMPLEADO: Guarda el historial de los componentes salariales de
 Hecho el modelo, pasamos a los ajustes de seguridad:
 
 La base de datos aceptará entradas de todas las direcciones IP:
+
 ![BBDD_4.png](img/servicios/SRV4/BBDD_4.png) 
 ![BBDD_5.png](img/servicios/SRV4/BBDD_5.png)
 
 Y en este archivo especificamos quién puede conectarse. En este caso se decide añadir las redes de todas las máquinas presentes en este proyecto
+
 ![BBDD_6.png](img/servicios/SRV4/BBDD_6.png)
 
 Procedemos a la creación de la base de datos y de un usuario (Se adjunta prueba de la existencia de ambos objetos):
+
 ![BBDD_7.png](img/servicios/SRV4/BBDD_7.png)
 
 Y la creación de la base de datos:
