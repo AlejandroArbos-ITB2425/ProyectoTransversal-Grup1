@@ -122,9 +122,38 @@ La combinación de falso suelo como plenum frío y falso techo como plenum calie
 
 ## Seguridad lógica
 #### Restricción de acceso mediante autorización
+La restricción de acceso mediante autorización es una medida clave en la seguridad lógica del CPD, garantiza que solo los usuarios que tengan los permisos adecuados puedan acceder a los recursos y servicios del CPD.
+
+__Principio de menor privilegio__
+Este principio establece que a cada usuario o sistema se le debe otorgar el mínimo nivel de acceso necesario para cumplir con sus tareas
+
+__Control de acceso basado en roles (RBAC)__
+Asigna permisos según los roles de los usuarios. Por ejemplo, solo los administradores del CPD tendrán acceso a configuraciones críticas de los servidores y los usuarios normales solo podrán interactuar con los servicios autorizados.
+
+__Autenticación multifactor (MFA)__
+Implementa autenticación multifactor para el acceso a sistemas críticos (servidores, bases de datos, paneles de control).
+
+__Gestión de sesiones__
+Asegurarse de que las sesiones de los usuarios que acceden al sistema tengan un tiempo limitado y que el acceso se cierre automáticamente si no se detecta actividad por un periodo de tiempo.
+
 #### Firewalls
+El uso de firewalls en el contexto de la seguridad lógica de un CPD (Centro de Procesamiento de Datos) es fundamental para proteger la infraestructura contra accesos no autorizados y ataques externos.
+
+__Firewall de red (hardware)__
+Es un dispositivo dedicado que se coloca entre la red interna del CPD y el exterior (internet). Estos firewalls son más robustos y están diseñados para manejar grandes volúmenes de tráfico.
+
+__Firewall de host (software)__
+Un firewall instalado en cada servidor o máquina del CPD. Actúa sobre el sistema operativo de la máquina y filtra el tráfico a nivel de la propia máquina.
+En nuestro caso, se utilizará un firewall de red para filtrar el tráfico entre la infraestructura interna y las redes externas, garantizando que solo las conexiones necesarias sean permitidas. Además, se implementará  un firewall de host en cada servidor para protegerlos a nivel individual, controlando qué aplicaciones pueden comunicarse entre sí.
+
 #### Monitorización
+Se implementará un sistema de monitorización centralizada que nos permitirá supervisar el estado y rendimiento de todos los servidores, servicios y recursos críticos del CPD. Se utilizará herramientas como Nagios para el control de disponibilidad, alertas en tiempo real y análisis de eventos, y ElasticSearch + Kibana para la visualización y análisis de logs. Esto nos ayudará a detectar fallos rápidamente, anticiparnos a problemas y asegurar la continuidad del servicio.
+
+Se configurarán los servicios mencionados dentro de un mismo servidor, el cual estará especializado para la monitorización de otros servicios y análisis en tiempo de eventos en tiempo real. 
+
 #### Copias de seguridad / Backups
+Al ofrecer servicios a clientes y operar con sus datos, debemos disponer de integridad y disponibilidad de los datos, para eso, implementaremos un sistema de copias de seguridad automatizadas. Se realizarán backups diarios incrementales y semanales completos, almacenados en una ubicación externa segura.
+
 #### RAIDs
 
 ## Prevención de riesgos laborales 
