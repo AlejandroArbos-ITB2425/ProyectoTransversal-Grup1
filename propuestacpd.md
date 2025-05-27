@@ -170,12 +170,24 @@ Se implementará RAID 5 en nuestro CPD, dado que ofrece un buen equilibrio entre
 #### Medidas aplicadas en materia de prevención de riesgos laborales en el CPD
 
 ## Sostenibilidad
+
 #### Cómo optimizar el consumo de energía
+Para optimizar el consumo de energía en nuestro CPD utilizaremos servidores con eficiencia energética, discos SSD en lugar de HDD siempre y cuando se pueda. Configuraciones RAID que reduzcan el consumo sin disminuir la seguridad. Además, implementar políticas de apagado o suspensión para aquellos equipos que estén activos durante un tiempo predeterminado, un sistema de climatización eficiente, aire acondicionado con gas y control del uso energético en tiempo real con herramientas de monitorización. Finalmente, sustituir las luces convencionales por luces LED, aprovechando su mayor durabilidad y eficiencia energética, lo que se traduce en un ahorro significativo en costes eléctricos.
+
 #### Uso de energía verde en el CPD
+Para minimizar el impacto ambiental del CPD, proponemos utilizar fuentes de energía renovable, como la energía solar, para alimentar las instalaciones. Esto no solo reduce las emisiones de carbono, sino que también contribuye a una operación más sostenible a largo plazo. Para eso, se deben seleccionar proveedores de electricidad que garanticen el uso de energías limpias certificadas, asegurando así un compromiso real con la sostenibilidad energética. 
+
 #### Ahorro en longitud de cableado
+Reducir la longitud del cableado dentro del CPD contribuye a minimizar pérdidas energéticas y mejorar la eficiencia del sistema. Para ello, se ha diseñado una distribución optimizada de los equipos y racks, ubicándolos lo más cerca posible para reducir la distancia entre conexiones. Además, se emplearán cables de alta calidad que permiten mantener un buen rendimiento incluso con longitudes reducidas, lo que favorece tanto el ahorro energético como la reducción del desorden y la mejora en el mantenimiento.
+
 #### Sistemas de circulación de aire que aprovechen condiciones naturales
+Implementar sistemas de ventilación que aprovechen las condiciones naturales del entorno puede reducir significativamente el consumo de energía del CPD. Esto incluye el uso de ventilación cruzada, la incorporación de tomas de aire exterior frescas y la utilización de sistemas de enfriamiento pasivo cuando las condiciones climáticas lo permitan. Teniendo en cuenta todo lo mencionado anteriormente se llegará a minimizar el uso de aire acondicionado, contribuyendo a una gestión más sostenible.
+
 #### Parada automática de equipos de comunicaciones cuando no haya carga
+Implementaremos sistemas que detecten la ausencia de tráfico o actividad en los equipos de comunicaciones y que permitan su apagado automático contribuye a un uso más eficiente de la energía. Esta medida evita el consumo innecesario de electricidad durante periodos de baja demanda, reduciendo la huella energética del CPD y optimizando el rendimiento global de la infraestructura tecnológica.
+
 #### Uso de equipos de bajo consumo energético
+Se selecciona y se hace uso de hardware y dispositivos que estén diseñados para consumir menos energía, es muy importante para reducir el impacto ambiental del CPD. Se usarán equipos con certificaciones de eficiencia energética (Energy Star) para poder mantener un alto rendimiento mientras se minimiza el gasto eléctrico, gracias a esto contribuimos a la sostenibilidad y al ahorro económico a largo plazo
 
 ## Implementación del CPD en la nube (AWS)
 #### Implementación del CPD en Amazon Web Services (AWS)
