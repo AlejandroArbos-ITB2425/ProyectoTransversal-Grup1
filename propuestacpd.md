@@ -125,24 +125,30 @@ La combinación de falso suelo como plenum frío y falso techo como plenum calie
 La restricción de acceso mediante autorización es una medida clave en la seguridad lógica del CPD, garantiza que solo los usuarios que tengan los permisos adecuados puedan acceder a los recursos y servicios del CPD.
 
 __Principio de menor privilegio__
+
 Este principio establece que a cada usuario o sistema se le debe otorgar el mínimo nivel de acceso necesario para cumplir con sus tareas
 
 __Control de acceso basado en roles (RBAC)__
+
 Asigna permisos según los roles de los usuarios. Por ejemplo, solo los administradores del CPD tendrán acceso a configuraciones críticas de los servidores y los usuarios normales solo podrán interactuar con los servicios autorizados.
 
 __Autenticación multifactor (MFA)__
+
 Implementa autenticación multifactor para el acceso a sistemas críticos (servidores, bases de datos, paneles de control).
 
 __Gestión de sesiones__
+
 Asegurarse de que las sesiones de los usuarios que acceden al sistema tengan un tiempo limitado y que el acceso se cierre automáticamente si no se detecta actividad por un periodo de tiempo.
 
 #### Firewalls
 El uso de firewalls en el contexto de la seguridad lógica de un CPD (Centro de Procesamiento de Datos) es fundamental para proteger la infraestructura contra accesos no autorizados y ataques externos.
 
 __Firewall de red (hardware)__
+
 Es un dispositivo dedicado que se coloca entre la red interna del CPD y el exterior (internet). Estos firewalls son más robustos y están diseñados para manejar grandes volúmenes de tráfico.
 
 __Firewall de host (software)__
+
 Un firewall instalado en cada servidor o máquina del CPD. Actúa sobre el sistema operativo de la máquina y filtra el tráfico a nivel de la propia máquina.
 En nuestro caso, se utilizará un firewall de red para filtrar el tráfico entre la infraestructura interna y las redes externas, garantizando que solo las conexiones necesarias sean permitidas. Además, se implementará  un firewall de host en cada servidor para protegerlos a nivel individual, controlando qué aplicaciones pueden comunicarse entre sí.
 
