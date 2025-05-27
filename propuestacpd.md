@@ -115,10 +115,74 @@ La combinación de falso suelo como plenum frío y falso techo como plenum calie
 
 ## Seguridad física
 #### Elementos de control de acceso a incorporar en el CPD
+__Acceso con datos biométricos (huellas)__ 
+Se utilizará el método de autenticación con datos biométricos. Permite asegurar que solo el personal autorizado pueda acceder a las instalaciones del CPD. La autenticación biométrica mediante huellas dactilares es una medida segura y evitamos el uso indebido de tarjetas o claves compartidas. Con esta tecnología garantiza que el acceso sea individual. Registro automatizado de accesos (logs con fecha, hora y usuario).
+
+__Llave de emergencia__ 
+En caso de corte de suministro eléctrico, los sistemas biométricos pueden quedar inoperativos. Por ello, se dispondrá de una llave de emergencia que permite el acceso físico al CPD. Almacenarlo en una caja de seguridad con acceso restringido a personal de alto rango. 
+
 #### Videovigilancia
+Se instalan cámaras de videovigilancia en la sala y en el entorno donde se sitúa el CPD (entradas, pasillos, salas de servidores) que cuentan con visión nocturna. Esto garantiza una supervisión continua las 24 horas del día, incluso con baja iluminación o en condiciones nocturnas. Las grabaciones se almacenan y se revisan en caso de incidentes.
+Almacenamiento en servidores locales con cifrado y copias en la nube, con retención de registros por al menos 90 días.
+
 #### Sistemas de prevención, detección y extinción de incendios
+
+__Prevención__
+
+- Instalación eléctrica certificada y protegida 
+Todo el sistema eléctrico del CPD debe cumplir con la normativa vigente y contar con protección contra sobrecargas, cortocircuitos y sobretensiones. 
+
+- Detectores térmicos (Control de temperatura y humedad) 
+El CPD está equipado con sensores que miden temperatura y humedad en tiempo real. Estos sensores generan alertas automáticas cuando los valores superan los umbrales establecidos,* lo que permite actuar rápidamente para evitar daños en los equipos. 
+*Temperatura: 18 °C a 27 °C
+*Humedad: 40 % a 60 % HR
+
+- Mantenimiento periódico de equipos
+Para garantizar la operatividad y seguridad del CPD, se realiza un mantenimiento preventivo regular. 
+Limpieza mensual de servidores y conductos de aire, para evitar la acumulación de polvo.
+Una revisión trimestral de cableados y conexiones eléctricas.
+
+__Detección__
+
+- Detectores de humo sensibles  
+Se utilizarán diferentes tecnologías según el tipo de incendio:
+Ionización: ideales para detectar incendios rápidos con poca cantidad de humo.
+Fotoeléctricos (ópticos): eficaces en la detección de incendios con humo denso y lento desarrollo.
+Detectores de chispas o llamas (IR/UV): detectan radiación emitida por llamas o chispas y actúan en milisegundos.
+
+- Sistema automático de alarma contra incendios (PCI) 
+El CPD cuenta con un sistema de alarma conectado a los sensores de humo, temperatura y llama. Ante cualquier anomalía, se activa una alarma sonora y visual, se notifica automáticamente al personal de seguridad y, si se configura, a servicios de emergencia externos. 
+
+- Monitorización 24/7 
+Se utilizará Nagios como sistema de monitorización continua de todos los equipos y servicios del CPD. Este software de código abierto permite detectar fallos o anomalías en tiempo real y enviar alertas inmediatas al equipo técnico.
+
+__Extinción__
+
+- Sistemas de supresión automática
+Ante un incendio, se activan sistemas de extinción que no dañan los equipos electrónicos. Se utilizará agentes limpios como los gases inertes Novec 1230 y FM-200. Actúan desplazando el oxígeno en la zona del fuego, extinguiéndolo sin dejar residuos.
+
+- Extintores por tipo de fuego
+Clase C: especiales para fuegos en equipos eléctricos o electrónicos.
+Clase A: para combustibles sólidos como papel, plásticos o textiles (poco frecuentes en CPD, pero necesarios por si acaso).
+
+- Puertas y paredes cortafuegos
+Estos elementos están diseñados para contener el fuego en caso de incendio durante un tiempo determinado (habitualmente 60 o 120 minutos).
+
 #### Vías de evacuación
+Se deben elaborar planos independientes por cada planta del edificio, o por zonas si son demasiado amplias. Los aspectos que hay que tener en cuenta son:
+- Realizar un plano de los diferentes espacios, donde se vean claramente las paredes, las escaleras, las puertas, etc. Hay que indicar el nombre de cada espacio.
+- Indicar el sentido de la vía de evacuación, mediante flechas que señalen hacia las salidas de emergencia.
+- Dibujar los diferentes símbolos como podrían ser los de riesgo, la ubicación de los extintores de incendios y de los pulsadores de alarma, las bocas de incendio equipadas y los avisadores de alarma.
+- Indicar el punto de encuentro exterior de concentración, en caso de evacuación.
+- Indicar las salidas al exterior del edificio del centro de trabajo. También se debe dibujar mediante flechas el recorrido de evacuación.
+Ancho mínimo de 1.2 metros en pasillos y puertas para facilitar el flujo de personas.
+Señalización luminiscente (fotoluminiscentes o con energía de respaldo) que indique la dirección de salidas.
+Iluminación de emergencia automática (con baterías) en caso de cortes de energía.
+Alarmas sonoras y visuales sincronizadas con sistemas de detección de incendios.
+
 #### Diagramas, planos y fotografías
+
+![image](./img_ubicacion_fisica/planE.png)
 
 ## Seguridad lógica
 #### Restricción de acceso mediante autorización
