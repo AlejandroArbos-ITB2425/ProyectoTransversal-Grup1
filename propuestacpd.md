@@ -147,7 +147,7 @@ __Firewall de red (hardware)__
 
 Es un dispositivo dedicado que se coloca entre la red interna del CPD y el exterior (internet). Estos firewalls son más robustos y están diseñados para manejar grandes volúmenes de tráfico.
 
-<u>Firewall de host (software)</u>
+__Firewall de host (software)__   
 
 Un firewall instalado en cada servidor o máquina del CPD. Actúa sobre el sistema operativo de la máquina y filtra el tráfico a nivel de la propia máquina.
 En nuestro caso, se utilizará un firewall de red para filtrar el tráfico entre la infraestructura interna y las redes externas, garantizando que solo las conexiones necesarias sean permitidas. Además, se implementará  un firewall de host en cada servidor para protegerlos a nivel individual, controlando qué aplicaciones pueden comunicarse entre sí.
@@ -158,9 +158,13 @@ Se implementará un sistema de monitorización centralizada que nos permitirá s
 Se configurarán los servicios mencionados dentro de un mismo servidor, el cual estará especializado para la monitorización de otros servicios y análisis en tiempo de eventos en tiempo real. 
 
 #### Copias de seguridad / Backups
-Al ofrecer servicios a clientes y operar con sus datos, debemos disponer de integridad y disponibilidad de los datos, para eso, implementaremos un sistema de copias de seguridad automatizadas. Se realizarán backups diarios incrementales y semanales completos, almacenados en una ubicación externa segura.
+Al ofrecer servicios a clientes y operar con sus datos, debemos disponer de integridad y disponibilidad de los datos, para eso, se implementará un sistema de copias de seguridad automatizadas. Se realizarán backups diarios incrementales y semanales completos, almacenados en una ubicación externa segura.
 
 #### RAIDs
+Para reforzar la disponibilidad y la tolerancia a fallos del sistema, en nuestro CPD se utilizarán configuraciones RAID. Estas permiten combinar varios discos duros físicos en una sola unidad lógica para mejorar la seguridad de los datos y rendimiento.
+
+Se implementará RAID 5 en nuestro CPD, dado que ofrece un buen equilibrio entre rendimiento, capacidad y tolerancia a fallos. Esta configuración distribuye los datos y la paridad entre varios discos, permitiendo que el sistema siga funcionando aunque uno falle.
+
 
 ## Prevención de riesgos laborales 
 #### Medidas aplicadas en materia de prevención de riesgos laborales en el CPD
