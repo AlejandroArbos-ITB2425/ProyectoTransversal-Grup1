@@ -99,7 +99,7 @@ La combinación de falso suelo como plenum frío y falso techo como plenum calie
 
 #### Planos, dibujos y diagramas
 
-![image](./img/img_ubicacion_fisica/plano_sala_rack.png)
+![image](./img_ubicacion_fisica/plano_sala_rack.png)
 
 #### Estructuración de los racks 
 
