@@ -74,12 +74,13 @@ Se asigna al usuario elastic como usuario y grupo propietario de los directorios
 ![image](./img/servicios/SRV1/1.14.png)
 
 Entrar al directorio /opt/elastic y descargar Elasticsearch 9.0.1 con la siguiente comanda
-sudo wget https://artifacts.elastic.co/downloads/beats/auditbeat/auditbeat-8.17.4-linux-x86_64.tar.gz
+
+_sudo wget https://artifacts.elastic.co/downloads/beats/auditbeat/auditbeat-8.17.4-linux-x86_64.tar.gz_
 
 ![image](./img/servicios/SRV1/1.15.png)
 
 El mismo proceso con Kibana. 
-sudo wget https://artifacts.elastic.co/downloads/kibana/kibana-8.17.4-linux-x86_64.tar.gz
+_sudo wget https://artifacts.elastic.co/downloads/kibana/kibana-8.17.4-linux-x86_64.tar.gz_
 
 ![image](./img/servicios/SRV1/1.16.png)
 
