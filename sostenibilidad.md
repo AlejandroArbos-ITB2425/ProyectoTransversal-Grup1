@@ -11,15 +11,22 @@ Servicios desplegados: ¿Qué tipo de máquinas, servicios en la nube y protocol
 
 TIPOS DE MÁQUINAS (AWS EC2):
 1x t2.xlarge (4 vCPU, 16GB RAM) - Server 1 Monitorización
+
 2x t3.small (2 vCPU, 2GB RAM) - Server 2 Streaming + Server 5 Backups
+
 1x t2.micro (1 vCPU, 1GB RAM) - Server 3 DNS+FTP
+
 1x t3.micro (2 vCPU, 1GB RAM) - Server 4 Base Datos
 
 SERVICIOS EN LA NUBE (AWS):
 EC2 - 5 instancias Ubuntu 24.04 LTS
+
 EBS - 6 volúmenes (5×8GB + 1×100GB)
+
 VPC - Red privada virtual
+
 Security Groups - Firewall de red
+
 Internet Gateway - Conectividad externa
 
 PROTOCOLOS UTILIZADOS:
