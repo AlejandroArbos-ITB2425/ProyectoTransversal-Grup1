@@ -75,7 +75,7 @@ Se asigna al usuario elastic como usuario y grupo propietario de los directorios
 
 Entrar al directorio _/opt/elastic_ y descargar Elasticsearch 9.0.1 con la siguiente comanda
 
-_sudo wget https://artifacts.elastic.co/downloads/beats/auditbeat/auditbeat-8.17.4-linux-x86_64.tar.gz_
+_sudo wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.17.4-linux-x86_64.tar.gz_
 
 ![image](./img/servicios/SRV1/1.15.png)
 
@@ -148,6 +148,22 @@ Ejecutar Kibana, _./bin/kibana-setup_. Introducir el enrollment token que se hab
 Abrir en el navegador la URL de Kibana (http://34.202.92.100:5601) , aparecerá la pantalla de bienvenida y autenticación. Introducir el Username (elastic) y la Password que se generó al arrancar Elasticsearch. De esta manera, se accede al dashboard principal de Kibana.
 
 ![image](./img/servicios/SRV1/1.26.png)
+
+**Auditbeat** 
+
+Se crea la carpeta para Auditbeat, mkdir /opt/audibeat en la partición de 32GB. 
+
+![image](./img/servicios/SRV1/1.27.png)
+
+A continuación descargar archivo .tar.gz oficial de Auditbeat 9.0.1 con la comanda 
+_sudo wget https://artifacts.elastic.co/downloads/beats/auditbeat/auditbeat-8.17.4-linux-x86_64.tar.gz_
+
+![image](./img/servicios/SRV1/1.28.png)
+
+Una vez completada la descarga, descomprimir  auditbeat-9.0.1-linux-x86_64.tar.gz en ese mismo directorio.
+
+![image](./img/servicios/SRV1/1.29.png)
+![image](./img/servicios/SRV1/1.30.png)
 
 
 #### Nagios
