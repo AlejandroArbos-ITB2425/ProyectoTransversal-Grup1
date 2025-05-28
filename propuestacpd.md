@@ -259,10 +259,10 @@ Se selecciona y se hace uso de hardware y dispositivos que estén diseñados par
 ## Implementación del CPD en la nube (AWS)
 
 
-| SRV1 | SRV2    | SRV3   | SRV4 | SRV5 | 
-|------|---------|----------| ----------|----------|
-|ElasticSearch | DNS | Base Datos |Copias Seguridad |
-|Kibana  | Audio | FTP |
+| SRV1 | SRV2 | SRV3 | SRV4       | SRV5             | 
+|------|-----|------|------------|------------------|
+|ElasticSearch | Web | DNS  | Base Datos | Copias Seguridad |
+|Kibana  | Audio | FTP  |
 |Nagios  | Streaming | 
 
 
