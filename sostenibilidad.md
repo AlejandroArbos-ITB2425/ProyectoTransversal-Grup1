@@ -32,6 +32,7 @@ Security Groups - Firewall de red
 
 Internet Gateway - Conectividad externa
 
+
 **PROTOCOLOS UTILIZADOS:**
 
 HTTP/HTTPS - Web y APIs (puertos 80/443)
@@ -66,6 +67,7 @@ RTP - 5002 y 5004 UDP
 
 Recursos consumidos: ¿Cuánto consumen en términos de CPU, RAM, almacenamiento, ancho de banda?
 
+
 **CPU:**
 
 Server 1 (t2.xlarge): 4 vCPU - Uso promedio 60-80% (Elasticsearch + Nagios + Kibana)
@@ -79,7 +81,9 @@ Server 4 (t3.micro): 2 vCPU - Uso promedio 50-70% (PostgreSQL + consultas)
 Server 5 (t3.small): 2 vCPU - Uso promedio 40-60% (rsync + backups)
 TOTAL: 11 vCPU utilizadas
 
+
 **RAM**:
+
 Server 1: 16GB - Uso 12-14GB (Elasticsearch buffer pool + cache)
 
 Server 2: 2GB - Uso 1.5-1.8GB (streaming buffers + transcoding)
@@ -92,7 +96,9 @@ Server 5: 2GB - Uso 1-1.5GB (backup processes + file cache)
 
 TOTAL: 22GB RAM - Uso efectivo ~18GB
 
+
 **ALMACENAMIENTO:**
+
 Server 1: 8GB EBS - Uso 6GB (SO + logs + índices Elasticsearch)
 
 Server 2: 8GB EBS - Uso 5GB (SO + archivos multimedia temporales)
@@ -105,7 +111,9 @@ Server 5: 8GB + 100GB EBS - Uso 6GB + 60GB (SO + backups históricos)
 
 TOTAL: 132GB EBS - Uso efectivo ~87GB
 
+
 **ANCHO DE BANDA:**
+
 Tráfico de entrada: ~500GB/mes (uploads FTP + datos monitorización)
 
 Tráfico de salida: ~2TB/mes (streaming audio/video + web + descargas)
@@ -122,7 +130,9 @@ TOTAL: ~2.7TB/mes transferencia total
 
 Previsión de uso: ¿Cuántas horas de funcionamiento, ¿cuántos usuarios y tráfico estimado se prevé?
 
+
 **HORAS DE FUNCIONAMIENTO:**
+
 Server 1 (Monitorización): 24/7 = 8.760 horas/año (crítico, nunca se apaga)
 
 Server 2 (Streaming): 24/7 = 8.760 horas/año (servicio continuo streaming)
@@ -133,7 +143,9 @@ Server 4 (Base Datos): 24/7 = 8.760 horas/año (BD siempre disponible)
 
 Server 5 (Backups): 20h/día = 7.300 horas/año (4h standby nocturno)
 
+
 **USUARIOS**
+
 Fase Actual (Año 1):
 
 Usuarios registrados: 2.500 usuarios
@@ -145,9 +157,13 @@ Usuarios concurrentes pico: 200-300 usuarios
 Streaming simultáneo: 50-100 streams
 
 Fase Crecimiento (Año 2-3):
+
 Usuarios registrados: 5.000 usuarios
+
 Usuarios activos diarios: 1.000-1.500 usuarios
+
 Usuarios concurrentes pico: 400-600 usuarios
+
 Streaming simultáneo: 100-200 streams
 
 Tráfico Mensual Actual:
