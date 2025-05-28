@@ -18,6 +18,23 @@
 
 ## Configuración de Servidor 1
 
+Se crea una instancia de tipo t2.large con sistema operativo Ubuntu Server 24.04. 
+![image](./img/servicios/srv1/1.1.png)
+
+Se añade un disco de 32GB, porque Elasticsearch requiere espacio suficiente para operar correctamente. 
+![image](./img/servicios/srv1/1.2.png)
+
+Se asigna una IP elástica, es una IP pública estática. 
+![image](./img/servicios/srv1/1.3.png)
+
+Se accede a la instancia mediante la clave privada por SSH. 
+![image](./img/servicios/srv1/1.4.png)
+
+Se hace un ping a los otros servidores para verificar la conectividad. 
+![image](./img/servicios/srv1/1.5.png)
+
+
+
 #### ElasticSearch + Kibana
 #### Nagios
 
