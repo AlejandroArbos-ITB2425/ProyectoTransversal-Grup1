@@ -40,6 +40,40 @@ Se hace un ping a los otros servidores para verificar la conectividad.
 
 #### ElasticSearch + Kibana
 
+Se formatea por completo el disco de 32 GB (/dev/xvdb) como ext4. 
+
+![image](./img/servicios/SRV1/1.6.png)
+
+Se crea un directorio /opt y eliminar todo su contenido para usarlo como punto de montaje limpio.
+![image](./img/servicios/SRV1/1.7.png)
+
+Se monta la partición recién formateada sobre /opt, de modo que cualquier dato escrito en este directorio, residirá en el volumen de 32 GB.
+
+![image](./img/servicios/SRV1/1.8.png)
+
+Configurar el archivo _/etc/fstab_, es un archivo de configuración en Linux que define cómo y dónde se montan de forma automática los sistemas de archivos (como discos, particiones o recursos remotos) durante el arranque del sistema sin tener que hacerlo manualmente cada vez.
+La configuración dice “monta siempre este disco (con UUID) en /opt con ext4 al arrancar” el sistema. 
+
+![image](./img/servicios/SRV1/1.9.png)
+
+Con la comanda df -h se puede mostrar que /dev/xvdb aparece montado en /opt con 32 GB de memoria, como se puede observar, ha tenido éxito el montaje
+
+![image](./img/servicios/SRV1/1.10.png)
+
+Se ha creado el usuario elastic, se le asigna una shell Bash, una contraseña y se añade al grupo sudo para que el usuario pueda realizar tareas que requieren permisos elevados, como modificar archivos del sistema o gestionar servicios. 
+
+![image](./img/servicios/SRV1/1.11.png)
+![image](./img/servicios/SRV1/1.12.png)
+
+Se crean dos directorios para la instalación, uno para el servicio ElasticSearch y el otro para Kibana.  Comanda: mkdir /opt/elastic  /opt/kibana 
+
+![image](./img/servicios/SRV1/1.13.png)
+
+Se asigna al usuario elastic como usuario y grupo propietario de los directorios creados en el apartado anterior. Lo hace recursivamente, es decir, aplica el cambio a todas las subcarpetas y archivos dentro de /opt/elastic y /opt/kibana. 
+
+![image](./img/servicios/SRV1/1.14.png)
+
+
 #### Nagios
 
 ## Configuración de Servidor 2
