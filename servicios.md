@@ -80,11 +80,11 @@ _sudo wget https://artifacts.elastic.co/downloads/beats/auditbeat/auditbeat-8.17
 ![image](./img/servicios/SRV1/1.15.png)
 
 El mismo proceso con Kibana. 
-_sudo wget https://artifacts.elastic.co/downloads/kibana/kibana-8.17.4-linux-x86_64.tar.gz_
+ _sudo wget https://artifacts.elastic.co/downloads/kibana/kibana-8.17.4-linux-x86_64.tar.gz_
 
 ![image](./img/servicios/SRV1/1.16.png)
 
-A continuación, descomprimir el archivo .tar.gz de Elasticsearch dentro del directorio  /opt/elastic. Utilizando la comanda tar xvf. 
+A continuación, descomprimir el archivo .tar.gz de Elasticsearch dentro del directorio  _/opt/elastic_, utilizando la comanda tar xvf. 
 
 ![image](./img/servicios/SRV1/1.17.png)
 
@@ -92,7 +92,7 @@ Lo mismo con la carpeta de Kibana, extraer el contenido dentro de /opt/kibana.
 
 ![image](./img/servicios/SRV1/1.18.png)
 
-Utilizar la comanda chown -R elastic:elastic para asignar la propiedad al directorio, de modo que el usuario elastic tendrá control total sobre la carpeta y su contenido.
+Utilizar la comanda _chown -R elastic:elastic_ para asignar la propiedad al directorio, de modo que el usuario elastic tendrá control total sobre la carpeta y su contenido.
 
 ![image](./img/servicios/SRV1/1.19.png)
 
