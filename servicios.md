@@ -84,10 +84,6 @@ El mismo proceso con Kibana.
 
 ![image](./img/servicios/SRV1/1.16.png)
 
-Lo mismo con la carpeta de Kibana, extraer el contenido dentro de _/opt/kibana_.
-
-![image](./img/servicios/SRV1/1.17.png)
-
 A continuación, descomprimir el archivo .tar.gz dentro del directorio, utilizando la comanda _tar xvf_. 
 
 ![image](./img/servicios/SRV1/1.18.png)
