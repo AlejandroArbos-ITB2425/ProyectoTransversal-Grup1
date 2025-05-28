@@ -135,7 +135,9 @@ Todo el sistema eléctrico del CPD debe cumplir con la normativa vigente y conta
 
 - Detectores térmicos (Control de temperatura y humedad) 
 El CPD está equipado con sensores que miden temperatura y humedad en tiempo real. Estos sensores generan alertas automáticas cuando los valores superan los umbrales establecidos,* lo que permite actuar rápidamente para evitar daños en los equipos. 
+
 *Temperatura: 18 °C a 27 °C
+
 *Humedad: 40 % a 60 % HR
 
 - Mantenimiento periódico de equipos
