@@ -19,7 +19,7 @@
 ## Configuración de Servidor 1
 
 #### ElasticSearch + Kibana
-### Nagios
+#### Nagios
 
 ## Configuración de Servidor 2
 Primero se crea una instancia dentro de AWS (Amazon Web Service) que tendrá el sistema operativo Ubuntu Server 24.04 LTS, se asigna t3.small como tipo de instancia dado que nos permitirá gestionar los servidores web, audio y streaming.
