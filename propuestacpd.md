@@ -39,11 +39,13 @@ Ventaja: minimiza interferencias electromagnéticas y facilita futuras ampliacio
 
 
 2. Etiquetado claro y uniforme
+   
 Cada cable lleva etiqueta en ambos extremos con formato:
 EJ: srv3 — eth0 — switch1 — port5
 Se emplea tipografía legible y película termocontraíble para durabilidad.
 Beneficio: agiliza la identificación en incidencias y reduce el riesgo de desconexiones erróneas.
-3. Tipos, longitudes y colores
+
+4. Tipos, longitudes y colores
 Categoría de cable:
 Cat 6a para todos los enlaces de datos (hasta 10 Gbps con margen).
 
@@ -91,10 +93,10 @@ Bandejas estructuradas de red y fibra.
 
 Iluminación LED empotrada y sensores de temperatura/humedad.
 Ventajas
-Evacuación limpia del aire caliente, evitando recirculaciones indeseadas.
-Canalización ordenada de cables de red, manteniendo el techo libre de obstáculos.
-Integración de detectores y luminarias sin interferir con el flujo de retorno.
-La combinación de falso suelo como plenum frío y falso techo como plenum caliente, junto al esquema de pasillos frío / caliente y unidades CRAC, reduce la carga de refrigeración, mejora la eficiencia energética y facilita futuras ampliaciones con mínimo trabajo en obra.
+- Evacuación limpia del aire caliente, evitando recirculaciones indeseadas.
+- Canalización ordenada de cables de red, manteniendo el techo libre de obstáculos.
+- Integración de detectores y luminarias sin interferir con el flujo de retorno.
+- La combinación de falso suelo como plenum frío y falso techo como plenum caliente, junto al esquema de pasillos frío / caliente y unidades CRAC, reduce la carga de refrigeración, mejora la   eficiencia energética y facilita futuras ampliaciones con mínimo trabajo en obra.
 
 #### Planos, dibujos y diagramas
 
