@@ -96,6 +96,26 @@ Usuarios activos diarios: 1.000-1.500 usuarios
 Usuarios concurrentes pico: 400-600 usuarios
 Streaming simultáneo: 100-200 streams
 
+Tráfico Mensual Actual:
+
+## **TABLA DE CÁLCULO DE TRÁFICO DETALLADA**
+
+| **Servicio** | **Server** | **Usuarios/Día** | **Uso por Usuario** | **Frecuencia** | **Tamaño Promedio** | **Cálculo Mensual** | **Tráfico/Mes** |
+|--------------|------------|------------------|---------------------|----------------|-------------------|------------------|------------------|
+| **Streaming Audio** | Server 2 | 200 | 1.5h/día | Diario | 128kbps = 57MB/h | 200×1.5h×57MB×30d | **513 GB** |
+| **Streaming Video** | Server 2 | 80 | 45min/día | Diario | 720p = 337MB/h | 80×0.75h×337MB×30d | **608 GB** |
+| **Páginas Web** | Server 2 | 500 | 15 páginas/día | Diario | 800KB/página | 500×15×0.8MB×30d | **180 GB** |
+| **APIs REST** | Server 2 | 500 | 100 llamadas/día | Diario | 8KB/respuesta | 500×100×8KB×30d | **12 GB** |
+| **Recursos Web** | Server 2 | 500 | 1 vez/día | Diario | 3MB (CSS/JS/img) | 500×3MB×30d | **45 GB** |
+| **FTP Upload** | Server 3 | 50 | 2 archivos/sem | Semanal | 25MB/archivo | 50×2×25MB×4w | **10 GB** |
+| **FTP Download** | Server 3 | 80 | 3 archivos/sem | Semanal | 15MB/archivo | 80×3×15MB×4w | **14.4 GB** |
+| **Consultas DNS** | Server 3 | 2500 | 150 consultas/día | Diario | 512 bytes/consulta | 2500×150×0.5KB×30d | **5.6 GB** |
+| **Backup Incremental** | Server 5 | - | 1 vez/día | Diario | 200MB/backup | 1×200MB×30d | **6 GB** |
+| **Backup Completo** | Server 5 | - | 1 vez/semana | Semanal | 1.5GB/backup | 1×1.5GB×4w | **6 GB** |
+| **Logs Sistema** | Server 1 | - | Continuo | Diario | 80MB/día | 80MB×30d | **2.4 GB** |
+| **Métricas Nagios** | Server 1 | - | Cada 5min | Continuo | 2KB/métrica | 288×2KB×30d | **17.3 MB** |
+| **Consultas PostgreSQL** | Server 4 | 500 | 50 queries/día | Diario | 1.5KB/query | 500×50×1.5KB×30d | **1.1 GB** |
+| **Sincronización BD** | Server 4 | - | 1 vez/hora | Continuo | 5MB/sync | 24×5MB×30d | **3.6 GB** |
 
 #### Identificación de recursos utilizados
 #### Estimación del consumo energético y huella de carbono
