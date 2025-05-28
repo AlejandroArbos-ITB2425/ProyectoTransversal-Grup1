@@ -73,6 +73,32 @@ Se asigna al usuario elastic como usuario y grupo propietario de los directorios
 
 ![image](./img/servicios/SRV1/1.14.png)
 
+Entrar al directorio /opt/elastic y descargar Elasticsearch 9.0.1 con la siguiente comanda
+sudo wget https://artifacts.elastic.co/downloads/beats/auditbeat/auditbeat-8.17.4-linux-x86_64.tar.gz
+
+![image](./img/servicios/SRV1/1.15.png)
+
+El mismo proceso con Kibana. 
+sudo wget https://artifacts.elastic.co/downloads/kibana/kibana-8.17.4-linux-x86_64.tar.gz
+
+![image](./img/servicios/SRV1/1.16.png)
+
+A continuación, descomprimir el archivo .tar.gz de Elasticsearch dentro del directorio  /opt/elastic. Utilizando la comanda tar xvf. 
+
+![image](./img/servicios/SRV1/1.17.png)
+
+Lo mismo con la carpeta de Kibana, extraer el contenido dentro de /opt/kibana.
+
+![image](./img/servicios/SRV1/1.18.png)
+
+Utilizar la comanda chown -R elastic:elastic para asignar la propiedad al directorio, de modo que el usuario elastic tendrá control total sobre la carpeta y su contenido.
+
+![image](./img/servicios/SRV1/1.19.png)
+
+
+
+
+
 
 #### Nagios
 
