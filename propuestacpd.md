@@ -257,7 +257,14 @@ Implementaremos sistemas que detecten la ausencia de tráfico o actividad en los
 Se selecciona y se hace uso de hardware y dispositivos que estén diseñados para consumir menos energía, es muy importante para reducir el impacto ambiental del CPD. Se usarán equipos con certificaciones de eficiencia energética (Energy Star) para poder mantener un alto rendimiento mientras se minimiza el gasto eléctrico, gracias a esto contribuimos a la sostenibilidad y al ahorro económico a largo plazo
 
 ## Implementación del CPD en la nube (AWS)
-#### Implementación del CPD en Amazon Web Services (AWS)
+
+
+| SRV1 | SRV2    | SRV3   | SRV4 | SRV5 | 
+|------|---------|----------| ----------|----------|
+|ElasticSearch | DNS | Base Datos |Copias Seguridad |
+|Kibana  | Audio | FTP |
+|Nagios  | Streaming | 
+
 
 ## Investigación y comparación de eficiencia energética
 #### Investigar y comparar la eficiencia energética con otros proveedores de nube
