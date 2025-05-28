@@ -101,9 +101,10 @@ Iniciar con el usuario elastic y ejecutar la comanda _./bin/elasticsearch_ desde
 
 ![image](./img/servicios/SRV1/1.20.png)
 
-**IMPORTANTE: Guardar contraseña usuario elastic, HTTP CA certificate fingerprint porque hará falta después para acceder a la aplicación Web.**
+**IMPORTANTE: Guardar contraseña usuario elastic, HTTP CA certificate fingerprint y enrollment token porque hará falta después para acceder a la aplicación Web.**
 
 ✅ Elasticsearch security features have been automatically configured!
+
 ✅ Authentication is enabled and cluster connections are encrypted.
 
 ℹ️  Password for the elastic user (reset with `bin/elasticsearch-reset-password -u elastic`):
@@ -127,6 +128,30 @@ Iniciar con el usuario elastic y ejecutar la comanda _./bin/elasticsearch_ desde
 
 Encriptedkey: zS7myWkXIFI98brFoojXzHu7bOu1kzjmbTvtsv/aJvc=
 
+Modificar el archivo de configuración _/opt/elastic/elasticsearch-9.0.1/config/elasticsearch.yml_
+descomentar network.host, define a qué direcciones IP escucha Elasticsearch para aceptar conexiones; y http.port, establece el puerto (como 9200) para recibir peticiones HTTP. 
+
+![image](./img/servicios/SRV1/1.21.png)
+
+En el caso de Kibana, al igual que Elastic, para configurar hay que descomentar, network.host y http.port en el archivo de configuración _kibana.yml_. 
+
+![image](./img/servicios/SRV1/1.22.png)
+
+Anotar la clave que usarán los Encrypted Saved Objects
+
+![image](./img/servicios/SRV1/1.23.png)
+
+Ejecutar Elasticsearch: _./bin/elasticsearch_
+
+![image](./img/servicios/SRV1/1.24.png)
+
+Ejecutar Kibana, _./bin/kibana-setup_. Introducir el enrollment token que se había copiado y muestra el mensaje de éxito (“Kibana configured successfully”), junto con la indicación de que a partir de ahora, para arrancar Kibana ejecutar _bin/kibana_.
+
+![image](./img/servicios/SRV1/1.25.png)
+
+Abrir en el navegador la URL de Kibana (http://34.202.92.100:5601) , aparecerá la pantalla de bienvenida y autenticación. Introducir el Username (elastic) y la Password que se generó al arrancar Elasticsearch. De esta manera, se accede al dashboard principal de Kibana.
+
+![image](./img/servicios/SRV1/1.26.png)
 
 
 #### Nagios
