@@ -56,7 +56,7 @@ La configuración dice “monta siempre este disco (con UUID) en /opt con ext4 a
 
 ![image](./img/servicios/SRV1/1.9.png)
 
-Con la comanda df -h se puede mostrar que /dev/xvdb aparece montado en /opt con 32 GB de memoria, como se puede observar, ha tenido éxito el montaje
+Con la comanda df -h se puede mostrar que _/dev/xvdb_ aparece montado en /opt con 32 GB de memoria, como se puede observar, ha tenido éxito el montaje
 
 ![image](./img/servicios/SRV1/1.10.png)
 
@@ -69,11 +69,11 @@ Se crean dos directorios para la instalación, uno para el servicio ElasticSearc
 
 ![image](./img/servicios/SRV1/1.13.png)
 
-Se asigna al usuario elastic como usuario y grupo propietario de los directorios creados en el apartado anterior. Lo hace recursivamente, es decir, aplica el cambio a todas las subcarpetas y archivos dentro de /opt/elastic y /opt/kibana. 
+Se asigna al usuario elastic como usuario y grupo propietario de los directorios creados en el apartado anterior. Lo hace recursivamente, es decir, aplica el cambio a todas las subcarpetas y archivos dentro de _/opt/elastic_ y _/opt/kibana_. 
 
 ![image](./img/servicios/SRV1/1.14.png)
 
-Entrar al directorio /opt/elastic y descargar Elasticsearch 9.0.1 con la siguiente comanda
+Entrar al directorio _/opt/elastic_ y descargar Elasticsearch 9.0.1 con la siguiente comanda
 
 _sudo wget https://artifacts.elastic.co/downloads/beats/auditbeat/auditbeat-8.17.4-linux-x86_64.tar.gz_
 
@@ -84,11 +84,11 @@ El mismo proceso con Kibana.
 
 ![image](./img/servicios/SRV1/1.16.png)
 
-A continuación, descomprimir el archivo .tar.gz de Elasticsearch dentro del directorio  _/opt/elastic_, utilizando la comanda tar xvf. 
+A continuación, descomprimir el archivo .tar.gz de Elasticsearch dentro del directorio  _/opt/elastic_, utilizando la comanda _tar xvf_. 
 
 ![image](./img/servicios/SRV1/1.17.png)
 
-Lo mismo con la carpeta de Kibana, extraer el contenido dentro de /opt/kibana.
+Lo mismo con la carpeta de Kibana, extraer el contenido dentro de _/opt/kibana_.
 
 ![image](./img/servicios/SRV1/1.18.png)
 
@@ -97,7 +97,35 @@ Utilizar la comanda _chown -R elastic:elastic_ para asignar la propiedad al dire
 ![image](./img/servicios/SRV1/1.19.png)
 
 
+Iniciar con el usuario elastic y ejecutar la comanda _./bin/elasticsearch_ desde dentro del directorio donde se había descomprimido Elasticsearch. En el proceso de arranque da la información para conectar Kibana.
 
+![image](./img/servicios/SRV1/1.20.png)
+
+**IMPORTANTE: Guardar contraseña usuario elastic, HTTP CA certificate fingerprint porque hará falta después para acceder a la aplicación Web.**
+
+✅ Elasticsearch security features have been automatically configured!
+✅ Authentication is enabled and cluster connections are encrypted.
+
+ℹ️  Password for the elastic user (reset with `bin/elasticsearch-reset-password -u elastic`):
+  0=7ohiqMIMy=tsDVFie9
+
+ℹ️  HTTP CA certificate SHA-256 fingerprint:
+  87f4438412e1ef8616d6e29a4bc274b3ea87b203297504302e13164290187ab9
+
+ℹ️  Configure Kibana to use this cluster:
+• Run Kibana and click the configuration link in the terminal when Kibana starts.
+• Copy the following enrollment token and paste it into Kibana in your browser (valid for the next 30 minutes):
+  eyJ2ZXIiOiI4LjE0LjAiLCJhZHIiOlsiMTAuMi4xLjExOTo5MjAwIl0sImZnciI6Ijg3ZjQ0Mzg0MTJlMWVmODYxNmQ2ZTI5YTRiYzI3NGIzZWE4N2IyMDMyOTc1MDQzMDJlMTMxNjQyOTAxODdhYjkiLCJrZXkiOiJ3cjVQRHBjQlVyeHBFZTNJYm1mejpqRGhSc2c0ZFV2YVhrck9Zd0JiMnNBIn0=
+
+ℹ️  Configure other nodes to join this cluster:
+• On this node:
+  ⁃ Create an enrollment token with `bin/elasticsearch-create-enrollment-token -s node`.
+  ⁃ Uncomment the transport.host setting at the end of config/elasticsearch.yml.
+  ⁃ Restart Elasticsearch.
+• On other nodes:
+  ⁃ Start Elasticsearch with `bin/elasticsearch --enrollment-token <token>`, using the enrollment token that you generated.
+
+Encriptedkey: zS7myWkXIFI98brFoojXzHu7bOu1kzjmbTvtsv/aJvc=
 
 
 
