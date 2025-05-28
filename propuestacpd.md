@@ -79,20 +79,20 @@ Canalización de cableado de datos (Cat 6a) y fibra, separado de la electricidad
 
 
 Pasacables y conductos de alimentación de PDUs desde bandejas superiores.
-Ventajas
-Flujo controlado de aire frío al frente de los racks.
-Acceso rápido al cableado para mantenimiento.
-Refuerzo de la estrategia “cold aisle containment”.
-Techo técnico (plenum de retorno)
-Función principal: rejillas y conductos para extraer el aire caliente del pasillo caliente y conducirlo de vuelta a los CRAC.
-Altura libre bajo techo: 0,30 m para bandejas y tuberías.
-Material: perfiles metálicos y placas ligeras (aluminio o chapa galvanizada).
-Usos complementarios:
-Bandejas estructuradas de red y fibra.
+Ventajas:
+- Flujo controlado de aire frío al frente de los racks.
+- Acceso rápido al cableado para mantenimiento.
+- Refuerzo de la estrategia “cold aisle containment”.
+- Techo técnico (plenum de retorno)
+- Función principal: rejillas y conductos para extraer el aire caliente del pasillo caliente y conducirlo de vuelta a los CRAC.
+- Altura libre bajo techo: 0,30 m para bandejas y tuberías.
+- Material: perfiles metálicos y placas ligeras (aluminio o chapa galvanizada).
+- Usos complementarios:
+- Bandejas estructuradas de red y fibra.
 
 
 Iluminación LED empotrada y sensores de temperatura/humedad.
-Ventajas
+Ventajas:
 - Evacuación limpia del aire caliente, evitando recirculaciones indeseadas.
 - Canalización ordenada de cables de red, manteniendo el techo libre de obstáculos.
 - Integración de detectores y luminarias sin interferir con el flujo de retorno.
