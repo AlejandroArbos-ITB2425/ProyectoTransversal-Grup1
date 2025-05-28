@@ -606,10 +606,15 @@ Y la creación de la base de datos:
 La base de datos ya está creada, y ahora es necesario darle una interfaz gráfica. Utilizaremos Flask, que permite crear webs rápidas a partir de Python y HTML:
 ![BBDD_9.png](img/servicios/SRV4/BBDD_9.png)
 Se crea dos archivos:
--Un app.py que permita ejecutarse para iniciar el servicio.
--Un HTML con el template básico.
-Y con esto ya tenemos una base de datos funcional.
-
+-Un app.py que permita ejecutarse para iniciar el servicio:
+![BBDD_11.png](img/servicios/SRV4/BBDD_11.png)
+-Unos HTML con los templates básicos:
+![BBDD_10.png](img/servicios/SRV4/BBDD_10.png)
+Y con esto ya tenemos una base de datos funcional:
+![BBDD_12.png](img/servicios/SRV4/BBDD_12.png)
+Luego podemos añadir los empleados que queramos:
+![BBDD_13.png](img/servicios/SRV4/BBDD_13.png)
+Y la base de datos está operativa.
 ## Configuración de Servidor 5
 #### Copias seguridad
 
