@@ -595,8 +595,8 @@ Se encarga de almacenar información de los empleados.
 
 Encargado de la protección de los datos ante pérdidas o fallos.
 
-Copia incremental diaria: Solo guarda los archivos que han cambiado desde la última copia.  
-Copia completa semanal: Se guarda todo el contenido seleccionado, garantizando una recuperación completa si es necesario.
+Copia incremental diaria: guarda los archivos que han cambiado desde la última copia.  
+Copia completa semanal: se guarda todo el contenido seleccionado, garantizando una recuperación completa si es necesario.
 
 Se desarrolla un script automatizado que utiliza rsync para sincronizar datos de forma eficiente entre servidores.
 
