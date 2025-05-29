@@ -433,19 +433,19 @@ Listado de servicios de SRV1
 En “Service Status Details For All Hosts” se filtra por SRV1 y se observan los cinco checks definidos:
 
 
-PING — OK: se indica que la latencia se encuentra dentro de los umbrales.
+  PING — OK: se indica que la latencia se encuentra dentro de los umbrales.
 
 
-Procesos críticos — OK: se indica que el número de procesos se encuentra en rango.
+  Procesos críticos — OK: se indica que el número de procesos se encuentra en rango.
 
 
-Swap Usage — OK: se indica que el uso de swap se mantiene bajo el umbral.
+  Swap Usage — OK: se indica que el uso de swap se mantiene bajo el umbral.
 
 
-Uso de disco / — OK: se indica que el espacio en la partición raíz es suficiente.
+  Uso de disco / — OK: se indica que el espacio en la partición raíz es suficiente.
 
 
-Cada fila muestra la última hora de ejecución, duración del chequeo y el estado.
+  Cada fila muestra la última hora de ejecución, duración del chequeo y el estado.
 
 ![2.49.png](img/servicios/SRV1/Nagios/2.49.png)
 
