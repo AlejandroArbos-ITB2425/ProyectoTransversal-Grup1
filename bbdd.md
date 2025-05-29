@@ -46,6 +46,7 @@ El diseño entidad-relación.
 
 ![BBDD_2.png](img/servicios/SRV4/BBDD_2.png)
 La transformación del modelo a relacional.
+
 ![BBDD_8.png](img/servicios/SRV4/BBDD_8.png)
 
 
