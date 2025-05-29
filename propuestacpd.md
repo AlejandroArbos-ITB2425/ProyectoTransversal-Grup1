@@ -79,6 +79,7 @@ Canalización de cableado de datos (Cat 6a) y fibra, separado de la electricidad
 
 
 Pasacables y conductos de alimentación de PDUs desde bandejas superiores.
+
 Ventajas:
 - Flujo controlado de aire frío al frente de los racks.
 - Acceso rápido al cableado para mantenimiento.
@@ -92,27 +93,179 @@ Ventajas:
 
 
 Iluminación LED empotrada y sensores de temperatura/humedad.
+
 Ventajas:
 - Evacuación limpia del aire caliente, evitando recirculaciones indeseadas.
 - Canalización ordenada de cables de red, manteniendo el techo libre de obstáculos.
 - Integración de detectores y luminarias sin interferir con el flujo de retorno.
 - La combinación de falso suelo como plenum frío y falso techo como plenum caliente, junto al esquema de pasillos frío / caliente y unidades CRAC, reduce la carga de refrigeración, mejora la   eficiencia energética y facilita futuras ampliaciones con mínimo trabajo en obra.
 
-#### Planos, dibujos y diagramas
+#### Planos, dibujos y diagramas 
 
-![image](./img_ubicacion_fisica/plano_sala_rack.png)
+![plano_sala_rack_v2.png](img_ubicacion_fisica/plano_sala_rack_v2.png)
 
-#### Estructuración de los racks 
+**Pasillo frío**
+
+![image](./img_ubicacion_fisica/frio.png)
+
+**Pasillo caliente**
+
+![image](./img_ubicacion_fisica/caliente.png)
 
 ## Infraestructura IT 
-#### Servidores
+
+#### Servidores: número y tipo de modelo
+
+Se montará 5 servidores:
+
+- FTP + DNS 
+
+- Audio + Video + Web
+
+- Monitorización
+
+- Base de datos
+
+- Backups
+
+La idea es empezar tratando a 2500 - 5000 clientes, así que no necesitaremos los servidores más potentes, pero sí necesitaremos que puedan aumentar su potencia y capacidad, por ende, hemos pensado planes de escalabilidad.
+
+Se implementará la siguiente estructura:
+
+3 racks de 19 pulgadas para permitir una mejor organización, separación de funciones y espacio para la expansión futura.
+
+- Rack 1: Equipos de red y seguridad (switches, firewall, patch panels).
+
+- Rack 2: Servidores (principalmente).
+
+4 servidores rack (ej. 1U o 2U) para cubrir los 3 roles principales con redundancia básica para los más críticos
+
+Estos servidores serán de la gama Smart Selection PowerEdge R660 Rack Servidor, en la que podremos personalizar nuestros racks, además de los 3 racks de 19 pulgadas:
+
+![image](./img/rack/1.1.png)
+
+
+
+Rack 3: Servidores adicionales, sistemas de almacenamiento, patch panels adicionales, espacio para crecimiento y escalabilidad.
+
+![image](./img/rack/1.2.png)
+![image](./img/rack/1.3.png)
+![image](./img/rack/1.4.png)
+![image](./img/rack/1.5.png)
+
+
+En resumen, lo más importante:
+
+Cables de red rápidos para gestionar las bases de datos y los servicios de monitorización principalmente.
+
+Fuentes de alimentación redundantes que permitan la manipulación en caliente
+
+3 discos duros SSD de 480 GB para permitir la configuración en RAID 5 (Copias de seguridad en caso de emergencias).
+
+En el caso de necesitar más discos duros por motivos de escalabilidad o exigencia, cambiaríamos a HDD para hacer más leves las consecuencias económicas del proyecto.
+
+Por ejemplo, el rack servidor de streaming es mucho más exigente que los otros 3, por tanto, utilizaremos HDD para ahorrar gastos y suplir las necesidades de un servicio tan demandante:
+
+![image](./img/rack/1.6.png)
+
+Este será el rack servidor para los servicios en streaming
+
+Por último, un procesador potente que nos asegure poder gestionar todos los procesos de forma adecuada.
+
+
 #### Patch panels
+
+En el rack de red mencionado anteriormente irán los patch pannels, donde se conectan todos los elementos de los servidores:
+
+![image](./img/rack/1.7.png)
+
+Se utilizará este modelo, que proporciona compatibilidad con nuestros cables de red gracias al estándar Cat 6a. Se podría adquirir más si fuera necesario.
+
+
 #### Switches
+
+Se utilizará este Switch como Switch Core:
+
+![image](./img/rack/1.8.png)
+
+Configurable a nivel de consola y con la velocidad adecuada
+
+Y este como Switch Access:
+
+![image](./img/rack/1.9.png)
+
+En la que la intención es formar una estructura redundante para evitar pérdida de información.
+
+![image](./img/rack/1.10.png)
+
+El precio sube un poco porque ya compramos 4 cables de 10 gigabits por switch, ya que proporciona la cantidad necesaria y un poco de exceso en caso de necesitarlo en futuras ampliaciones 
+
 #### Planos y diagramas
 
+![image](./img/rack/1.11.png)
+
+![image](./img/rack/1.12.png)
+
+![image](./img/rack/1.13.png)
+
+
 ## Infraestructura eléctrica
+
 #### Sistemas de alimentación redundante
+Un SAI (Sistema de Alimentación Ininterrumpida) es un dispositivo que proporciona energía de reserva temporal a los servidores cuando existe un corte eléctrico, utilizando baterías internas, y también protege contra fluctuaciones de voltaje (como subidas o bajadas de tensión).
+Un SAI es esencial para: 
+
+Evitar pérdidas de datos: Si un servidor se corta repentinamente, se pueden perder datos del stream o configuraciones.
+En un sistema redundante, un SAI actúa como capa de protección mientras un generador eléctrico (si lo hubiere) arranca.
+Permite que los servidores permanezcan operativos durante un tiempo limitado para cerrar procesos o cambiar a una fuente alternativa.
+
 #### SAIs
+```
+CÁLCULO DE SAIs
+La fórmula que se usa es: Potencia total (VA) = Suma de potencias (W) de todos los dispositivos × 1.6 (factor de conversión W a VA) × 1.3 (margen de seguridad del 30%).
+
+Rack 1 (Red): 300W × 1.6 × 1.3 = 624 VA
+
+Rack 2 (4 Servidores): 1.700W × 1.6 × 1.3 = 3.536 VA
+
+Rack 3 (Server 5): 450W × 1.6 × 1.3 = 936 VA
+
+TOTAL: 2.450W × 1.6 × 1.3 = 5.096 VA
+
+SAIs necesarios:
+
+Rack 1: SAI 1000VA 
+
+Rack 2: SAI 4000VA mínimo (se elige  5000VA para margen)
+
+Rack 3: SAI 1500VA 
+```
+![image](./img/rack/1.14.png)
+
+Se han seleccionado equipos APC Smart-UPS SRT con tecnología de doble conversión online como solución de alimentación ininterrumpida para el proyecto. Además, se han tenido en cuenta los siguientes criterios:
+
+Autonomía operativa: Se establece un mínimo de 1 hora de funcionamiento continuo.
+Tecnología de protección: Se especifica tecnología online de doble conversión.
+Gestión remota: Se requiere capacidad de monitorización SNMP integrada.
+Escalabilidad: Se contempla la posibilidad de expansión mediante baterías externas.
+Soporte técnico: Se exige disponibilidad de soporte profesional 24/7.
+
+Como resumen, APC Smart-UPS SRT constituye la opción técnica y económicamente más adecuada para los requerimientos del proyecto
+
+**Presupuesto**
+
+![image](./img/rack/1.15.png)
+
+![image](./img/rack/1.16.png)
+
+![image](./img/rack/1.17.png)
+
+![image](./img/rack/1.18.png)
+
+![image](./img/rack/1.19.png)
+
+![image](./img/rack/1.20.png)
+
 
 ## Seguridad física
 #### Elementos de control de acceso a incorporar en el CPD
@@ -232,9 +385,82 @@ Para reforzar la disponibilidad y la tolerancia a fallos del sistema, en nuestro
 
 Se implementará RAID 5 en nuestro CPD, dado que ofrece un buen equilibrio entre rendimiento, capacidad y tolerancia a fallos. Esta configuración distribuye los datos y la paridad entre varios discos, permitiendo que el sistema siga funcionando aunque uno falle.
 
-
 ## Prevención de riesgos laborales 
+
 #### Medidas aplicadas en materia de prevención de riesgos laborales en el CPD
+
+En un CPD (Centro de Procesamiento de Datos), hay diversos riesgos que pueden comprometer la seguridad, disponibilidad e integridad de los datos y sistemas.
+
+**Riesgos Físicos o Ambientales**
+
+Incendios: por fallos eléctricos, cortocircuitos o materiales inflamables.
+
+Inundaciones: por rotura de tuberías, lluvias intensas o fallos en el sistema de climatización.
+
+Temperaturas extremas: fallo del aire acondicionado puede provocar sobrecalentamiento.
+
+Cortes de energía: afectan directamente a los servidores si no hay SAIs o generadores.
+
+Vibraciones o movimientos estructurales: afectan al hardware delicado.
+
+**Riesgos Técnicos o de Infraestructura**
+
+Fallo de hardware: discos duros, fuentes de alimentación, tarjetas de red, etc.
+
+Fallo de software: errores del sistema operativo, aplicaciones o firmware.
+
+Fallo en el sistema de refrigeración: puede llevar a un sobrecalentamiento.
+
+**Riesgos de Seguridad Lógica (Ciberseguridad)**
+
+Ataques externos: malware, ransomware, phishing, DDoS, etc.
+
+Intrusiones: accesos no autorizados a redes, servidores o bases de datos.
+
+Fugas de información: por malware, vulnerabilidades o mala configuración.
+
+### Riesgos laborales 
+
+**Riesgos Ergonómicos**
+
+Posturas forzadas o repetitivas: por trabajar muchas horas sentado frente al ordenador.
+
+Pantallas de visualización: fatiga visual, dolores cervicales y de espalda.
+
+Movimientos repetitivos: uso continuo de teclado y ratón.
+
+Espacios reducidos: puede dificultar la movilidad y causar incomodidad.
+
+**Medidas preventivas:**
+
+Instalación de mobiliario ergonómico (sillas regulables, reposapiés, soportes de monitor)
+Pausas programadas cada 2 horas para descanso visual y corporal
+Formación sobre higiene postural y ejercicios de estiramiento
+Iluminación adecuada para reducir reflejos y fatiga visual
+
+**Riesgos Eléctricos**
+
+Contacto con cables o equipos eléctricos defectuosos.
+
+Sobrecargas o chispazos al manipular hardware.
+
+Riesgo de electrocución si no se siguen protocolos de seguridad.
+
+**Medidas preventivas:**
+
+Uso obligatorio de equipos de protección individual (EPI) dieléctricos
+Inspecciones periódicas de instalaciones eléctricas
+Formación específica en seguridad eléctrica para el personal técnico
+Sistemas de protección diferencial y tomas de tierra verificadas
+
+**Riesgos Ambientales**
+
+Temperaturas extremas: si el sistema de refrigeración falla o hay zonas mal ventiladas.
+
+Riesgo acústico: por ventiladores, servidores o sistemas de refrigeración 
+
+
+
 
 ## Sostenibilidad
 
