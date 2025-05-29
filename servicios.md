@@ -23,47 +23,47 @@ Crear una VPC  (Virtual Private Cloud), sirve para tener una red privada virtual
 
 Asignar un nombre a la VPC y el rango de IP privadas. 
 
-![image](./img/servicios/1.1.png)
+![image](./img/1.1.png)
 
 Configurar una subred, es una sección de la VPC donde se puede lanzar recursos como instancias EC2, bases de datos, etc. Cada subred tiene un rango de direcciones IP definido y puede ser pública o privada, dependiendo de si tiene acceso a Internet.
 
 Seleccionar la VPC que se ha creado en el apartado anterior, asignar un nombre a la subred, el rango de direcciones IP privadas y la zona tiene que ser la misma que se usa para EC2. 
 
-![image](./img/servicios/1.2.png)
+![image](./img/1.2.png)
 
 Crear Internet Gateway, sirve para dar acceso a Internet a los recursos dentro de una VPC, como por ejemplo, una instancia EC2 que quiere que actúe como un servidor web accesible desde fuera de AWS. Es un componente de red que conecta la VPC a Internet. Funciona como un “puente” entre la red privada en AWS y la red pública (Internet).
 
 Asignar un nombre al IGW, una vez creado, haz clic en "Acciones > Conectar a la VPC" y seleccionar la VPC. 
 
-![image](./img/servicios/1.3.png)
+![image](./img/1.3.png)
 
-![image](./img/servicios/1.4.png)
+![image](./img/1.4.png)
 
 Crear una tabla de enrutamiento, sirve para controlar cómo se dirige el tráfico dentro de la VPC, una lista de reglas que le dice a los recursos en una subred a qué destino deben enviar el tráfico y por qué medio. 
 
-![image](./img/servicios/1.5.png)
+![image](./img/1.5.png)
 
 Asignar un nombre y seleccionar la VPC. 
 Luego, ir a la pestaña "Rutas" > Editar rutas y añadir una nueva ruta. 
 Destino: 0.0.0.0/0
 Destino → Gateway: selecciona el Internet Gateway creado. 
 
-![image](./img/servicios/1.6.png)
+![image](./img/1.6.png)
 
 Ir a la pestaña "Asociaciones de subredes" y asociar la subred. Esto permite que todas las IPs externas puedan comunicarse con las instancias.
 
-![image](./img/servicios/1.7.png)
+![image](./img/1.7.png)
 
 Crear un grupo de seguridad, sirve para controlar qué tráfico de red puede entrar o salir de las instancias, como una especie de firewall virtual a nivel de instancia.
 
-![image](./img/servicios/1.8.png)
+![image](./img/1.8.png)
 
 Interconexión entre instancias, sirve para comunicar distintas redes o entornos entre sí, ya sea dentro de AWS o entre AWS y una red externa. Estas interconexiones permiten compartir datos, servicios o acceder de forma privada y segura entre distintos recursos o ubicaciones.
 
 Conectar las instancias dentro de la VPC usando sus IPs privadas.
 
-![image](./img/servicios/1.9.png)
-![image](./img/servicios/1.10.png)
+![image](./img/1.9.png)
+![image](./img/1.10.png)
 
 
 ## Configuración de Servidor 1
