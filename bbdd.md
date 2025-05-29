@@ -1,13 +1,15 @@
-3. Diseño e implementación de una base de datos
+# 3. Diseño e implementación de una base de datos
 
 Se trata de diseñar e implementar una base de datos para la gestión del personal de la empresa. Los requisitos que se deben tener en cuenta son los siguientes:
 
 🔹 Información de los empleados
 Cada empleado se identifica mediante su DNI, y se debe registrar también su nombre, apellidos, dirección y teléfono.
 ![BBDD_14.png](img/servicios/SRV4/BBDD_14.png)
+
 🔹 Información de los departamentos
 Los empleados están asignados a un determinado departamento, el cual se identifica con un código único. Además, se almacenará el nombre completo del departamento y su teléfono de contacto.
 ![BBDD_15.png](img/servicios/SRV4/BBDD_15.png)
+
 🔹 Información de los grupos-nivel
 Cada empleado tiene asignado un grupo-nivel, que se identifica por un código (por ejemplo: A1, B1, etc.). Para cada grupo-nivel, se debe registrar:
 
