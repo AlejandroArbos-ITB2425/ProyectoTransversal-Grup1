@@ -824,4 +824,4 @@ Como último paso, modificar el archivo de crontab para que ejecute los scripts 
 
 ![image](./img/servicios/srv5/5.22.png)
 
-![image](./img/servicios/srv5/5.23.png)
+![image](./img/servicios/srv5/5.23.png) 
