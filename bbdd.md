@@ -76,14 +76,8 @@ No obstante, se mantendrán las mejoras que las Empresas puedan aplicar las pers
 Las vacaciones se iniciarán siempre en día laborable y terminarán el día inmediatamente anterior de reincorporación al trabajo, salvo en las empresas que tengan establecido un período fijo anual para vacar la totalidad de su plantilla.
 
 
-
 ### **Tabla salarial actualizada**
 
 ![image](./img/servicios/SRV4/tablasalarial.png)
 
 ![BBDD_21.png](img/servicios/SRV4/BBDD_21.png)
-La implementación en un Sistema Gestor de Bases de Datos (por ejemplo, MySQL, Oracle, etc.).
-
-
-La introducción de un conjunto significativo de datos reales o representativos.
-
