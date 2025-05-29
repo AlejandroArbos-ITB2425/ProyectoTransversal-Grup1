@@ -601,7 +601,7 @@ Servicio Web:se aloja un servidor web Nginx con información de los servicios qu
 Servicio de audio y video:se usará Icecast para transmisión de audio en tiempo real. Darkice para capturar y enviar audio al servidor Icecast. Protocolo RTP para transmisión de medios y FFmpeg para codificación, decodificación de audio/vídeo. 
 
 
-**SRV**3
+**SRV3**
 
 Servicios de red fundamentales para el funcionamiento interno y la transferencia de archivos.
 
@@ -648,9 +648,9 @@ Se desarrolla un script automatizado que utiliza rsync para sincronizar datos de
 
 #### **AWS**
 **Servicios CPD gestionados:**
-- **EC2 Dedicated Hosts:** Hardware físico dedicado
-- **AWS Outposts:** Infraestructura AWS on-premise
-- **Local Zones:** Edge computing de baja latencia
+- **EC2 Dedicated Hosts:** Hardware físico dedicado. Servidores físicos dedicados con licencias incluidas y cumplimiento de estándares.
+- **AWS Outposts:** Infraestructura AWS on-premise. Racks/servidores instalados on-premise, operados y mantenidos íntegramente por AWS.
+- **Local Zones:** Edge computing de baja latencia. Extensiones de infraestructura para baja latencia y computación en el borde.
 - **Wavelength:** 5G edge computing
 
 **Características sostenibles:**
@@ -661,9 +661,9 @@ Se desarrolla un script automatizado que utiliza rsync para sincronizar datos de
 
 #### **Google Cloud Platform**
 **Servicios CPD gestionados:**
-- **Anthos:** Plataforma híbrida on-premise/cloud
-- **Google Distributed Cloud:** Edge locations
-- **Dedicated Cloud Interconnect:** Conexión privada
+- **Anthos:** Plataforma híbrida on-premise/cloud. Infraestructura gestionada tanto en centros de datos locales como en nodos de edge.
+- **Google Distributed Cloud:** Edge locations. Infraestructura gestionada tanto en centros de datos locales como en nodos de edge.
+- **Dedicated Cloud Interconnect:** Conexión privada. Conexión privada de alta capacidad y baja latencia entre tu red y la nube de Google.
 
 **Características sostenibles:**
 - Carbon-free energy matching 24/7 (objetivo 2030)
@@ -673,9 +673,9 @@ Se desarrolla un script automatizado que utiliza rsync para sincronizar datos de
 
 #### **Microsoft Azure**
 **Servicios CPD gestionados:**
-- **Azure Stack:** Infraestructura híbrida
-- **Azure Edge Zones:** Computing distribuído
-- **Azure Arc:** Gestión multi-cloud
+- **Azure Stack Hub / HCI / Edge:** Infraestructura híbrida. Extensiones de Azure on-premise con hardware validado para integración en tu CPD.
+- **Azure Edge Zones & Extended Zones:** Computing distribuído. Despliegues de baja latencia en ubicaciones específicas, conectados a la plataforma Azure.
+- **Azure Arc:** Gestión multi-cloud. Administración unificada de recursos multicloud y locales desde Azure Resource Manager.
 
 **Características sostenibles:**
 - Underwater datacenters (Project Natick)
