@@ -145,10 +145,17 @@ Estos servidores serán de la gama Smart Selection PowerEdge R660 Rack Servidor,
 ![image](./img/rack/1.1.png)
 
 
+
 Rack 3: Servidores adicionales, sistemas de almacenamiento, patch panels adicionales, espacio para crecimiento y escalabilidad.
+
+![image](./img/rack/1.2.png)
+![image](./img/rack/1.3.png)
+![image](./img/rack/1.4.png)
+![image](./img/rack/1.5.png)
 
 
 En resumen, lo más importante:
+
 Cables de red rápidos para gestionar las bases de datos y los servicios de monitorización principalmente.
 Fuentes de alimentación redundantes que permitan la manipulación en caliente
 3 discos duros SSD de 480 GB para permitir la configuración en RAID 5 (Copias de seguridad en caso de emergencias).
