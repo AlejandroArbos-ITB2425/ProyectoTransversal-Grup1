@@ -172,6 +172,31 @@ Este será el rack servidor para los servicios en streaming
 
 Por último, un procesador potente que nos asegure poder gestionar todos los procesos de forma adecuada.
 
+**Patch panels**
+En el rack de red mencionado anteriormente irán los patch pannels, donde se conectan todos los elementos de los servidores:
+
+![image](./img/rack/1.7.png)
+
+Se utilizará este modelo, que proporciona compatibilidad con nuestros cables de red gracias al estándar Cat 6a. Se podría adquirir más si fuera necesario.
+
+**Switches**
+Se utilizará este Switch como Switch Core:
+
+![image](./img/rack/1.8.png)
+
+Configurable a nivel de consola y con la velocidad adecuada
+
+Y este como Switch Access:
+
+![image](./img/rack/1.9.png)
+
+En la que la intención es formar una estructura redundante para evitar pérdida de información.
+
+![image](./img/rack/1.10.png)
+
+El precio sube un poco porque ya compramos 4 cables de 10 gigabits por switch, ya que proporciona la cantidad necesaria y un poco de exceso en caso de necesitarlo en futuras ampliaciones 
+
+
 #### Servidores
 #### Patch panels
 #### Switches
