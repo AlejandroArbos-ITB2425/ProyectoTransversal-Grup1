@@ -14,4 +14,4 @@ Entre los servicios esenciales que deben alojarse en este CPD se encuentran los 
 Este documento recoge el diseño detallado del CPD, la distribución de los servicios, la selección de tecnologías, los planes de contingencia, las estrategias de sostenibilidad y las medidas de prevención de riesgos laborales que se implantarán para garantizar el correcto funcionamiento del centro en el largo plazo.
 
 
-[Índice](./Indice.md)
+[ÍNIDICE DEL PROYECTO](./Indice.md)
