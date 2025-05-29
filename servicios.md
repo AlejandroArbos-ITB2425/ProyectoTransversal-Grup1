@@ -351,10 +351,13 @@ Se recarga el servicio de Nagios.
 
 Se accede de nuevo a http://34.202.92.100/nagios/ y esto es lo que se observa:
 Current Network Status
- – El panel muestra “Current Network Status” con todos los contadores a cero y el círculo verde, lo que indica que Nagios está ejecutándose y se están recopilando datos correctamente.
+ 
+– El panel muestra “Current Network Status” con todos los contadores a cero y el círculo verde, lo que indica que Nagios está ejecutándose y se están recopilando datos correctamente.
 Host Status Totals
+
  – Hay 1 host monitorizado (el propio localhost), marcado como Up.
 Service Status Totals
+
  – De los servicios configurados, todos están en OK (0 warnings, 0 criticals, 0 unknown).
 Detalle de cada servicio
 
