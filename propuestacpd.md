@@ -543,7 +543,7 @@ Trabajo en turnos nocturnos o guardias: puede afectar el descanso y la salud men
 
 Aislamiento: si el trabajo se realiza en solitario o en zonas sin interacción frecuente.
 
-Medidas preventivas:
+**Medidas preventivas:**
 
 Rotación de turnos para distribuir la carga de trabajo nocturno
 
