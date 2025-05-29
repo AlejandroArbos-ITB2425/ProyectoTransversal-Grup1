@@ -118,15 +118,15 @@ Ventajas:
 
 Se montará 5 servidores:
 
-FTP + DNS 
+- FTP + DNS 
 
-Audio + Video + Web
+- Audio + Video + Web
 
-Monitorización
+- Monitorización
 
-Base de datos
+- Base de datos
 
-Backups
+- Backups
 
 La idea es empezar tratando a 2500 - 5000 clientes, así que no necesitaremos los servidores más potentes, pero sí necesitaremos que puedan aumentar su potencia y capacidad, por ende, hemos pensado planes de escalabilidad.
 
@@ -137,7 +137,7 @@ Se implementará la siguiente estructura:
 - Rack 1: Equipos de red y seguridad (switches, firewall, patch panels).
 
 - Rack 2: Servidores (principalmente).
-- 
+
 4 servidores rack (ej. 1U o 2U) para cubrir los 3 roles principales con redundancia básica para los más críticos
 
 Estos servidores serán de la gama Smart Selection PowerEdge R660 Rack Servidor, en la que podremos personalizar nuestros racks, además de los 3 racks de 19 pulgadas:
