@@ -684,8 +684,11 @@ Se desarrolla un script automatizado que utiliza rsync para sincronizar datos de
 #### Cómo cubren los requerimientos previamente expuestos
 
 
-| **Requisitos**      | **AWS Outposts & <br/> EC2 Dedicated Hosts** | **Google Distributed <br/> Cloud & Anthos** | **Compromiso Net Zero**                       | **Regiones Eficientes** |
-|---------------------|----------------------------------------------|---------------------------------------------|-----------------------------------------------|-------------------------|
-| **AWS**             | 1.15                                         | 100% (2025)                                 | Neutralidad de carbono para 2040              | us-west-2, eu-north-1 |
-| **Google Cloud**    | 1.10                                         | 100% (2017)                                 | Cero emisiones netas en operaciones para 2030 | europe-north1, us-central1 |
-| **Microsoft Azure** | 1.18                                         | 100% (2025)                                 | Carbono negativo para 2030                    | North Europe, West US 2 |
+| **Requisitos**                | **AWS Outposts & <br/> EC2 Dedicated Hosts** | **Google Distributed <br/> Cloud & Anthos**                   | **Azure Stack &<br/> Arc/Edge Zones**         |
+|-------------------------------|------------------------------------------|---------------------------------------------------------------|-----------------------------------------------|
+| **Ubicación física**          | Se instalan en tu sala CPD, cumplen requisitos de espacio, acceso y discreción    | Hardware sellado y certificaciones para entornos regulados    | Rack certificado para CPD interior sin ventanas              | 
+| **Climatización**             | Requieren CRAC, UPS y condiciones de aire según especificación AWS                | Normativas de Data Centers Google (temperatura, humedad)      | Validado para aire frío/plenum y falso techo para retorno | 
+| **Seguridad física**          | Monitoreo 24/7, control biométrico y CCTV bajo estándares SOC/ISO                 | Certificaciones FedRAMP, NIST SP 800-53 y ISO                 | ISO 27001, acceso restringido y auditorías regulares                    | 
+| **Infraestructura eléctrica** | Alimentación redundante, SAI integrado y generadores gestionados por AWS          | PSU duales y redundancia N+1 en appliances GDC                | Clústeres HCI con SAI, generadores y respaldo en Azure Stack                    | 
+| **Seguridad lógica**          | AM, VPC, KMS, CloudTrail y MFA según política AWS                                 | Google IAM, Cloud Audit, Policy Controller                    | Azure AD, RBAC, Azure Policy y Defender integrados                    |
+| **Monitorización y alertas**  | CloudWatch, Prometheus, CloudTrail y notificaciones integradas                    | Stackdriver (Cloud Monitoring), Logging y alertas AI-driven   | Azure Monitor, Log Analytics, alertas de Azure Policy                    | 
