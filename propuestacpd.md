@@ -20,8 +20,11 @@ Energía renovable: la energía eólica local tiene un coste marginal muy bajo y
 ### Sala CPD
 
 Alejado de ventanas: Sin exposición directa a luz solar (orientación interior)
+
 Proximidad al SAI: Conexión directa con sistema de alimentación ininterrumpida
+
 Acceso controlado: Alejado del tráfico principal de oficinas
+
 Seguridad física: Zona con menos tránsito de personal no autorizado
 
 ![image](./img_ubicacion_fisica/planosala.png)
