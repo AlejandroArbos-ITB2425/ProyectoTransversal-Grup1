@@ -3,15 +3,20 @@
 ## Ubicación Física
 #### Situación física de la sala en el edificio
 Montar el sistema de CPD dentro del propio edificio, en una sala especializada para su mantenimiento y rendimiento estable. ej: alejado de las ventanas y la luz del sol.
+
 Ubicación: Polígono Industrial de Avilés, Asturias
+
 Coordenadas: 43.5563°N, 5.9248°W
+
 Superficie: 360 m² (edificio CPD + oficinas)
 
 Ventajas específicas de Asturias:
+
 Costo energía:  0,12 €/kWh (Asturias) vs. 0,15 €/kWh (Madrid)
 Energía renovable: la energía eólica local tiene un coste marginal muy bajo y estable (no depende de combustibles fósiles) y, al ser renovable, reduce drásticamente las emisiones de CO₂, disminuyendo así la huella de carbono.
 
 Sala CPD
+
 Alejado de ventanas: Sin exposición directa a luz solar (orientación interior)
 Proximidad al SAI: Conexión directa con sistema de alimentación ininterrumpida
 Acceso controlado: Alejado del tráfico principal de oficinas
