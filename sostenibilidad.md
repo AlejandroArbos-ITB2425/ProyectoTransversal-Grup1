@@ -307,7 +307,8 @@ Emisiones_CO₂ = kWh_consumidos × 0.256
 
 Donde:
 - kWh_consumidos: Consumo energético anual
-- 0.256: Factor emisión España (kg CO₂/kWh) según CeroCO2.org
+- 0.256: Factor emisión España (kg CO₂/kWh) 
+según CeroCO2.org
 ```
 
 ### Recursos
@@ -380,6 +381,6 @@ Londres (eu-west-2): ~0.020 kg CO₂e/kWh (estimado para región 100% renovable)
 
 Reducción estimada: 163.2 → 10.6 kg CO₂e/año (-93.5%)
 
-¿Elegir regiones de nube más eficientes en términos energéticos?
+**¿Elegir regiones de nube más eficientes en términos energéticos?**
 
 Se ha optado por elegir la región de Londres (eu-west-2), que nos proporciona energía 100% renovable desde 2021.
