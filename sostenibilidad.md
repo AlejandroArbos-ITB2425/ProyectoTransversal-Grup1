@@ -311,15 +311,15 @@ Donde:
 ```
 
 #### Recursos
-
+```
 Carbon Trust
 
 Factores de emisiones medias globales o por región del proveedor de nube.
+```
 
 
 
-
-
+```
 
 Propuesta de medidas de reducción u optimización:
 
@@ -341,7 +341,7 @@ Impacto estimado: -25% consumo total = -40.8 kg CO₂e/año
 Cambio de región: Migrar a us-west-2 (Oregon) con 95% renovable
 Factor actual: 0.316 vs Oregon: 0.025 kg CO₂e/kWh
 Reducción: 163.2 → 12.9 kg CO₂e/año (-92%)
-
+```
 
 #### Propuesta de medidas de reducción u optimización
 
