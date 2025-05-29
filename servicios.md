@@ -553,7 +553,8 @@ Se crea y configura el host virtual dentro del directorio _/etc/nginx/sites-avai
 
 > Al recibir una petición por el puerto 80, redirige automáticamente al puerto 443 (HTTPS), nuestro servidor escucha por todas las interfaces, por ende, se puede ver tanto con su IP privada y pública. Se añaden los certificados creados anteriormente, ruta de archivos, index.html y un return 404 para otros errores. 
 
-> Para acceder a la página web: [WEB](https://18.204.111.82/)
+> Para acceder a la página web: https://18.204.111.82/
+[WEB](https://proyectotransversalweb-grup1.pages.dev/)
 
 ![image](./img/servicios/srv2/2.6.png)
 
