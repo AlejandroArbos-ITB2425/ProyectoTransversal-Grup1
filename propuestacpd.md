@@ -209,12 +209,55 @@ El precio sube un poco porque ya compramos 4 cables de 10 gigabits por switch, y
 ![image](./img/rack/1.13.png)
 
 
-
-
-
 ## Infraestructura eléctrica
+
 #### Sistemas de alimentación redundante
+Un SAI (Sistema de Alimentación Ininterrumpida) es un dispositivo que proporciona energía de reserva temporal a los servidores cuando existe un corte eléctrico, utilizando baterías internas, y también protege contra fluctuaciones de voltaje (como subidas o bajadas de tensión).
+Un SAI es esencial para: 
+
+Evitar pérdidas de datos: Si un servidor se corta repentinamente, se pueden perder datos del stream o configuraciones.
+En un sistema redundante, un SAI actúa como capa de protección mientras un generador eléctrico (si lo hubiere) arranca.
+Permite que los servidores permanezcan operativos durante un tiempo limitado para cerrar procesos o cambiar a una fuente alternativa.
+
 #### SAIs
+
+CÁLCULO DE SAIs
+La fórmula que se usa es: Potencia total (VA) = Suma de potencias (W) de todos los dispositivos × 1.6 (factor de conversión W a VA) × 1.3 (margen de seguridad del 30%).
+Rack 1 (Red): 300W × 1.6 × 1.3 = 624 VA
+Rack 2 (4 Servidores): 1.700W × 1.6 × 1.3 = 3.536 VA
+Rack 3 (Server 5): 450W × 1.6 × 1.3 = 936 VA
+TOTAL: 2.450W × 1.6 × 1.3 = 5.096 VA
+SAIs necesarios:
+Rack 1: SAI 1000VA 
+Rack 2: SAI 4000VA mínimo (se elige  5000VA para margen)
+Rack 3: SAI 1500VA 
+
+![image](./img/rack/1.14.png)
+
+Se han seleccionado equipos APC Smart-UPS SRT con tecnología de doble conversión online como solución de alimentación ininterrumpida para el proyecto. Además, se han tenido en cuenta los siguientes criterios:
+
+Autonomía operativa: Se establece un mínimo de 1 hora de funcionamiento continuo.
+Tecnología de protección: Se especifica tecnología online de doble conversión.
+Gestión remota: Se requiere capacidad de monitorización SNMP integrada.
+Escalabilidad: Se contempla la posibilidad de expansión mediante baterías externas.
+Soporte técnico: Se exige disponibilidad de soporte profesional 24/7.
+
+Como resumen, APC Smart-UPS SRT constituye la opción técnica y económicamente más adecuada para los requerimientos del proyecto
+
+**Presupuesto**
+
+![image](./img/rack/1.15.png)
+
+![image](./img/rack/1.16.png)
+
+![image](./img/rack/1.17.png)
+
+![image](./img/rack/1.18.png)
+
+![image](./img/rack/1.19.png)
+
+![image](./img/rack/1.20.png)
+
 
 ## Seguridad física
 #### Elementos de control de acceso a incorporar en el CPD
