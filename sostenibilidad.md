@@ -254,7 +254,94 @@ Consumo Video = 608 GB/mes × 0.025 kWh/GB = 15.20 kWh/mes
 
 Total Streaming = 22.90 kWh/mes × 12 meses = 274.74 kWh/año
 
+Consumo de servidores virtuales o servicios en funcionamiento continuo.
+
+### Instancias EC2 en Operación
+
+| **Server** | **Tipo Instancia** | **Consumo (W)** | **Horas/año** | **kWh/año** |
+|------------|-------------------|-----------------|---------------|-------------|
+| Server 1 (Monitorización) | t2.xlarge | 31.5 | 8760 | 276.1 |
+| Server 2 (Streaming) | t3.small | 12.0 | 8760 | 105.1 |
+| Server 3 (DNS+FTP) | t2.micro | 3.2 | 8760 | 28.0 |
+| Server 4 (Base Datos) | t3.micro | 6.0 | 8760 | 52.6 |
+| Server 5 (Backups) | t3.small | 7.5 | 7300 | 54.8 |
+
+**TOTAL: 516.6 kWh/año**
+
+### Fórmula de Cálculo
+
+```
+Consumo_Anual = Potencia_Base × Factor_Carga × Horas_Funcionamiento ÷ 1000
+
+Donde:
+- Potencia_Base: Watts nominales de la instancia
+- Factor_Carga: % utilización promedio (0.4 - 0.8)
+- Horas_Funcionamiento: 8760h/año (24/7) o 7300h/año (20h/día)
+
+Ejemplo Server 1:
+Consumo = 45W × 0.7 × 8760h ÷ 1000 = 276.12 kWh/año
+```
+Conversión de energía (kWh) a emisiones (kg CO₂ eq.): Utiliza factores de equivalencia para convertir el consumo energético en emisiones de carbono.
+
+Se ha usado la calculadora de CeroCO2.org.
+
+## Conversión de Energía a Emisiones de CO₂
+### Factor de Equivalencia CeroCO2.org
+**Fuente:** https://www.ceroco2.org/calculadoras/
+**Factor España:** 0.256 kg CO₂/kWh (mix energético español)
+
+### Cálculo de Emisiones del Proyecto
+
+**Consumo total:** 516.6 kWh/año  
+**Factor CeroCO2:** 0.256 kg CO₂/kWh  
+
+```
+Emisiones CO₂ = Consumo_kWh × Factor_CeroCO2
+
+Emisiones = 516.6 kWh/año × 0.256 kg CO₂/kWh = 132.2 kg CO₂/año
+```
+
+### Fórmula General
+```
+Emisiones_CO₂ = kWh_consumidos × 0.256
+
+Donde:
+- kWh_consumidos: Consumo energético anual
+- 0.256: Factor emisión España (kg CO₂/kWh) según CeroCO2.org
+```
 
 #### Recursos
+
+Carbon Trust
+
+Factores de emisiones medias globales o por región del proveedor de nube.
+
+
+
+
+
+
+Propuesta de medidas de reducción u optimización:
+
+¿Reducir las horas de funcionamiento de los servicios?
+
+Servicios que SÍ se pueden optimizar:
+Server 5 (Backups): De 20h/día a 12h/día = -20% consumo (10.9 kg CO₂e/año menos)
+Server 2 (Streaming): Modo standby en horario valle (02:00-07:00) = -15% consumo
+Servicios no críticos: Apagar dashboards/reportes durante madrugada
+
+Servicios que NO se pueden reducir:
+Server 1 (Monitorización): Debe estar 24/7 para detectar fallos
+Server 3 (DNS): Crítico, debe resolver nombres siempre
+Server 4 (Base Datos): Aplicaciones dependen 24/7
+
+Impacto estimado: -25% consumo total = -40.8 kg CO₂e/año
+
+¿Utilizar energía renovable para los servicios?
+Cambio de región: Migrar a us-west-2 (Oregon) con 95% renovable
+Factor actual: 0.316 vs Oregon: 0.025 kg CO₂e/kWh
+Reducción: 163.2 → 12.9 kg CO₂e/año (-92%)
+
+
 #### Propuesta de medidas de reducción u optimización
 
