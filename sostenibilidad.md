@@ -267,7 +267,7 @@ Consumo de servidores virtuales o servicios en funcionamiento continuo.
 | Server 5 (Backups) | t3.small | 7.5 | 7300 | 54.8 |
 
 **TOTAL: 516.6 kWh/año**
-```
+
 ### Fórmula de Cálculo
 
 
