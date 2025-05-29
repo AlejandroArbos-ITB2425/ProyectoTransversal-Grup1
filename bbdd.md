@@ -59,6 +59,8 @@ El periódo de prueba de las personas trabajadoras del área 2 es de:**
 Durante el período de prueba la persona trabajadora tendrá los derechos y obligaciones correspondientes a su grupo y nivel profesional y al puesto de trabajo que desempeñe, excepto los derivados de la resolución de la relación laboral, que podrá producirse a instancias de cualquiera de las partes durante su transcurso.
 
 Transcurrido el período de prueba sin que se haya producido el desistimiento, el contrato producirá plenos efectos, computándose el tiempo de los servicios prestados en la antigüedad de la persona en la empresa. Siempre que se haya producido un acuerdo en tal sentido expresado en el contrato de trabajo, las situaciones de incapacidad temporal, nacimiento, adopción, guarda con fines de adopción, acogimiento, riesgo durante el embarazo, riesgo durante la lactancia y violencia de género que afecten al personal durante el período de prueba interrumpirá el cómputo del mismo.
+![BBDD_20.png](img/servicios/SRV4/BBDD_20.png)
+
 
 **Área 2. Actividades relacionadas con la atención al usuario, interno y externo**
 
@@ -79,6 +81,7 @@ Las vacaciones se iniciarán siempre en día laborable y terminarán el día inm
 
 ![image](./img/servicios/SRV4/tablasalarial.png)
 
+![BBDD_21.png](img/servicios/SRV4/BBDD_21.png)
 La implementación en un Sistema Gestor de Bases de Datos (por ejemplo, MySQL, Oracle, etc.).
 
 
