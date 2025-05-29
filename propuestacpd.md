@@ -560,30 +560,44 @@ Habrá 4 servidores que ofrecerán 8 servicios.
 
 **SRV1**
 
-ElasticSearch:s utiliza como motor de búsqueda y análisis para centralizar los logs generados por los diferentes servidores y servicios.  
+ElasticSearch:se utiliza como motor de búsqueda y análisis para centralizar los logs generados por los diferentes servidores y servicios.  
+
 Kibana:proporciona una interfaz web para visualizar y analizar los datos almacenados en ElasticSearch. Se usarán dashboards para identificar errores o problemas en tiempo real.
+
 Nagios:monitoriza el estado de la infraestructura de red (discos, CPU, RAM, estado de servicios, conectividad, etc.). Envía alerta
 
 **SRV2**
+
 Servidor dedicado a servicios públicos o multimedia accesibles por los usuarios.
+
 Servicio Web:se aloja un servidor web Nginx con información de los servicios que se implementa. 
+
 Servicio de audio y video:se usará Icecast para transmisión de audio en tiempo real. Darkice para capturar y enviar audio al servidor Icecast. Protocolo RTP para transmisión de medios y FFmpeg para codificación, decodificación de audio/vídeo. 
 
 
 **SRV**3
+
 Servicios de red fundamentales para el funcionamiento interno y la transferencia de archivos.
+
 DNS (Bind9):resuelve nombres de dominio en direcciones IP dentro de la red local o como proxy externo.  
+
 FTP (ProFTPd):permite la transferencia de archivos entre clientes y el servidor, con autenticación segura y control de permisos.
 
 **SRV4**
+
 Servidor dedicado al almacenamiento estructurado de datos.
+
 Motor de base de datos con PostgreSQL. 
+
 Se encarga de almacenar información de los empleados.
 
 **SRV5**
+
 Encargado de la protección de los datos ante pérdidas o fallos.
+
 Copia incremental diaria: Solo guarda los archivos que han cambiado desde la última copia.  
 Copia completa semanal: Se guarda todo el contenido seleccionado, garantizando una recuperación completa si es necesario.
+
 Se desarrolla un script automatizado que utiliza rsync para sincronizar datos de forma eficiente entre servidores.
 
 
