@@ -110,7 +110,7 @@ Ventajas:
 
 **Pasillo caliente**
 
-![image](./img_ubicacion_fisica/caliente.png)
+![image](img_ubicacion_fisica/caliente_muy_caliente_papi.png)
 
 ## Infraestructura IT 
 
