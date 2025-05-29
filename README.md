@@ -3,7 +3,7 @@
 ### Alejandro Arbós | Eduard Pérez | Carlos Rodríguez | Linyi Zhang
 
 
-#### Introducción
+**#### Introducción**
 
 InnovateTech es una empresa dedicada a la creación y distribución de contenido digital que, en el marco de su proceso de transformación tecnológica, se plantea el diseño e implantación de una arquitectura de Centro de Procesamiento de Datos (CPD). Esta infraestructura debe responder a sus necesidades actuales y futuras, garantizando la disponibilidad, rendimiento, escalabilidad y seguridad de sus servicios, al mismo tiempo que promueve la sostenibilidad ambiental, alineándose con los Objetivos de Desarrollo Sostenible (ODS) de la Agenda 2030.
 
