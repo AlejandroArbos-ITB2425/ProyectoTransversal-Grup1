@@ -348,7 +348,7 @@ Donde:
 
 
 #### Propuesta de medidas de reducción u optimización
-¿Reducir las horas de funcionamiento de los servicios?
+**¿Reducir las horas de funcionamiento de los servicios?**
 
 Servicios que SÍ se pueden optimizar:
 
@@ -368,7 +368,7 @@ Server 4 (Base Datos): Aplicaciones dependen 24/7
 
 Impacto estimado: -25% consumo total = -40.8 kg CO₂e/año
 
-¿Utilizar energía renovable para los servicios?
+**¿Utilizar energía renovable para los servicios?**
 
 Europa (Londres) está alimentada con más del 95% de energía renovable y es una de las 19 regiones que operan actualmente con 100% energía renovable a nivel mundial
 
