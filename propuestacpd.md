@@ -10,6 +10,8 @@ Coordenadas: 43.5563°N, 5.9248°W
 
 Superficie: 360 m² (edificio CPD + oficinas)
 
+![image](./img_ubicacion_fisica/ubicacion.png)
+
 Ventajas específicas de Asturias:
 
 Costo energía:  0,12 €/kWh (Asturias) vs. 0,15 €/kWh (Madrid)
