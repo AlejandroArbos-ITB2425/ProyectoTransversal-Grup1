@@ -351,6 +351,7 @@ Donde:
 ¿Reducir las horas de funcionamiento de los servicios?
 
 Servicios que SÍ se pueden optimizar:
+
 Server 5 (Backups): De 20h/día a 12h/día = -20% consumo (10.9 kg CO₂e/año menos)
 Server 2 (Streaming): Modo standby en horario valle (02:00-07:00) = -15% consumo
 Servicios no críticos: Apagar dashboards/reportes durante madrugada
