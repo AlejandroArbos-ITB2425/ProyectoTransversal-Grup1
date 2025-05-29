@@ -602,6 +602,57 @@ Se desarrolla un script automatizado que utiliza rsync para sincronizar datos de
 
 
 ## Investigación y comparación de eficiencia energética
+
 #### Investigar y comparar la eficiencia energética con otros proveedores de nube
+
+### **Comparación de Proveedores de Nube - Eficiencia Energética**
+
+| **Proveedor** | **PUE Promedio** | **% Energía Renovable** | **Compromiso Net Zero** | **Regiones Eficientes** |
+|---------------|------------------|-------------------------|-------------------------|-------------------------|
+| **AWS** | 1.15 | 100% (2025) | 2040 | us-west-2, eu-north-1 |
+| **Google Cloud** | 1.10 | 100% (2017) | 2030 | europe-north1, us-central1 |
+| **Microsoft Azure** | 1.18 | 100% (2025) | 2030 | North Europe, West US 2 |
+| **Promedio Industria** | 1.84 | 30% | 2050 | N/A |
+
 #### Cómo los distintos proveedores ofrecen soluciones de CPD gestionadas por estas empresas
+
+### **Soluciones de CPD Gestionadas por Proveedor**
+
+#### **AWS**
+**Servicios CPD gestionados:**
+- **EC2 Dedicated Hosts:** Hardware físico dedicado
+- **AWS Outposts:** Infraestructura AWS on-premise
+- **Local Zones:** Edge computing de baja latencia
+- **Wavelength:** 5G edge computing
+
+**Características sostenibles:**
+- Customer Carbon Footprint Tool integrado
+- Instancias Graviton2 (20% más eficientes)
+- Refrigeración líquida directa en servidores
+- Backup generators con HVO (aceite vegetal)
+
+#### **Google Cloud Platform**
+**Servicios CPD gestionados:**
+- **Anthos:** Plataforma híbrida on-premise/cloud
+- **Google Distributed Cloud:** Edge locations
+- **Dedicated Cloud Interconnect:** Conexión privada
+
+**Características sostenibles:**
+- Carbon-free energy matching 24/7 (objetivo 2030)
+- Predicción AI para optimización cooling
+- Custom TPUs 10x más eficientes que GPUs
+- Programa de carbono negativo
+
+#### **Microsoft Azure**
+**Servicios CPD gestionados:**
+- **Azure Stack:** Infraestructura híbrida
+- **Azure Edge Zones:** Computing distribuído
+- **Azure Arc:** Gestión multi-cloud
+
+**Características sostenibles:**
+- Underwater datacenters (Project Natick)
+- Fuel cells de hidrógeno para backup power
+- Cooling por aire exterior (free cooling)
+- Compromiso water positive 2030
+
 #### Cómo cubren los requerimientos previamente expuestos
