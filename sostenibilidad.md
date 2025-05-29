@@ -280,8 +280,7 @@ Donde:
 
 Ejemplo Server 1:
 Consumo = 45W × 0.7 × 8760h ÷ 1000 = 276.12 kWh/año
-```
-```
+``` ```
 Conversión de energía (kWh) a emisiones (kg CO₂ eq.): Utiliza factores de equivalencia para convertir el consumo energético en emisiones de carbono.
 
 Se ha usado la calculadora de CeroCO2.org.
