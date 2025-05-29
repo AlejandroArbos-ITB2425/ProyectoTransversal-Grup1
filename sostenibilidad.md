@@ -187,7 +187,7 @@ Tráfico Mensual Actual:
 | **Consultas PostgreSQL** | Server 4 | 500 | 50 queries/día | Diario | 1.5KB/query | 500×50×1.5KB×30d | **1.1 GB** |
 | **Sincronización BD** | Server 4 | - | 1 vez/hora | Continuo | 5MB/sync | 24×5MB×30d | **3.6 GB** |
 
-#### Identificación de recursos utilizados
+### Identificación de recursos utilizados
 #### Estimación del consumo energético y huella de carbono
 
 Instancias de la nube: Estimar el consumo energético de las instancias de la nube (puedes utilizar valores aproximados o herramientas del proveedor como el Carbon Footprint Calculator de AWS, o similares de GCP/Azure).
@@ -310,7 +310,7 @@ Donde:
 - 0.256: Factor emisión España (kg CO₂/kWh) según CeroCO2.org
 ```
 
-#### Recursos
+### Recursos
 
 Carbon Trust
 
@@ -347,7 +347,7 @@ Donde:
 ```
 
 
-#### Propuesta de medidas de reducción u optimización
+### Propuesta de medidas de reducción u optimización
 **¿Reducir las horas de funcionamiento de los servicios?**
 
 Servicios que SÍ se pueden optimizar:
