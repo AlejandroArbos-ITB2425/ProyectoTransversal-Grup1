@@ -15,7 +15,7 @@ Ventajas específicas de Asturias:
 Costo energía:  0,12 €/kWh (Asturias) vs. 0,15 €/kWh (Madrid)
 Energía renovable: la energía eólica local tiene un coste marginal muy bajo y estable (no depende de combustibles fósiles) y, al ser renovable, reduce drásticamente las emisiones de CO₂, disminuyendo así la huella de carbono.
 
-Sala CPD
+### Sala CPD
 
 Alejado de ventanas: Sin exposición directa a luz solar (orientación interior)
 Proximidad al SAI: Conexión directa con sistema de alimentación ininterrumpida
