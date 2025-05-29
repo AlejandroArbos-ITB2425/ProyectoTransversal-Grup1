@@ -288,6 +288,7 @@ Se ha usado la calculadora de CeroCO2.org.
 ## Conversión de Energía a Emisiones de CO₂
 ### Factor de Equivalencia CeroCO2.org
 **Fuente:** https://www.ceroco2.org/calculadoras/
+
 **Factor España:** 0.256 kg CO₂/kWh (mix energético español)
 
 ```
@@ -297,12 +298,13 @@ Se ha usado la calculadora de CeroCO2.org.
 **Consumo total:** 516.6 kWh/año  
 **Factor CeroCO2:** 0.256 kg CO₂/kWh  
 
-```
+``` ```
 Emisiones CO₂ = Consumo_kWh × Factor_CeroCO2
 
 Emisiones = 516.6 kWh/año × 0.256 kg CO₂/kWh = 132.2 kg CO₂/año
-```
 
+```
+```
 ### Fórmula General
 ```
 Emisiones_CO₂ = kWh_consumidos × 0.256
@@ -313,9 +315,8 @@ Donde:
 ```
 
 #### Recursos
-```
+``` ```
 Carbon Trust
-
 Factores de emisiones medias globales o por región del proveedor de nube.
 ```
 
