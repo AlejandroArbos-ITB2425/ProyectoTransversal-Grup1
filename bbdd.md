@@ -37,9 +37,12 @@ A partir del convenio y la tabla salarial actualizada de 2025, se deberá incorp
 
 ![BBDD_2.png](img/servicios/SRV4/BBDD_2.png)
 
-La transformación del modelo a relacional.
+**La transformación del modelo a relacional**
 
 ![BBDD_8.png](img/servicios/SRV4/BBDD_8.png)
+
+
+
 
 
 La implementación en un Sistema Gestor de Bases de Datos (por ejemplo, MySQL, Oracle, etc.).
