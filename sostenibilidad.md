@@ -316,13 +316,38 @@ Carbon Trust
 
 Factores de emisiones medias globales o por región del proveedor de nube.
 
+### Factores de Equivalencia por Región AWS
+
+| **Región AWS** | **Factor CO₂e (kg/kWh)** |
+|----------------|---------------------------|
+| eu-west-1 (Irlanda) | 0.316 |
+| us-east-1 (Virginia) | 0.415 |
+| us-west-2 (Oregon) | 0.025 |
+
+### Cálculo de Emisiones del Proyecto
+
+**Consumo total:** 516.6 kWh/año  
+**Región:** eu-west-1  
+**Factor:** 0.316 kg CO₂e/kWh  
+
+```
+Emisiones CO₂e = Consumo_kWh × Factor_región
+
+Emisiones = 516.6 kWh/año × 0.316 kg CO₂e/kWh = 163.2 kg CO₂e/año
+```
+
+### Fórmula General
+
+```
+Emisiones_CO₂e = kWh_consumidos × Factor_región
+
+Donde:
+- kWh_consumidos: Consumo energético anual
+- Factor_región: kg CO₂e/kWh según región AWS
+```
 
 
-
-
-
-Propuesta de medidas de reducción u optimización:
-
+#### Propuesta de medidas de reducción u optimización
 ¿Reducir las horas de funcionamiento de los servicios?
 
 Servicios que SÍ se pueden optimizar:
@@ -338,9 +363,14 @@ Server 4 (Base Datos): Aplicaciones dependen 24/7
 Impacto estimado: -25% consumo total = -40.8 kg CO₂e/año
 
 ¿Utilizar energía renovable para los servicios?
-Cambio de región: Migrar a us-west-2 (Oregon) con 95% renovable
-Factor actual: 0.316 vs Oregon: 0.025 kg CO₂e/kWh
-Reducción: 163.2 → 12.9 kg CO₂e/año (-92%)
- 
-#### Propuesta de medidas de reducción u optimización
 
+Europa (Londres) está alimentada con más del 95% de energía renovable y es una de las 19 regiones que operan actualmente con 100% energía renovable a nivel mundial
+
+Comparación de Factores de Emisión:
+Factor actual: 0.316 kg CO₂e/kWh
+Londres (eu-west-2): ~0.020 kg CO₂e/kWh (estimado para región 100% renovable)
+Reducción estimada: 163.2 → 10.6 kg CO₂e/año (-93.5%)
+
+¿Elegir regiones de nube más eficientes en términos energéticos?
+
+Se ha optado por elegir la región de Londres (eu-west-2), que nos proporciona energía 100% renovable desde 2021.
