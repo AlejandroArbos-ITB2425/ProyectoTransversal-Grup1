@@ -385,9 +385,75 @@ Para reforzar la disponibilidad y la tolerancia a fallos del sistema, en nuestro
 
 Se implementará RAID 5 en nuestro CPD, dado que ofrece un buen equilibrio entre rendimiento, capacidad y tolerancia a fallos. Esta configuración distribuye los datos y la paridad entre varios discos, permitiendo que el sistema siga funcionando aunque uno falle.
 
-
 ## Prevención de riesgos laborales 
+
 #### Medidas aplicadas en materia de prevención de riesgos laborales en el CPD
+
+En un CPD (Centro de Procesamiento de Datos), hay diversos riesgos que pueden comprometer la seguridad, disponibilidad e integridad de los datos y sistemas.
+
+**Riesgos Físicos o Ambientales**
+
+Incendios: por fallos eléctricos, cortocircuitos o materiales inflamables.
+
+Inundaciones: por rotura de tuberías, lluvias intensas o fallos en el sistema de climatización.
+
+Temperaturas extremas: fallo del aire acondicionado puede provocar sobrecalentamiento.
+
+Cortes de energía: afectan directamente a los servidores si no hay SAIs o generadores.
+
+Vibraciones o movimientos estructurales: afectan al hardware delicado.
+
+**Riesgos Técnicos o de Infraestructura**
+
+Fallo de hardware: discos duros, fuentes de alimentación, tarjetas de red, etc.
+
+Fallo de software: errores del sistema operativo, aplicaciones o firmware.
+
+Fallo en el sistema de refrigeración: puede llevar a un sobrecalentamiento.
+
+**Riesgos de Seguridad Lógica (Ciberseguridad)**
+
+Ataques externos: malware, ransomware, phishing, DDoS, etc.
+
+Intrusiones: accesos no autorizados a redes, servidores o bases de datos.
+
+Fugas de información: por malware, vulnerabilidades o mala configuración.
+
+### Riesgos laborales 
+
+**Riesgos Ergonómicos**
+
+Posturas forzadas o repetitivas: por trabajar muchas horas sentado frente al ordenador.
+
+Pantallas de visualización: fatiga visual, dolores cervicales y de espalda.
+
+Movimientos repetitivos: uso continuo de teclado y ratón.
+
+Espacios reducidos: puede dificultar la movilidad y causar incomodidad.
+
+**Medidas preventivas:**
+
+Instalación de mobiliario ergonómico (sillas regulables, reposapiés, soportes de monitor)
+Pausas programadas cada 2 horas para descanso visual y corporal
+Formación sobre higiene postural y ejercicios de estiramiento
+Iluminación adecuada para reducir reflejos y fatiga visual
+
+**Riesgos Eléctricos**
+Contacto con cables o equipos eléctricos defectuosos.
+
+Sobrecargas o chispazos al manipular hardware.
+
+Riesgo de electrocución si no se siguen protocolos de seguridad.
+
+**Medidas preventivas:**
+
+Uso obligatorio de equipos de protección individual (EPI) dieléctricos
+Inspecciones periódicas de instalaciones eléctricas
+Formación específica en seguridad eléctrica para el personal técnico
+Sistemas de protección diferencial y tomas de tierra verificadas
+
+
+
 
 ## Sostenibilidad
 
