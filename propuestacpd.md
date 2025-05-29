@@ -173,6 +173,7 @@ Este será el rack servidor para los servicios en streaming
 Por último, un procesador potente que nos asegure poder gestionar todos los procesos de forma adecuada.
 
 **Patch panels**
+
 En el rack de red mencionado anteriormente irán los patch pannels, donde se conectan todos los elementos de los servidores:
 
 ![image](./img/rack/1.7.png)
@@ -180,6 +181,7 @@ En el rack de red mencionado anteriormente irán los patch pannels, donde se con
 Se utilizará este modelo, que proporciona compatibilidad con nuestros cables de red gracias al estándar Cat 6a. Se podría adquirir más si fuera necesario.
 
 **Switches**
+
 Se utilizará este Switch como Switch Core:
 
 ![image](./img/rack/1.8.png)
