@@ -114,7 +114,7 @@ Ventajas:
 
 ## Infraestructura IT 
 
-**Servidores: número y tipo de modelo.**
+#### Servidores: número y tipo de modelo
 
 Se montará 5 servidores:
 
@@ -172,7 +172,8 @@ Este será el rack servidor para los servicios en streaming
 
 Por último, un procesador potente que nos asegure poder gestionar todos los procesos de forma adecuada.
 
-**Patch panels**
+
+#### Patch panels
 
 En el rack de red mencionado anteriormente irán los patch pannels, donde se conectan todos los elementos de los servidores:
 
@@ -180,7 +181,8 @@ En el rack de red mencionado anteriormente irán los patch pannels, donde se con
 
 Se utilizará este modelo, que proporciona compatibilidad con nuestros cables de red gracias al estándar Cat 6a. Se podría adquirir más si fuera necesario.
 
-**Switches**
+
+#### Switches
 
 Se utilizará este Switch como Switch Core:
 
@@ -198,11 +200,17 @@ En la que la intención es formar una estructura redundante para evitar pérdida
 
 El precio sube un poco porque ya compramos 4 cables de 10 gigabits por switch, ya que proporciona la cantidad necesaria y un poco de exceso en caso de necesitarlo en futuras ampliaciones 
 
-
-#### Servidores
-#### Patch panels
-#### Switches
 #### Planos y diagramas
+
+![image](./img/rack/1.11.png)
+
+![image](./img/rack/1.12.png)
+
+![image](./img/rack/1.13.png)
+
+
+
+
 
 ## Infraestructura eléctrica
 #### Sistemas de alimentación redundante
