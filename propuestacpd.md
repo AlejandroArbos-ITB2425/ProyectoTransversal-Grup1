@@ -100,7 +100,7 @@ Ventajas:
 
 #### Planos, dibujos y diagramas
 
-![image](./img_ubicacion_fisica/plano_sala_rack.png)
+![plano_sala_rack_v2.png](img_ubicacion_fisica/plano_sala_rack_v2.png)
 
 #### Estructuración de los racks 
 
