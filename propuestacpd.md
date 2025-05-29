@@ -10,7 +10,7 @@ Coordenadas: 43.5563°N, 5.9248°W
 
 Superficie: 360 m² (edificio CPD + oficinas)
 
-![image](./img_ubicacion_fisica/ubicacion.png)
+![image](./img_ubicacion_fisica/ubicacion.jpg)
 
 Ventajas específicas de Asturias:
 
