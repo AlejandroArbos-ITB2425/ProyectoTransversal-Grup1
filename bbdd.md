@@ -13,6 +13,7 @@ Los empleados están asignados a un determinado departamento, el cual se identif
 ![BBDD_15.png](img/servicios/SRV4/BBDD_15.png)
 
 **🔹 Información de los grupos-nivel**
+
 Cada empleado tiene asignado un grupo-nivel, que se identifica por un código (por ejemplo: A1, B1, etc.). Para cada grupo-nivel, se debe registrar:
 
 - El salario total
@@ -32,14 +33,10 @@ A partir del convenio y la tabla salarial actualizada de 2025, se deberá incorp
 - Duración del período de prueba.
 - Días de vacaciones anuales.
 
-CONVENIO COLECTIVO 2025
-
-
-🔹 Entregables
-Se requiere entregar:
-El diseño entidad-relación.
+**Diseño entidad-relación**
 
 ![BBDD_2.png](img/servicios/SRV4/BBDD_2.png)
+
 La transformación del modelo a relacional.
 
 ![BBDD_8.png](img/servicios/SRV4/BBDD_8.png)
