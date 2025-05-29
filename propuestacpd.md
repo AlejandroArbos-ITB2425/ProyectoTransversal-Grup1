@@ -114,19 +114,32 @@ Ventajas:
 
 ## Infraestructura IT 
 
-Servidores: número y tipo de modelo.
-Montaremos 5 servidores 
+**Servidores: número y tipo de modelo.**
+
+Se montará 5 servidores:
+
 FTP + DNS 
+
 Audio + Video + Web
+
 Monitorización
+
 Base de datos
+
 Backups
+
 La idea es empezar tratando a 2500 - 5000 clientes, así que no necesitaremos los servidores más potentes, pero sí necesitaremos que puedan aumentar su potencia y capacidad, por ende, hemos pensado planes de escalabilidad.
-Montaremos la siguiente estructura:
+
+Se implementará la siguiente estructura:
+
 3 racks de 19 pulgadas para permitir una mejor organización, separación de funciones y espacio para la expansión futura.
-Rack 1: Equipos de red y seguridad (switches, firewall, patch panels).
-Rack 2: Servidores (principalmente).
+
+- Rack 1: Equipos de red y seguridad (switches, firewall, patch panels).
+
+- Rack 2: Servidores (principalmente).
+- 
 4 servidores rack (ej. 1U o 2U) para cubrir los 3 roles principales con redundancia básica para los más críticos
+
 Estos servidores serán de la gama Smart Selection PowerEdge R660 Rack Servidor, en la que podremos personalizar nuestros racks, además de los 3 racks de 19 pulgadas:
 
 ![image](./img/rack/1.1.png)
