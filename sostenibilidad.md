@@ -220,6 +220,40 @@ Instancias de la nube: Estimar el consumo energético de las instancias de la nu
 > Emisiones CO₂ = (vCPU × Factor_CPU + RAM × Factor_RAM + Storage × Factor_Storage) 
                 × Horas_Uso × Factor_Región × PUE_Datacenter
 
+Tráfico generado por el streaming: Estimar el consumo energético en función de watts por GB transferido.
+
+### Tráfico de Streaming 
+**Del cálculo anterior:**
+- **Streaming Audio:** 513 GB/mes
+- **Streaming Video:** 608 GB/mes
+- **TOTAL STREAMING:** 1.121 GB/mes = 13.452 GB/año
+
+### Consumo Energético por GB Transferido
+**Factores de Consumo AWS:**
+- **Transferencia de datos:** 0.006 kWh/GB (incluye red + procesamiento)
+- **Encoding/Transcoding:** 0.012 kWh/GB (FFmpeg + CPU intensivo)
+- **Storage I/O:** 0.002 kWh/GB (lectura desde EBS)
+
+**TOTAL: 0.020 kWh/GB para streaming**
+
+### Cálculo Consumo por Tipo de Streaming
+| **Tipo Streaming** | **GB/mes** | **GB/año** | **kWh/GB** | **kWh/mes** | **kWh/año** |
+|-------------------|------------|------------|------------|-------------|-------------|
+| **Audio (Icecast)** | 513 | 6.156 | 0.015 | 7.70 | 92.34 |
+| **Video (FFmpeg)** | 608 | 7.296 | 0.025 | 15.20 | 182.40 |
+| **TOTAL** | 1.121 | 13.452 | - | 22.90 | 274.74 |
+
+### Fórmulas de Cálculo
+```
+Consumo Audio = GB_transferidos × 0.015 kWh/GB
+Consumo Video = GB_transferidos × 0.025 kWh/GB
+
+Ejemplo:
+Consumo Audio = 513 GB/mes × 0.015 kWh/GB = 7.70 kWh/mes
+Consumo Video = 608 GB/mes × 0.025 kWh/GB = 15.20 kWh/mes
+
+Total Streaming = 22.90 kWh/mes × 12 meses = 274.74 kWh/año
+
 
 #### Recursos
 #### Propuesta de medidas de reducción u optimización
