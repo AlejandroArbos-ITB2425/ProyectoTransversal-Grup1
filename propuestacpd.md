@@ -79,6 +79,7 @@ Canalización de cableado de datos (Cat 6a) y fibra, separado de la electricidad
 
 
 Pasacables y conductos de alimentación de PDUs desde bandejas superiores.
+
 Ventajas:
 - Flujo controlado de aire frío al frente de los racks.
 - Acceso rápido al cableado para mantenimiento.
@@ -92,15 +93,25 @@ Ventajas:
 
 
 Iluminación LED empotrada y sensores de temperatura/humedad.
+
 Ventajas:
 - Evacuación limpia del aire caliente, evitando recirculaciones indeseadas.
 - Canalización ordenada de cables de red, manteniendo el techo libre de obstáculos.
 - Integración de detectores y luminarias sin interferir con el flujo de retorno.
 - La combinación de falso suelo como plenum frío y falso techo como plenum caliente, junto al esquema de pasillos frío / caliente y unidades CRAC, reduce la carga de refrigeración, mejora la   eficiencia energética y facilita futuras ampliaciones con mínimo trabajo en obra.
 
-#### Planos, dibujos y diagramas
+#### Planos, dibujos y diagramas 
 
 ![plano_sala_rack_v2.png](img_ubicacion_fisica/plano_sala_rack_v2.png)
+
+**Pasillo frío**
+
+![image](./img_ubicacion_fisica/frio.png)
+
+**Pasillo caliente**
+
+![image](./img_ubicacion_fisica/caliente.png)
+
 
 #### Estructuración de los racks 
 
