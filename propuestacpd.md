@@ -129,6 +129,8 @@ Rack 2: Servidores (principalmente).
 4 servidores rack (ej. 1U o 2U) para cubrir los 3 roles principales con redundancia básica para los más críticos
 Estos servidores serán de la gama Smart Selection PowerEdge R660 Rack Servidor, en la que podremos personalizar nuestros racks, además de los 3 racks de 19 pulgadas:
 
+![image](./img/rack/1.1.png)
+
 
 Rack 3: Servidores adicionales, sistemas de almacenamiento, patch panels adicionales, espacio para crecimiento y escalabilidad.
 
@@ -140,6 +142,10 @@ Fuentes de alimentación redundantes que permitan la manipulación en caliente
 En el caso de necesitar más discos duros por motivos de escalabilidad o exigencia, cambiaríamos a HDD para hacer más leves las consecuencias económicas del proyecto.
 Por ejemplo, el rack servidor de streaming es mucho más exigente que los otros 3, por tanto, utilizaremos HDD para ahorrar gastos y suplir las necesidades de un servicio tan demandante:
 
+
+
+Este será el rack servidor para los servicios en streaming
+Por último, un procesador potente que nos asegure poder gestionar todos los procesos de forma adecuada.
 
 #### Servidores
 #### Patch panels
