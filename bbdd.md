@@ -41,10 +41,10 @@ A partir del convenio y la tabla salarial actualizada de 2025, se deberá incorp
 
 ![BBDD_8.png](img/servicios/SRV4/BBDD_8.png)
 
-Según el convenio colectivo 2025, XIX Convenio Colectivo Estatal de Empresas de Consultoría, Tecnologías de la Información y Estudios de Mercado y de la Opinión Pública. 
-El periódo de prueba de las personas trabajadoras del área 2 es de: 
+Según el convenio colectivo 2025, **XIX Convenio Colectivo Estatal de Empresas de Consultoría, Tecnologías de la Información y Estudios de Mercado y de la Opinión Pública. 
+El periódo de prueba de las personas trabajadoras del área 2 es de:** 
 
-– Área funcional 1 y 2 del Convenio Colectivo:
+**– Área funcional 1 y 2 del Convenio Colectivo:**
 
 ● Grupo A: Seis meses.
 
