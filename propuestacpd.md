@@ -24,6 +24,9 @@ Proximidad al SAI: Conexión directa con sistema de alimentación ininterrumpida
 Acceso controlado: Alejado del tráfico principal de oficinas
 Seguridad física: Zona con menos tránsito de personal no autorizado
 
+![image](./img_ubicacion_fisica/planosala.png)
+
+
 #### Sistemas de climatización
 La temperatura se debe mantener entre 18°C – 27°C
 La humedad relativa se debe mantener entre el 40% - 60%
