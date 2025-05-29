@@ -555,7 +555,7 @@ Se crea y configura el host virtual dentro del directorio _/etc/nginx/sites-avai
 
 > Para acceder a la página web: https://18.204.111.82/
 
-[WEB](https://proyectotransversalweb-grup1.pages.dev/)
+[WEB PROYECTO](https://proyectotransversalweb-grup1.pages.dev/)
 
 ![image](./img/servicios/srv2/2.6.png)
 
