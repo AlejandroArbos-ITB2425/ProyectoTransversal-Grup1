@@ -359,6 +359,7 @@ Host Status Totals
 Service Status Totals
 
  – De los servicios configurados, todos están en OK (0 warnings, 0 criticals, 0 unknown).
+
 Detalle de cada servicio
 
 ![2.38.png](img/servicios/SRV1/Nagios/2.38.png)
