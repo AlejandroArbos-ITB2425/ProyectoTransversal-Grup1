@@ -267,10 +267,10 @@ Consumo de servidores virtuales o servicios en funcionamiento continuo.
 | Server 5 (Backups) | t3.small | 7.5 | 7300 | 54.8 |
 
 **TOTAL: 516.6 kWh/año**
-
+```
 ### Fórmula de Cálculo
 
-```
+
 Consumo_Anual = Potencia_Base × Factor_Carga × Horas_Funcionamiento ÷ 1000
 
 Donde:
@@ -281,6 +281,7 @@ Donde:
 Ejemplo Server 1:
 Consumo = 45W × 0.7 × 8760h ÷ 1000 = 276.12 kWh/año
 ```
+```
 Conversión de energía (kWh) a emisiones (kg CO₂ eq.): Utiliza factores de equivalencia para convertir el consumo energético en emisiones de carbono.
 
 Se ha usado la calculadora de CeroCO2.org.
@@ -290,6 +291,8 @@ Se ha usado la calculadora de CeroCO2.org.
 **Fuente:** https://www.ceroco2.org/calculadoras/
 **Factor España:** 0.256 kg CO₂/kWh (mix energético español)
 
+```
+```
 ### Cálculo de Emisiones del Proyecto
 
 **Consumo total:** 516.6 kWh/año  
