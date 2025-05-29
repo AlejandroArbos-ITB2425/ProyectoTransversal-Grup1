@@ -189,6 +189,38 @@ Tráfico Mensual Actual:
 
 #### Identificación de recursos utilizados
 #### Estimación del consumo energético y huella de carbono
+
+Instancias de la nube: Estimar el consumo energético de las instancias de la nube (puedes utilizar valores aproximados o herramientas del proveedor como el Carbon Footprint Calculator de AWS, o similares de GCP/Azure).
+
+### **CONSUMO ENERGÉTICO POR INSTANCIA**
+| **Server** | **Tipo Instancia** | **vCPU** | **RAM (GB)** | **Consumo Base (W)** | **Factor Carga** | **Consumo Real (W)** | **kWh/día** | **kWh/mes** |
+|------------|-------------------|----------|--------------|---------------------|------------------|-------------------|-------------|-------------|
+| Server 1 | t2.xlarge | 4 | 16 | 45W | 70% | 31.5W | 0.756 | 22.68 |
+| Server 2 | t3.small | 2 | 2 | 15W | 80% | 12W | 0.288 | 8.64 |
+| Server 3 | t2.micro | 1 | 1 | 8W | 40% | 3.2W | 0.077 | 2.31 |
+| Server 4 | t3.micro | 2 | 1 | 10W | 60% | 6W | 0.144 | 4.32 |
+| Server 5 | t3.small | 2 | 2 | 15W | 50% | 7.5W | 0.180 | 5.40 |
+
+**TOTAL CONSUMO: 60.2W → 1.445 kWh/mes → 17.34 kWh/año**
+
+### **HUELLA DE CARBONO AWS (Región eu-west-1)**
+**Factor de emisión eu-west-1 (Irlanda): 0.316 kg CO₂/kWh**
+| **Server** | **kWh/año** | **Factor CO₂** | **kg CO₂/año** |
+|------------|-------------|----------------|----------------|
+| Server 1 | 272.16 | 0.316 | 86 kg |
+| Server 2 | 103.68 | 0.316 | 33 kg |
+| Server 3 | 27.72 | 0.316 | 9 kg |
+| Server 4 | 51.84 | 0.316 | 16 kg |
+| Server 5 | 64.80 | 0.316 | 20 kg |
+
+**TOTAL HUELLA CARBONO: 164 kg CO₂/año**
+
+
+### **FÓRMULA DE CÁLCULO AWS**
+> Emisiones CO₂ = (vCPU × Factor_CPU + RAM × Factor_RAM + Storage × Factor_Storage) 
+                × Horas_Uso × Factor_Región × PUE_Datacenter
+
+
 #### Recursos
 #### Propuesta de medidas de reducción u optimización
 
