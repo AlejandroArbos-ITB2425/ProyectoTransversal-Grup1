@@ -112,10 +112,35 @@ Ventajas:
 
 ![image](./img_ubicacion_fisica/caliente.png)
 
-
-#### Estructuración de los racks 
-
 ## Infraestructura IT 
+
+Servidores: número y tipo de modelo.
+Montaremos 5 servidores 
+FTP + DNS 
+Audio + Video + Web
+Monitorización
+Base de datos
+Backups
+La idea es empezar tratando a 2500 - 5000 clientes, así que no necesitaremos los servidores más potentes, pero sí necesitaremos que puedan aumentar su potencia y capacidad, por ende, hemos pensado planes de escalabilidad.
+Montaremos la siguiente estructura:
+3 racks de 19 pulgadas para permitir una mejor organización, separación de funciones y espacio para la expansión futura.
+Rack 1: Equipos de red y seguridad (switches, firewall, patch panels).
+Rack 2: Servidores (principalmente).
+4 servidores rack (ej. 1U o 2U) para cubrir los 3 roles principales con redundancia básica para los más críticos
+Estos servidores serán de la gama Smart Selection PowerEdge R660 Rack Servidor, en la que podremos personalizar nuestros racks, además de los 3 racks de 19 pulgadas:
+
+
+Rack 3: Servidores adicionales, sistemas de almacenamiento, patch panels adicionales, espacio para crecimiento y escalabilidad.
+
+
+En resumen, lo más importante:
+Cables de red rápidos para gestionar las bases de datos y los servicios de monitorización principalmente.
+Fuentes de alimentación redundantes que permitan la manipulación en caliente
+3 discos duros SSD de 480 GB para permitir la configuración en RAID 5 (Copias de seguridad en caso de emergencias).
+En el caso de necesitar más discos duros por motivos de escalabilidad o exigencia, cambiaríamos a HDD para hacer más leves las consecuencias económicas del proyecto.
+Por ejemplo, el rack servidor de streaming es mucho más exigente que los otros 3, por tanto, utilizaremos HDD para ahorrar gastos y suplir las necesidades de un servicio tan demandante:
+
+
 #### Servidores
 #### Patch panels
 #### Switches
