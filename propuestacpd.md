@@ -434,8 +434,11 @@ Espacios reducidos: puede dificultar la movilidad y causar incomodidad.
 **Medidas preventivas:**
 
 Instalación de mobiliario ergonómico (sillas regulables, reposapiés, soportes de monitor)
+
 Pausas programadas cada 2 horas para descanso visual y corporal
+
 Formación sobre higiene postural y ejercicios de estiramiento
+
 Iluminación adecuada para reducir reflejos y fatiga visual
 
 **Riesgos Eléctricos**
@@ -449,8 +452,11 @@ Riesgo de electrocución si no se siguen protocolos de seguridad.
 **Medidas preventivas:**
 
 Uso obligatorio de equipos de protección individual (EPI) dieléctricos
+
 Inspecciones periódicas de instalaciones eléctricas
+
 Formación específica en seguridad eléctrica para el personal técnico
+
 Sistemas de protección diferencial y tomas de tierra verificadas
 
 **Riesgos Ambientales**
@@ -459,8 +465,67 @@ Temperaturas extremas: si el sistema de refrigeración falla o hay zonas mal ven
 
 Riesgo acústico: por ventiladores, servidores o sistemas de refrigeración 
 
+**Medidas preventivas:**
 
+Sistemas de climatización redundantes con alarmas de temperatura
 
+Monitorización continua de condiciones ambientales
+
+Protección auditiva obligatoria en zonas de alto ruido
+
+**Riesgos Mecánicos o Técnicos**
+
+Caídas o golpes: al moverse entre racks o manipular equipos pesados.
+
+Cortes: al abrir o manejar hardware 
+
+Carga física: levantar servidores o equipos pesados. 
+
+**Medidas preventivas:**
+
+Pasillos amplios y libres de obstáculos entre racks
+
+Iluminación de emergencia y señalización clara
+
+Equipos de elevación mecánica para cargas pesadas
+
+Formación en técnicas de manipulación manual de cargas
+
+Uso de guantes de protección y herramientas adecuadas
+
+**Riesgos de Incendio** 
+
+Espacios cerrados con alta densidad de equipos eléctricos: riesgo elevado de incendio.
+
+**Medidas preventivas:**
+
+Sistema de detección de incendios con sensores de humo y temperatura
+
+Sistema de extinción automática con gas inerte (no dañino para equipos)
+
+Extintores específicos para fuegos eléctricos distribuidos estratégicamente
+
+Plan de evacuación específico y simulacros periódicos
+
+Mantenimiento preventivo de instalaciones eléctricas
+
+**Riesgos Psicosociales**
+
+Estrés laboral: por la necesidad de mantener la disponibilidad 24/7 de los sistemas.
+
+Trabajo en turnos nocturnos o guardias: puede afectar el descanso y la salud mental.
+
+Aislamiento: si el trabajo se realiza en solitario o en zonas sin interacción frecuente.
+
+Medidas preventivas:
+
+Rotación de turnos para distribuir la carga de trabajo nocturno
+
+Evaluación periódica del clima laboral y nivel de estrés
+
+Formación en gestión del estrés y técnicas de relajación
+
+Espacios de descanso adecuados para personal de guardia
 
 ## Sostenibilidad
 
