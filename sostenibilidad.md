@@ -353,12 +353,17 @@ Donde:
 Servicios que SÍ se pueden optimizar:
 
 Server 5 (Backups): De 20h/día a 12h/día = -20% consumo (10.9 kg CO₂e/año menos)
+
 Server 2 (Streaming): Modo standby en horario valle (02:00-07:00) = -15% consumo
+
 Servicios no críticos: Apagar dashboards/reportes durante madrugada
 
 Servicios que NO se pueden reducir:
+
 Server 1 (Monitorización): Debe estar 24/7 para detectar fallos
+
 Server 3 (DNS): Crítico, debe resolver nombres siempre
+
 Server 4 (Base Datos): Aplicaciones dependen 24/7
 
 Impacto estimado: -25% consumo total = -40.8 kg CO₂e/año
@@ -368,8 +373,11 @@ Impacto estimado: -25% consumo total = -40.8 kg CO₂e/año
 Europa (Londres) está alimentada con más del 95% de energía renovable y es una de las 19 regiones que operan actualmente con 100% energía renovable a nivel mundial
 
 Comparación de Factores de Emisión:
+
 Factor actual: 0.316 kg CO₂e/kWh
+
 Londres (eu-west-2): ~0.020 kg CO₂e/kWh (estimado para región 100% renovable)
+
 Reducción estimada: 163.2 → 10.6 kg CO₂e/año (-93.5%)
 
 ¿Elegir regiones de nube más eficientes en términos energéticos?
