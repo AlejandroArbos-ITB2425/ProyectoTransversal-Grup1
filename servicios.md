@@ -167,8 +167,34 @@ Una vez completada la descarga, descomprimir  auditbeat-9.0.1-linux-x86_64.tar.g
 
 
 #### Nagios
-
+Se crea el usuario “nagios”.
 ![2.2.png](img/servicios/SRV1/Nagios/2.2.png)
+
+Se prepara el punto de montaje, se crea la carpeta /usr/local/nagios que servirá de directorio raíz para Nagios.
+![2.3.png](img/servicios/SRV1/Nagios/2.3.png)
+
+Se monta la partición (en este caso /dev/xvdc) dentro de ese directorio, para dedicar un disco separado al servicio.
+![2.4.png](img/servicios/SRV1/Nagios/2.4.png)
+
+Iniciar como el usuario Nagios.
+![2.5.png](img/servicios/SRV1/Nagios/2.5.png)
+
+Se crea el directorio de fuentes y se ajustan los permisos. Dentro del montaje, se crea la carpeta /src, donde se descargará y se compilará ???? el código fuente de Nagios.
+También se asegura que el usuario Nagios sea el propietario del directorio, para que tenga derechos de escritura y ejecución durante la compilación.
+![2.6.png](img/servicios/SRV1/Nagios/2.6.png)
+
+Se descarga el código fuente de Nagios Core, se ejecuta wget sobre el enlace oficial de Nagios 4.5.9 y se guarda directamente con el nombre nagios-4.5.9.tar.gz.
+![2.7.png](img/servicios/SRV1/Nagios/2.7.png)
+
+Se descomprime el paquete.
+![2.8.png](img/servicios/SRV1/Nagios/2.8.png)
+
+Se instala la utilidad unzip para que el sistema pueda descomprimir los plugins necesarios.
+
+Ahora, dentro del directorio de fuentes de Nagios, se ejecuta el lanzador de configuración, se comprueba que se tengan gcc, make, strip y demás utilidades, y se crean unos archivos de ejemplo en sample-config/.
+
+
+Ahora, se continúa con la compilación e instalación completa de Nagios, se compila todo el código fuente.
 
 
 ## Configuración de Servidor 2
