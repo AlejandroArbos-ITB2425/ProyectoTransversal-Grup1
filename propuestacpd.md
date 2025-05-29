@@ -684,8 +684,8 @@ Se desarrolla un script automatizado que utiliza rsync para sincronizar datos de
 #### Cómo cubren los requerimientos previamente expuestos
 
 
-| **Requisitos**      | **AWS Outposts & EC2 Dedicated Hosts** | **Google Distributed <br/>Cloud & Anthos** | **Compromiso Net Zero**                       | **Regiones Eficientes** |
-|---------------------|----------------------------------------|--------------------------------------------|-----------------------------------------------|-------------------------|
-| **AWS**             | 1.15                                   | 100% (2025)                                | Neutralidad de carbono para 2040              | us-west-2, eu-north-1 |
-| **Google Cloud**    | 1.10                                   | 100% (2017)                                | Cero emisiones netas en operaciones para 2030 | europe-north1, us-central1 |
-| **Microsoft Azure** | 1.18                                   | 100% (2025)                                | Carbono negativo para 2030                    | North Europe, West US 2 |
+| **Requisitos**      | **AWS Outposts & <br/> EC2 Dedicated Hosts** | **Google Distributed <br/> Cloud & Anthos** | **Compromiso Net Zero**                       | **Regiones Eficientes** |
+|---------------------|----------------------------------------------|---------------------------------------------|-----------------------------------------------|-------------------------|
+| **AWS**             | 1.15                                         | 100% (2025)                                 | Neutralidad de carbono para 2040              | us-west-2, eu-north-1 |
+| **Google Cloud**    | 1.10                                         | 100% (2017)                                 | Cero emisiones netas en operaciones para 2030 | europe-north1, us-central1 |
+| **Microsoft Azure** | 1.18                                         | 100% (2025)                                 | Carbono negativo para 2030                    | North Europe, West US 2 |
