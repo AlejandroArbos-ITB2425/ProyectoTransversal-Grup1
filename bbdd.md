@@ -38,10 +38,6 @@ Días de vacaciones anuales.
 CONVENIO COLECTIVO 2025
 
 
-
-
-
-
 🔹 Entregables
 Se requiere entregar:
 El diseño entidad-relación.
