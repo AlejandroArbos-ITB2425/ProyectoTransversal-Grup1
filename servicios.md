@@ -168,6 +168,9 @@ Una vez completada la descarga, descomprimir  auditbeat-9.0.1-linux-x86_64.tar.g
 
 #### Nagios
 
+![2.2.png](img/servicios/SRV1/Nagios/2.2.png)
+
+
 ## Configuración de Servidor 2
 Primero se crea una instancia dentro de AWS (Amazon Web Service) que tendrá el sistema operativo Ubuntu Server 24.04 LTS, se asigna t3.small como tipo de instancia dado que nos permitirá gestionar los servidores web, audio y streaming.
 
