@@ -73,7 +73,8 @@ o obstante, se mantendrán las mejoras que las Empresas puedan aplicar las perso
 
 Las vacaciones se iniciarán siempre en día laborable y terminarán el día inmediatamente anterior de reincorporación al trabajo, salvo en las empresas que tengan establecido un período fijo anual para vacar la totalidad de su plantilla.
 
-**Tabla salarial actualizada**
+
+### **Tabla salarial actualizada**
 
 ![image](./img/servicios/SRV4/tablasalarial.png)
 
