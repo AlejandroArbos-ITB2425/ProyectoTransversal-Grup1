@@ -439,6 +439,7 @@ Formación sobre higiene postural y ejercicios de estiramiento
 Iluminación adecuada para reducir reflejos y fatiga visual
 
 **Riesgos Eléctricos**
+
 Contacto con cables o equipos eléctricos defectuosos.
 
 Sobrecargas o chispazos al manipular hardware.
@@ -451,6 +452,12 @@ Uso obligatorio de equipos de protección individual (EPI) dieléctricos
 Inspecciones periódicas de instalaciones eléctricas
 Formación específica en seguridad eléctrica para el personal técnico
 Sistemas de protección diferencial y tomas de tierra verificadas
+
+**Riesgos Ambientales**
+
+Temperaturas extremas: si el sistema de refrigeración falla o hay zonas mal ventiladas.
+
+Riesgo acústico: por ventiladores, servidores o sistemas de refrigeración 
 
 
 
