@@ -739,10 +739,10 @@ Se crea dos archivos:
 -Unos HTML con los templates básicos:
 ![BBDD_10.png](img/servicios/SRV4/BBDD_10.png)
 Y con esto ya tenemos una base de datos funcional:
-![BBDD_12.png](img/servicios/SRV4/BBDD_12.png)
+![BBDD_19.png](img/servicios/SRV4/BBDD_19.png)
 Luego podemos añadir los empleados que queramos:
-![BBDD_13.png](img/servicios/SRV4/BBDD_13.png)
-Y la base de datos está operativa.
+![BBDD_18.png](img/servicios/SRV4/BBDD_18.png)
+Y con esto la base de datos ya está operativa.
 ## Configuración de Servidor 5
 #### Copias seguridad
 
