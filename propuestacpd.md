@@ -631,6 +631,15 @@ Se desarrolla un script automatizado que utiliza rsync para sincronizar datos de
 
 #### Investigar y comparar la eficiencia energética con otros proveedores de nube
 
+
+| **Proveedor** | **PUE Promedio** | **% Energía Renovable** | **Compromiso Net Zero**                       | **Regiones Eficientes** |
+|---------------|------------------|-------------------------|-----------------------------------------------|-------------------------|
+| **AWS** | 1.15 | 100% (2025) | Neutralidad de carbono para 2040              | us-west-2, eu-north-1 |
+| **Google Cloud** | 1.10 | 100% (2017) | Cero emisiones netas en operaciones para 2030 | europe-north1, us-central1 |
+| **Microsoft Azure** | 1.18 | 100% (2025) | Carbono negativo para 2030                    | North Europe, West US 2 |
+
+
+
 ### **Comparación de Proveedores de Nube - Eficiencia Energética**
 
 | **Proveedor** | **PUE Promedio** | **% Energía Renovable** | **Compromiso Net Zero** | **Regiones Eficientes** |
@@ -641,6 +650,8 @@ Se desarrolla un script automatizado que utiliza rsync para sincronizar datos de
 | **Promedio Industria** | 1.84 | 30% | 2050 | N/A |
 
 #### Cómo los distintos proveedores ofrecen soluciones de CPD gestionadas por estas empresas
+
+
 
 ### **Soluciones de CPD Gestionadas por Proveedor**
 
