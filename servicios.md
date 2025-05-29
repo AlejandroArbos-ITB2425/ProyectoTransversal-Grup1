@@ -197,11 +197,246 @@ Se descomprime el paquete.
 ![2.8.png](img/servicios/SRV1/Nagios/2.8.png)
 
 Se instala la utilidad unzip para que el sistema pueda descomprimir los plugins necesarios.
+  
+![2.9.png](img/servicios/SRV1/Nagios/2.9.png)
 
 Ahora, dentro del directorio de fuentes de Nagios, se ejecuta el lanzador de configuración, se comprueba que se tengan gcc, make, strip y demás utilidades, y se crean unos archivos de ejemplo en sample-config/.
 
+![2.10.png](img/servicios/SRV1/Nagios/2.10.png)
 
-Ahora, se continúa con la compilación e instalación completa de Nagios, se compila todo el código fuente.
+![2.11.png](img/servicios/SRV1/Nagios/2.11.png)
+
+Se continúa con la compilación e instalación completa de Nagios, se compila todo el código fuente.
+
+![2.12.png](img/servicios/SRV1/Nagios/2.12.png)
+
+Se instalan los binarios y scripts.
+– Se copia el ejecutable nagios a /usr/local/nagios/bin/.
+– También se instalan los scripts de control en /usr/local/nagios/libexec/ y las bibliotecas necesarias.
+
+![2.13.png](img/servicios/SRV1/Nagios/2.13.png)
+
+Se instala el servicio en systemd.
+
+![2.14.png](img/servicios/SRV1/Nagios/2.14.png)
+
+Se instalan los archivos de configuración por defecto.
+– Se copian los archivos de configuración desde sample-config/ a /usr/local/nagios/etc/.
+– Se incluyen nagios.cfg, resource.cfg, y el directorio objects/ con localhost.cfg, commands.cfg y services.cfg.
+
+![2.15.png](img/servicios/SRV1/Nagios/2.15.png)
+
+Se crea y se asegura el directorio de comandos externos.
+
+![2.16.png](img/servicios/SRV1/Nagios/2.16.png)
+
+Se configura la interfaz web en Apache:
+– Se copia htpasswd.conf (configuración de autenticación) a /etc/apache2/sites-available/nagios.conf.
+– Se crea el enlace simbólico en sites-enabled/.
+– Con esto, Apache servirá la URL http://34.202.92.100/nagios/ y se exigirán credenciales para acceder.
+
+Usuario: Nagiosadmin
+Contraseña: @ITB2024
+
+![2.17.png](img/servicios/SRV1/Nagios/2.17.png)
+
+Se crea el usuario nagiosadmin para la interfaz web mencionada anteriormente.
+
+![2.18.png](img/servicios/SRV1/Nagios/2.18.png)
+
+Después compruebo los permisos:
+
+
+
+Se verifica la configuración de los CGIs de Nagios:
+ Se abre el archivo de ejemplo cgi.cfg para asegurarse de que:
+Se apunta al main_config_file=/usr/local/nagios/etc/nagios.cfg.
+
+
+Se tienen bien definidos los ficheros de caché.
+
+
+
+Se habilita el módulo CGI en Apache y se reinicia el servicio.
+
+
+
+Se habilita el sitio de Nagios en Apache.
+
+
+
+Se recarga la configuración de Apache.
+
+
+
+Se ejecuta la comprobación previa de Nagios.
+
+
+
+Ahora, se accede a la interfaz web de Nagios para verificar el estado y, a continuación, se instalan los plugins y se prepara el directorio de comprobaciones remotas:
+Se comprueba la interfaz web.
+
+
+Se abre http://34.202.92.100/nagios/ en el navegador.
+
+
+
+En “Current Status” se observa que todos los hosts y servicios aparecen como CRITICAL (sin haber sido iniciados ni configurados del todo aún).
+
+
+
+### Activación de servicios:
+
+Se instalan los paquetes de plugins.
+
+
+
+Se prepara el directorio de plugins de Nagios.
+
+
+
+Se enlazan todos los plugins disponibles.
+
+
+
+Se ajustan permisos y propietario:
+– Se asigna nagios:nagcmd como usuario y grupo para que el demonio y el daemon externo puedan invocarlos.
+– Se establecen permisos rwx r-x --- para seguridad.
+
+
+
+Se crea un swapfile de 2 GB.
+
+
+
+Se reservan 2 GB en /swapfile y se protege con permisos (rw-------).
+
+
+
+Se inicializa el swap:
+– El sistema avisa de que había una firma antigua (quizá de una prueba previa), la limpia y crea la nueva.
+
+
+
+Se vuelve a formatear (doble mkswap, idéntico a la captura).
+
+
+
+-Se verifica memoria y swap.
+-Se ejecuta la comprobación previa de Nagios.
+
+
+
+Se hace persistente el swap en el arranque.
+– Se abre /etc/fstab con un editor y se añade esta línea al final:
+
+
+
+Se recarga el servicio de Nagios.
+
+
+
+Se accede de nuevo a http://34.202.92.100/nagios/ y esto es lo que se observa:
+Current Network Status
+ – El panel muestra “Current Network Status” con todos los contadores a cero y el círculo verde, lo que indica que Nagios está ejecutándose y se están recopilando datos correctamente.
+Host Status Totals
+ – Hay 1 host monitorizado (el propio localhost), marcado como Up.
+Service Status Totals
+ – De los servicios configurados, todos están en OK (0 warnings, 0 criticals, 0 unknown).
+Detalle de cada servicio
+
+
+
+
+### Hosts: SRV1
+
+Se define en servers.cfg el host SRV1 con la plantilla linux-server, especificando nombre, alias, dirección IP, periodos de chequeo y notificación, intentos máximos y grupo de contactos.
+
+
+
+Se incluye en nagios.cfg el fichero:
+cfg_file=/usr/local/nagios/etc/objects/servers.cfg  
+Para cargar las definiciones de hosts personalizados.
+
+
+
+Se comprueba la configuración
+
+
+
+Se resetea
+
+
+
+Y ya se muestran mis hosts personalizados, en este caso SRV1.
+
+
+
+### Ejemplo para SRV1
+
+En nagios.cfg se hace lo siguiente para SRV1:
+Se añade el archivo de servicios para SRV1; en este fichero se enlazará cada servicio (PING, HTTP, SSH, disco, swap…) al host SRV1, indicando qué comandos de verificación se usarán y con qué umbrales.
+
+
+
+Ahora, para SRV1 se ha abierto el fichero services.cfg y se ha creado un bloque define service por cada chequeo que se desea monitorizar.
+En cada uno de los servicios se especifica:
+PING
+Uso de disco /
+Usuarios conectados
+Procesos críticos
+Swap Usage
+
+
+
+En commands.cfg se han definido los comandos personalizados que luego se enlazan en cada servicio de SRV1.
+De este modo, basta con que se le pasen argumentos genéricos (ej.: ARG1, ARG2) y se ejecutan los checks contra el plugin adecuado.
+Así se tienen configurados:
+check_local_disk
+check_local_procs
+check_local_users
+check_local_swap
+check_local_mrtgtraf
+
+
+
+En el fichero localhost.cfg se definen los servicios que se monitorizarán sobre el propio servidor Nagios (localhost):
+Root Partition
+Current Users
+Total Processes
+Swap Usage
+SSH
+HTTP
+
+
+
+En estas capturas se muestra cómo aparecen en la interfaz web de Nagios los servicios configurados para SRV1 y el detalle de uno de ellos (“Usuarios conectados”):
+Listado de servicios de SRV1
+En “Service Status Details For All Hosts” se filtra por SRV1 y se observan los cinco checks definidos:
+
+
+PING — OK: se indica que la latencia se encuentra dentro de los umbrales.
+
+
+Procesos críticos — OK: se indica que el número de procesos se encuentra en rango.
+
+
+Swap Usage — OK: se indica que el uso de swap se mantiene bajo el umbral.
+
+
+Uso de disco / — OK: se indica que el espacio en la partición raíz es suficiente.
+
+
+Cada fila muestra la última hora de ejecución, duración del chequeo y el estado.
+
+
+
+Se hace la prueba entrando en un usuario:
+
+
+
+Se mira si me he conectado con el usuario.
+
 
 
 ## Configuración de Servidor 2
