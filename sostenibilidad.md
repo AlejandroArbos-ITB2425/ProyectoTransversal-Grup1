@@ -255,7 +255,7 @@ Consumo Video = 608 GB/mes × 0.025 kWh/GB = 15.20 kWh/mes
 Total Streaming = 22.90 kWh/mes × 12 meses = 274.74 kWh/año
 
 Consumo de servidores virtuales o servicios en funcionamiento continuo.
-
+```
 ### Instancias EC2 en Operación
 
 | **Server** | **Tipo Instancia** | **Consumo (W)** | **Horas/año** | **kWh/año** |
